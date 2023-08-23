@@ -1,0 +1,36 @@
+{
+  "photoList":[
+    {
+      "id": "randomString",
+      "url": "https://img.freepik.com/free-photo/back-view-of-woman-doing-yoga-outdoors_23-2148769551.jpg?w=2000",
+      "name": "Image name",
+      "selectors": [
+        {"Male": false},
+        {"Female": true},
+        {"Hands": false},
+        {"Legs": false},
+        {"Head": false},
+        {"Waist": true}]
+    },
+    {
+      "id": "randomString2",
+      "url": "https://img.freepik.com/free-photo/back-view-of-woman-doing-yoga-outdoors_23-2148769551.jpg?w=2000",
+      "name": "Image name",
+      "selectors": [
+        {"Male": false},
+        {"Female": true},
+        {"Hand": false},
+        {"Legs": false},
+        {"Heads": false},
+        {"Waist": true}]
+    }
+  ],
+  "searchList":[
+    {"Male": false},
+    {"Female": false},
+    {"Hand": false},
+    {"Legs": false},
+    {"Heads": false},
+    {"Waist": false}
+  ]
+}

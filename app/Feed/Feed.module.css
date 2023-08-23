@@ -1,0 +1,12 @@
+.feed {
+  display: flex; }
+  .feed__wrapper {
+    display: flex; }
+  .feed__content {
+    width: 85%;
+    display: inline-block; }
+  .feed__sidebar {
+    width: 15%;
+    display: inline-block; }
+
+/*# sourceMappingURL=Feed.module.css.map */

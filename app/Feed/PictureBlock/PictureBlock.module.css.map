@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAa;EACX,OAAO,EAAE,YAAY;EACrB,mBAAO;IACL,QAAQ,EAAE,QAAQ;EAEpB,oBAAQ;IACN,YAAY,EAAE,IAAI;IAClB,KAAK,EAAE,KAAK",
+"sources": ["PictureBlock.module.scss"],
+"names": [],
+"file": "PictureBlock.module.css"
+}

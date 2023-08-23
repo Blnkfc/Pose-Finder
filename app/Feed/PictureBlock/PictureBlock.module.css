@@ -1,0 +1,9 @@
+.pictureBlock {
+  display: inline-block; }
+  .pictureBlock__name {
+    position: absolute; }
+  .pictureBlock__image {
+    aspect-ratio: auto;
+    width: 400px; }
+
+/*# sourceMappingURL=PictureBlock.module.css.map */

@@ -1,0 +1,11 @@
+.footer {
+  width: 50%;
+  margin-left: 25%; }
+  .footer__info {
+    display: flex;
+    justify-content: space-between; }
+    .footer__info__logo {
+      display: block;
+      width: 3em; }
+
+/*# sourceMappingURL=Footer.module.css.map */

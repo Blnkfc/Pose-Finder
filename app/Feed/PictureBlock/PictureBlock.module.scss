@@ -1,0 +1,10 @@
+.pictureBlock{
+  display: inline-block;
+  &__name{
+    position: absolute;
+  }
+  &__image{
+    aspect-ratio: auto;
+    width: 400px;
+  }
+}

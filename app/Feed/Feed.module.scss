@@ -1,0 +1,14 @@
+.feed{
+  display: flex;
+  &__wrapper{
+    display: flex;
+  }
+  &__content{
+    width: 85%;
+    display: inline-block;
+  }
+  &__sidebar{
+    width: 15%;
+    display: inline-block;
+  }
+}

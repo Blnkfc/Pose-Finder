@@ -1,0 +1,12 @@
+.footer{
+  width: 50%;
+  margin-left: 25%;
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    &__logo{
+      display: block;
+      width: 3em;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  &__logo{
+    display: block;
+    width: 3em;
+  }
+  &__nav{
+    display: flex;
+    justify-content: space-between;
+    &__settings{
+      display: block;
+      width: 3em;
+    }
+  }
+
+}

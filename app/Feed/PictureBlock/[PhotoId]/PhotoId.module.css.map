@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,wBAAQ;EACN,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK",
+"sources": ["PhotoId.module.scss"],
+"names": [],
+"file": "PhotoId.module.css"
+}

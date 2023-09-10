@@ -1,6 +1,10 @@
+@import "../../variables.module";
 .header{
   display: flex;
   justify-content: space-between;
+  background-color: $background-dark;
+  height: 3em;
+  border-bottom: solid 1px $white-color;
   &__logo{
     display: block;
     width: 3em;
@@ -8,6 +12,19 @@
   &__nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    &__link{
+      text-decoration: none;
+      color: $text-light;
+      text-align: center;
+      line-height: 3em;
+      width: 7em;
+      height: 100%;
+      &:hover{
+        border: solid 2px $teal-color;
+        color: $white-color;
+      }
+    }
     &__settings{
       display: block;
       width: 3em;

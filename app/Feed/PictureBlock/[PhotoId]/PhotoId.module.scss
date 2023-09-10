@@ -1,0 +1,15 @@
+.picture__wrapper{
+  display: flex;
+  &__image{
+    aspect-ratio: auto;
+    width: 50%;
+  }
+  &__sidebar{
+    margin-left: 5em;
+    &__selectors{
+      span{
+        margin: 1em;
+      }
+    }
+  }
+}

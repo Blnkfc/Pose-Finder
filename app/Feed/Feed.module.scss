@@ -1,14 +1,44 @@
+@import "../variables.module";
+.feed__wrapper{
+  display: flex;
+  width: 100%;
+  min-height:40em;
+  justify-content: space-between;
+  background-color: $background-dark;
+  padding:0.5em 0 0 0.5em;
+}
 .feed{
   display: flex;
-  &__wrapper{
-    display: flex;
-  }
+  padding-right: 0.5em;
+  width: 100%;
   &__content{
-    width: 85%;
+    width: 100%;
     display: inline-block;
   }
   &__sidebar{
     width: 15%;
     display: inline-block;
+    height:20em;
+    h3{
+      color: $text-light;
+    }
+    &__categories{
+      display: flex;
+      flex-flow: row wrap;
+      button{
+        padding: 0.2em 0.5em 0.2em 0.5em ;
+        margin: 0.2em 0.2em 0.2em 0.2em ;
+        background-color: $background-dark;
+        border: solid 1px $white-color;
+        border-radius: 0.5em ;
+        color: $text-light;
+        transition: all 0.1s;
+        &:hover{
+          background-color: $teal-color;
+          color: $white-color;
+          cursor: pointer;
+        }
+      }
+    }
   }
 }

@@ -1,10 +1,54 @@
+@import "../../variables.module";
 .pictureBlock{
   display: inline-block;
+  width: 25%;
+  height: 15em;
   &__name{
     position: absolute;
+    transform: translateX(+0.2em) translateY(0.2em);
+    z-index: 2;
+  }
+  &__image__wrapper{
+    margin: 0.2em;
   }
   &__image{
+    position: relative;
+    width: 100%;
+    height: 15em;
     aspect-ratio: auto;
-    width: 400px;
-  }
+    border-radius: 0.3em;
+    background-size: cover;
+    border: solid 2px $text-light;
+    &:hover{
+      border: solid 2px $teal-color;
+    }
+    &__info{
+      display: flex;
+      flex-flow: row wrap;
+      position: absolute;
+      background: $background-dark;
+      padding: 0.3em 0.5em 0.3em 0.5em;
+      width: 18em;
+      height: 5em;
+      transform: translateY(+150%) translateX(+5%);
+      z-index: 999;
+      &__selector{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 0.2em 0.5em 0.2em 0.5em ;
+        margin: 0.2em 0.2em 0.2em 0.2em ;
+        background-color: $background-dark;
+        border: solid 1px $white-color;
+        border-radius: 0.5em ;
+        color: $text-light;
+        height: 2em;
+        font-size: 0.7em;
+      }
+    }
+    &__expander{
+      width: 3em;
+      height: 3em;
+    }
+    }
 }

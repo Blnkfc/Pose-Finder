@@ -3,30 +3,28 @@ import React, { useEffect, useState } from "react";
 import {useStore} from "@/src/store"
 
 const FeedSidebar = (props) => {
+    /*  SEARCH LIST REFERENCE FROM THE STORE  */
     const searchList = useStore((state) => state.searchList)
 
-    const initialCategoryActive = [
-        { name: "Male", isActive: false },
-        { name: "Female", isActive: false },
-        { name: "Hands", isActive: false },
-        { name: "Legs", isActive: false },
-        { name: "Head", isActive: false },
-        { name: "Waist", isActive: false },
-    ];
-    const [activeCategoryList, setActiveCategoryList] = useState(initialCategoryActive)
+
+    /*  SETTING STATE FOR LIST OF ACTIVE CATEGORIES  */
+    const [activeCategoryList, setActiveCategoryList] = useState(searchList)
+
+    /*  ON CLICK HANDLER FOR STATE CHANGES, TOGGLES STATE OF CATEGORIES  */
     const toggleCategory = (index) => {
-        const activeCategoryListCopy = [...activeCategoryList]
-        activeCategoryListCopy[index].isActive = !activeCategoryListCopy[index].isActive
-        setActiveCategoryList(activeCategoryListCopy)
-        console.log(activeCategoryListCopy[index].isActive)
-    }
-
-
+        useStore.setState((state) => {
+            const updatedSearchList = [...state.searchList];
+            updatedSearchList[index].isActive = !updatedSearchList[index].isActive;
+            return { searchList: updatedSearchList };
+        });
+    };
+    /*  LISTING ALL EXISTING CATEGORIES  */
     const categories = activeCategoryList.map((C, index) => {
         return(
             <button
+                key={index}
                 style={
-                {backgroundColor: C.isActive?"red":"white"}
+                {backgroundColor: C.isActive?"#00c2bf":"#1f1f1f", color: C.isActive?"#fff":"#cfcfcf" }
             }
                 onClick={() => {
                     toggleCategory(index)
@@ -38,7 +36,7 @@ const FeedSidebar = (props) => {
 
 
     return (
-        <div>
+        <div className={"feed__sidebar"}>
             <h3>Categories</h3>
             <div className={"feed__sidebar__categories"}>{categories}</div>
         </div>

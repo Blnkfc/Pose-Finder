@@ -17,8 +17,9 @@ export const metadata = {
   const dataRes = await fetch("http://localhost:8080/state1.json", {cache:'no-store'})
   const data = await dataRes.json()
   useStore.setState({
-    generalStore: data.photoList,
-    searchList: data.searchList
+    photoList: data.photoList,
+    searchList: data.searchList,
+    addPictureState: data.addPictureState
   })
 
 
@@ -26,7 +27,10 @@ export const metadata = {
     <html lang="en">
     <body>
     <div className="wrapper">
-      <StoreInitializer photoList={data.photoList} searchList={data.searchList} />
+      <StoreInitializer
+          photoList={data.photoList}
+          searchList={data.searchList}
+          addPictureState={data.addPictureState} />
       <Header  />
       <main>{children}</main>
       <Footer />

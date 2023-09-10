@@ -1,9 +1,47 @@
 .pictureBlock {
-  display: inline-block; }
+  display: inline-block;
+  width: 25%;
+  height: 15em; }
   .pictureBlock__name {
-    position: absolute; }
+    position: absolute;
+    transform: translateX(0.2em) translateY(0.2em);
+    z-index: 2; }
+  .pictureBlock__image__wrapper {
+    margin: 0.2em; }
   .pictureBlock__image {
+    position: relative;
+    width: 100%;
+    height: 15em;
     aspect-ratio: auto;
-    width: 400px; }
+    border-radius: 0.3em;
+    background-size: cover;
+    border: solid 2px #cfcfcf; }
+    .pictureBlock__image:hover {
+      border: solid 2px #00c2bf; }
+    .pictureBlock__image__info {
+      display: flex;
+      flex-flow: row wrap;
+      position: absolute;
+      background: #1f1f1f;
+      padding: 0.3em 0.5em 0.3em 0.5em;
+      width: 18em;
+      height: 5em;
+      transform: translateY(150%) translateX(5%);
+      z-index: 999; }
+      .pictureBlock__image__info__selector {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 0.2em 0.5em 0.2em 0.5em;
+        margin: 0.2em 0.2em 0.2em 0.2em;
+        background-color: #1f1f1f;
+        border: solid 1px #fff;
+        border-radius: 0.5em;
+        color: #cfcfcf;
+        height: 2em;
+        font-size: 0.7em; }
+    .pictureBlock__image__expander {
+      width: 3em;
+      height: 3em; }
 
 /*# sourceMappingURL=PictureBlock.module.css.map */

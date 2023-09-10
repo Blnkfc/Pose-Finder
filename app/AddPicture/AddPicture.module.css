@@ -1,0 +1,28 @@
+.addPicture {
+  display: flex; }
+  .addPicture__load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40em;
+    height: 40em;
+    aspect-ratio: auto;
+    margin: 0 2em 1em 1em; }
+    .addPicture__load::after {
+      content: "";
+      position: absolute;
+      width: 40em;
+      height: 40em;
+      background-color: black;
+      opacity: 60%; }
+    .addPicture__load__input {
+      isolation: isolate;
+      z-index: 99; }
+      .addPicture__load__input input {
+        width: 10em;
+        height: 2em; }
+  .addPicture__sidebar {
+    display: flex;
+    flex-flow: wrap column; }
+
+/*# sourceMappingURL=AddPicture.module.css.map */

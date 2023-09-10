@@ -3,34 +3,47 @@
     {
       "id": "randomString",
       "url": "https://img.freepik.com/free-photo/back-view-of-woman-doing-yoga-outdoors_23-2148769551.jpg?w=2000",
-      "name": "Image name",
+      "name": "Image1 name",
       "selectors": [
-        {"Male": false},
-        {"Female": true},
-        {"Hands": false},
-        {"Legs": false},
-        {"Head": false},
-        {"Waist": true}]
+        { "name": "Male", "isActive": true },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": false },
+        { "name": "Legs", "isActive": true },
+        { "name": "Head", "isActive": false },
+        { "name": "Waist", "isActive": false }]
     },
     {
       "id": "randomString2",
       "url": "https://img.freepik.com/free-photo/back-view-of-woman-doing-yoga-outdoors_23-2148769551.jpg?w=2000",
-      "name": "Image name",
+      "name": "Image2 name",
       "selectors": [
-        {"Male": false},
-        {"Female": true},
-        {"Hand": false},
-        {"Legs": false},
-        {"Heads": false},
-        {"Waist": true}]
+        { "name": "Male", "isActive": false },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": false },
+        { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": false },
+        { "name": "Waist", "isActive": false }]
     }
   ],
   "searchList":[
-    {"Male": false},
-    {"Female": false},
-    {"Hand": false},
-    {"Legs": false},
-    {"Heads": false},
-    {"Waist": false}
-  ]
+    { "name": "Male", "isActive": false },
+    { "name": "Female", "isActive": false },
+    { "name": "Hands", "isActive": false },
+    { "name": "Legs", "isActive": false },
+    { "name": "Head", "isActive": false },
+    { "name": "Waist", "isActive": false }
+  ],
+  "addPictureState": {
+    "title": "",
+    "id": null,
+    "selectors": [
+      { "name": "Male", "isActive": false },
+      { "name": "Female", "isActive": false },
+      { "name": "Hands", "isActive": false },
+      { "name": "Legs", "isActive": false },
+      { "name": "Head", "isActive": false },
+      { "name": "Waist", "isActive": false }
+    ],
+    "inputValue": ""
+  }
 }

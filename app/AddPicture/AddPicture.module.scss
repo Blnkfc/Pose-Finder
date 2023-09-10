@@ -1,0 +1,31 @@
+.addPicture{
+  display: flex;
+  &__load{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40em;
+    height: 40em;
+    aspect-ratio: auto;
+    margin: 0 2em 1em 1em;
+    &::after{
+      content: "";
+      position: absolute;
+      width: 40em;
+      height: 40em;
+      background-color: black;
+      opacity: 60%;
+    }
+    &__input{
+      isolation: isolate;
+      z-index: 99;
+      input{width: 10em;
+        height: 2em;}
+
+    }
+  }
+  &__sidebar{
+    display: flex;
+    flex-flow: wrap column;
+  }
+}

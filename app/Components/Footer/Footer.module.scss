@@ -1,9 +1,21 @@
+@import "../../variables.module";
+
 .footer{
-  width: 50%;
-  margin-left: 25%;
+  width: 100%;
+  background-color: $background-dark;
   &__info{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
+    a{
+      text-decoration: none;
+      color: $text-light;
+      transition: all 0.2s;
+      &:hover{
+        color: $teal-color;
+
+      }
+    }
     &__logo{
       display: block;
       width: 3em;

@@ -1,27 +1,16 @@
+
 import FeedSidebar from "@/app/Feed/FeedSidebar/FeedSidebar";
-import {useState} from "react";
+
+import React from 'react'
+import {useStore} from "@/src/store";
 
 
-export default function FeedLayout({ children }) {
-    const initialSearchList = [
-        {Male: false},
-        {Female: false},
-        {Hand: false},
-        {Legs: false},
-        {Heads: false},
-        {Waist: false}
-    ]
-    const [searchList, setSearchList] = useState(initialSearchList)
-    const retrieveSearchList = (list) => {
-        const initialSearchListCopy = [...initialSearchList]
+export default  function FeedLayout({ children }) {
 
-    }
-
-
+    /*{React.cloneElement(children, {searchList})}*/
     return(
         <div className={'feed__wrapper'}>
-            <span className={"feed__content"}>{children}</span>
-            <FeedSidebar className={"feed__sidebar"} retrieveSearchList={retrieveSearchList} />
+            <span className={"feed__content"} >{children}</span>
         </div>
     )
 }

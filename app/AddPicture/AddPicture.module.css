@@ -1,5 +1,20 @@
+.selector-button-template, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #1f1f1f;
+  border: solid 1px #fff;
+  border-radius: 0.5em;
+  color: #cfcfcf;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #00c2bf;
+    color: #fff;
+    cursor: pointer; }
+
 .addPicture {
-  display: flex; }
+  display: flex;
+  background: #1f1f1f;
+  padding-top: 1em; }
   .addPicture__load {
     display: flex;
     justify-content: center;
@@ -14,15 +29,70 @@
       width: 40em;
       height: 40em;
       background-color: black;
-      opacity: 60%; }
+      opacity: 60%;
+      border: solid 2px #00c2bf;
+      border-radius: 0.5em; }
     .addPicture__load__input {
       isolation: isolate;
       z-index: 99; }
       .addPicture__load__input input {
-        width: 10em;
-        height: 2em; }
+        width: 15em;
+        height: 2em;
+        background: #454545;
+        border: #cfcfcf;
+        color: #cfcfcf; }
+      .addPicture__load__input button {
+        background: #1f1f1f;
+        height: 2em;
+        border: solid 1px #00c2bf;
+        border-radius: 0.3em;
+        color: #cfcfcf;
+        padding: 0 0.5em 0 0.5em;
+        margin-left: 0.5em; }
   .addPicture__sidebar {
     display: flex;
     flex-flow: wrap column; }
+    .addPicture__sidebar p {
+      font-size: 2em;
+      color: #cfcfcf; }
+    .addPicture__sidebar__title {
+      padding-bottom: 2em; }
+      .addPicture__sidebar__title input {
+        width: 15em;
+        height: 2em;
+        background: #454545;
+        border: #cfcfcf;
+        color: #cfcfcf; }
+    .addPicture__sidebar__selectors {
+      padding-bottom: 2em; }
+    .addPicture__sidebar__submit a {
+      background: #1f1f1f;
+      border: solid 1px #00c2bf;
+      border-radius: 0.3em;
+      color: #cfcfcf;
+      text-decoration: none;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      width: 7em;
+      height: 1.5em; }
+      .addPicture__sidebar__submit a:hover {
+        cursor: pointer;
+        background-color: #00c2bf;
+        border: solid 1px #fff;
+        color: #fff; }
+    .addPicture__sidebar__submit__error {
+      margin-bottom: 0.5em; }
+      .addPicture__sidebar__submit__error p {
+        color: #ff0000;
+        font-size: 1em; }
+      .addPicture__sidebar__submit__error button {
+        width: 1.5em;
+        height: 1.5em;
+        color: #fff;
+        background-color: #ff0000;
+        border: solid 1px #fff;
+        border-radius: 0.2em;
+        margin-left: 0.5em; }
+        .addPicture__sidebar__submit__error button:hover {
+          cursor: pointer; }
 
 /*# sourceMappingURL=AddPicture.module.css.map */

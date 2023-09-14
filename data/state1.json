@@ -34,8 +34,9 @@
     { "name": "Waist", "isActive": false }
   ],
   "addPictureState": {
-    "title": "",
-    "id": null,
+    "pictureId": "",
+    "name": "",
+    "url": "",
     "selectors": [
       { "name": "Male", "isActive": false },
       { "name": "Female", "isActive": false },
@@ -43,7 +44,6 @@
       { "name": "Legs", "isActive": false },
       { "name": "Head", "isActive": false },
       { "name": "Waist", "isActive": false }
-    ],
-    "inputValue": ""
+    ]
   }
 }

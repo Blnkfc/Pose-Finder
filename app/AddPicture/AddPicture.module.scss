@@ -1,5 +1,8 @@
+@import "../variables.module";
 .addPicture{
   display: flex;
+  background: $background-dark;
+  padding-top: 1em;
   &__load{
     display: flex;
     justify-content: center;
@@ -15,17 +18,80 @@
       height: 40em;
       background-color: black;
       opacity: 60%;
+      border: solid 2px $teal-color;
+      border-radius: 0.5em;
     }
     &__input{
       isolation: isolate;
       z-index: 99;
-      input{width: 10em;
-        height: 2em;}
-
+      input{
+        width: 15em;
+        height: 2em;
+        background: lighten($background-dark, 15%);
+        border: $text-light;
+        color: $text-light;
+      }
     }
   }
   &__sidebar{
     display: flex;
     flex-flow: wrap column;
+    p{
+      font-size: 2em;
+      color: $text-light;
+    }
+    &__title{
+      padding-bottom: 2em;
+      input{
+        width: 15em;
+        height: 2em;
+        background:lighten( $background-dark, 15%);
+        border: $text-light;
+        color: $text-light;
+      }
+    }
+    &__selectors{
+      padding-bottom: 2em;
+      button{
+        @extend .selector-button-template;
+      }
+    }
+    &__submit{
+      a{
+        background: $background-dark;
+        border: solid 1px $teal-color;
+        border-radius: 0.3em;
+        color: $text-light;
+        text-decoration: none;
+        padding: 0.2em 0.5em 0.2em 0.5em ;
+        width: 7em;
+        height: 1.5em;
+        &:hover{
+          cursor: pointer;
+          background-color: $teal-color;
+          border: solid 1px $white-color;
+          color: $white-color;
+        }
+      }
+      &__error{
+        margin-bottom: 0.5em;
+        p{
+          color: $text-red;
+          font-size: 1em;
+        }
+        button{
+          width: 1.5em;
+          height: 1.5em;
+          color: $white-color;
+          background-color: $text-red;
+          border: solid 1px $white-color;
+          border-radius: 0.2em;
+          margin-left: 0.5em;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
   }
 }

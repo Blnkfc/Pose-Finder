@@ -2,7 +2,6 @@
 import PictureBlock from "@/app/Feed/PictureBlock/page";
 import {useStore} from "@/src/store";
 import React, {useEffect, useState} from "react";
-import {log} from "next/dist/server/typescript/utils";
 import FeedSidebar from "@/app/Feed/FeedSidebar/FeedSidebar";
 
 
@@ -47,10 +46,14 @@ const Feed = () => {
     useEffect(() => {
         setPhotos (
             feedFilter(photoList, searchList)
-                .map((PhotoUnit, index) => (<PictureBlock key={index} name={PhotoUnit.name} url={PhotoUnit.url} id={PhotoUnit.id} searchlist={searchList} />))
+                .map((PhotoUnit, index) => (<PictureBlock
+                    key={index}
+                    name={PhotoUnit.name}
+                    url={PhotoUnit.url}
+                    id={PhotoUnit.id}
+                    searchlist={searchList} />))
         )
     }, [photoList, searchList])
-
 
 
     return (

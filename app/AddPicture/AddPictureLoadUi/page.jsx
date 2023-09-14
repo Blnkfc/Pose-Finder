@@ -9,7 +9,7 @@ const AddPictureLoadUi =  () => {
 
     /*  LOAD SETUP  */
     /* const initialLinkValue = initialData.inputValue*/
-    const [link, setLink] = useState(initialData.inputValue)
+    const [link, setLink] = useState(initialData.url)
     /*  SETTING VALUE FOR INPUT ACCORDING TO STATE  */
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const AddPictureLoadUi =  () => {
         const linkValue = document.getElementById("load_link").value;
         useStore.setState((state) => {
             const updatedAddPicture = state.addPictureState;
-            updatedAddPicture.inputValue = linkValue;
+            updatedAddPicture.url = linkValue;
             setLink(linkValue)
             return { addPictureState: updatedAddPicture };
         });
@@ -31,10 +31,8 @@ const AddPictureLoadUi =  () => {
 
     return (
         <div className="addPicture__load" style={{backgroundImage: link?`url(${link})`:`url("")`, backgroundSize: "cover"}}>
-
             <div className={"addPicture__load__input"}>
-                <input type="text" id="load_link" ></input>
-                <button onClick={retrieveLink}  >Submit</button>
+                <input type="text" id="load_link"  onChange={retrieveLink}  ></input>
             </div>
     </div>)
 }

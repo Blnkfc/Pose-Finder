@@ -20,13 +20,16 @@
       border: solid 2px #00c2bf; }
     .pictureBlock__image__info {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: column wrap;
+      justify-content: space-between;
       position: absolute;
       background: #1f1f1f;
       padding: 0.3em 0.5em 0.3em 0.5em;
+      border: solid 1px #cfcfcf;
+      border-radius: 0.5em;
       width: 18em;
-      height: 5em;
-      transform: translateY(150%) translateX(5%);
+      height: 7em;
+      transform: translateY(100%) translateX(5%);
       z-index: 999; }
       .pictureBlock__image__info__selector {
         display: flex;
@@ -40,8 +43,26 @@
         color: #cfcfcf;
         height: 2em;
         font-size: 0.7em; }
-    .pictureBlock__image__expander {
-      width: 3em;
-      height: 3em; }
+        .pictureBlock__image__info__selector__wrapper {
+          display: flex;
+          width: 100%; }
+    .pictureBlock__image__expander__up {
+      width: 2em;
+      height: 2em;
+      position: absolute;
+      transform: translateY(-110%) translateX(10%);
+      border: 1px solid #cfcfcf;
+      border-radius: 0.5em;
+      background: #1f1f1f;
+      color: #00c2bf;
+      font-size: 0.9em; }
+    .pictureBlock__image__expander__down {
+      width: 2em;
+      height: 2em;
+      border: 1px solid #cfcfcf;
+      border-radius: 0.5em;
+      background: #1f1f1f;
+      color: #00c2bf;
+      font-size: 0.9em; }
 
 /*# sourceMappingURL=PictureBlock.module.css.map */

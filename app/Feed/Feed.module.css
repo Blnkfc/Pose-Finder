@@ -1,3 +1,16 @@
+.selector-button-template, .feed__sidebar__categories button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #1f1f1f;
+  border: solid 1px #fff;
+  border-radius: 0.5em;
+  color: #cfcfcf;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover {
+    background-color: #00c2bf;
+    color: #fff;
+    cursor: pointer; }
+
 .feed__wrapper {
   display: flex;
   width: 100%;
@@ -22,17 +35,5 @@
     .feed__sidebar__categories {
       display: flex;
       flex-flow: row wrap; }
-      .feed__sidebar__categories button {
-        padding: 0.2em 0.5em 0.2em 0.5em;
-        margin: 0.2em 0.2em 0.2em 0.2em;
-        background-color: #1f1f1f;
-        border: solid 1px #fff;
-        border-radius: 0.5em;
-        color: #cfcfcf;
-        transition: all 0.1s; }
-        .feed__sidebar__categories button:hover {
-          background-color: #00c2bf;
-          color: #fff;
-          cursor: pointer; }
 
 /*# sourceMappingURL=Feed.module.css.map */

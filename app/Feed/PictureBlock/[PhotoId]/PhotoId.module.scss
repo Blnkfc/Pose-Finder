@@ -1,3 +1,5 @@
+@import "../../../variables.module";
+
 .picture__wrapper{
   display: flex;
   &__image{
@@ -6,9 +8,33 @@
   }
   &__sidebar{
     margin-left: 5em;
+    h2{
+      color: $text-light;
+    }
     &__selectors{
+      color: $text-light;
       span{
         margin: 1em;
+        border: solid 1px $teal-color;
+        border-radius: 0.5em;
+        background: $background-dark;
+        padding: 0.3em 0.5em 0.3em 0.5em ;
+
+      }
+    }
+    &__delete{
+      margin-top: 3em;
+      a{
+        text-decoration: none;
+        color: $text-light;
+        border: solid 1px $text-red;
+        border-radius: 0.5em;
+        padding: 0.3em 0.5em 0.3em 0.5em ;
+        &:hover{
+          background: $text-red;
+          color: $white-color;
+          border: $white-color solid 1px;
+        }
       }
     }
   }

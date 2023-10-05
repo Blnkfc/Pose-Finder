@@ -10,6 +10,7 @@ const Feed = () => {
     const photoList = useStore((state) => state.photoList)
     const searchList = useStore((state) => state.searchList)
 
+    /*  OBJECT WITH GENERAL LIST OF SELECTORS TO CHECK FOR ACTIVE SELECTORS LATER  */
     const initialSelectorList = [
         { name: "Male", isActive: false },
         { name: "Female", isActive: false },
@@ -25,7 +26,7 @@ const Feed = () => {
 
 
     /*  CHECK FOR ACTIVE SELECTORS  */
-    /*  photoList IS THE LIST OF ALL PHOTOS IN FEED, selectorList IS A SET OF SELECTOR IN GENERAL FORM  */
+    /*  photoList IS THE LIST OF ALL PHOTOS IN FEED, selectorList IS A SET OF SELECTORS FROM THE STATE FORM  */
    function feedFilter (photoList, selectorList) {
        const photoListFiltered = []
        if (JSON.stringify(selectorList) === JSON.stringify(initialSelectorList)) {
@@ -42,7 +43,7 @@ const Feed = () => {
    }
 
 
-    /*  INITIALIZING THE LIST OF PHOTOS TO SHOW IN FEED  */
+    /*  INITIALIZING THE LIST OF PHOTOS TO SHOW IN FEED, ONLY HAPPENS ON photoList OR searchList UPDATE  */
     useEffect(() => {
         setPhotos (
             feedFilter(photoList, searchList)

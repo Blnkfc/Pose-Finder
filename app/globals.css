@@ -73,9 +73,9 @@
       border: solid 1px #fff;
       color: #fff;
       background-color: #00c2bf;
-      -webkit-box-shadow: 0px 0px 6px 0px white;
-      -moz-box-shadow: 0px 0px 6px 0px white;
-      box-shadow: 0px 0px 6px 0px white; }
+      -webkit-box-shadow: 0 0 6px 0 white;
+      -moz-box-shadow: 0 0 6px 0 white;
+      box-shadow: 0 0 6px 0 white; }
 
 .selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
   padding: 0.2em 0.5em 0.2em 0.5em;
@@ -170,6 +170,9 @@
 
 .feed {
   display: flex;
+  flex-wrap: wrap;
+  align-content: baseline;
+  row-gap: 0.4em;
   padding-right: 0.5em;
   width: 100%; }
   .feed__content {
@@ -200,7 +203,7 @@
 
 .pictureBlock {
   display: inline-block;
-  width: 25%;
+  min-width: 25%;
   height: 15em; }
   .pictureBlock__name {
     position: absolute;
@@ -285,12 +288,15 @@
     width: 50%; }
   .picture__wrapper__sidebar {
     margin-left: 5em; }
-    .picture__wrapper__sidebar h2 {
+    .picture__wrapper__sidebar h1 {
       color: #cfcfcf; }
+    .picture__wrapper__sidebar h2 {
+      color: #cfcfcf;
+      margin-bottom: 1em; }
     .picture__wrapper__sidebar__selectors {
       color: #cfcfcf; }
       .picture__wrapper__sidebar__selectors span {
-        margin: 1em;
+        margin-right: 1em;
         border: solid 1px #00c2bf;
         border-radius: 0.5em;
         background: #1f1f1f;
@@ -345,20 +351,14 @@
     .addPicture__load__input {
       isolation: isolate;
       z-index: 99; }
+      .addPicture__load__input p {
+        color: #cfcfcf; }
       .addPicture__load__input input {
         width: 15em;
         height: 2em;
         background: #454545;
         border: #cfcfcf;
         color: #cfcfcf; }
-      .addPicture__load__input button {
-        background: #1f1f1f;
-        height: 2em;
-        border: solid 1px #00c2bf;
-        border-radius: 0.3em;
-        color: #cfcfcf;
-        padding: 0 0.5em 0 0.5em;
-        margin-left: 0.5em; }
   .addPicture__sidebar {
     display: flex;
     flex-flow: wrap column; }
@@ -381,6 +381,7 @@
       border-radius: 0.3em;
       color: #cfcfcf;
       text-decoration: none;
+      text-align: center;
       padding: 0.2em 0.5em 0.2em 0.5em;
       width: 7em;
       height: 1.5em; }
@@ -394,15 +395,72 @@
       .addPicture__sidebar__submit__error p {
         color: #ff0000;
         font-size: 1em; }
-      .addPicture__sidebar__submit__error button {
+      .addPicture__sidebar__submit__error a {
         width: 1.5em;
         height: 1.5em;
         color: #fff;
         background-color: #ff0000;
         border: solid 1px #fff;
         border-radius: 0.2em;
-        margin-left: 0.5em; }
-        .addPicture__sidebar__submit__error button:hover {
+        margin-left: 0.5em;
+        text-align: center; }
+        .addPicture__sidebar__submit__error a:hover {
           cursor: pointer; }
+      .addPicture__sidebar__submit__error button {
+        background: #ff0000;
+        border: solid 1px #cfcfcf;
+        border-radius: 0.3em;
+        cursor: pointer;
+        color: #cfcfcf;
+        text-decoration: none;
+        text-align: center;
+        width: 1.5em;
+        height: 1.5em; }
+
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #1f1f1f;
+  border: solid 1px #fff;
+  border-radius: 0.5em;
+  color: #cfcfcf;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #00c2bf;
+    color: #fff;
+    cursor: pointer; }
+
+.contacts {
+  background-color: #1f1f1f;
+  height: 100vh;
+  padding: 1em 0 0 1em; }
+  .contacts h1 {
+    color: #00c2bf;
+    margin-bottom: 1em; }
+  .contacts-list {
+    display: flex; }
+    .contacts-list a {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      background-color: #1f1f1f;
+      padding: 1em;
+      width: 10em;
+      text-decoration: none;
+      border: 1px solid #00c2bf;
+      border-radius: 0.5em;
+      color: #00c2bf;
+      margin-right: 1.5em; }
+      .contacts-list a:hover {
+        padding: 0.8em;
+        cursor: pointer;
+        color: #cfcfcf; }
+        .contacts-list a:hover img {
+          width: 2.3em;
+          height: 2.3em; }
+      .contacts-list a img {
+        width: 2em;
+        height: 2em;
+        margin-right: 0.5em; }
 
 /*# sourceMappingURL=globals.css.map */

@@ -8,13 +8,17 @@
   }
   &__sidebar{
     margin-left: 5em;
+    h1{
+      color: $text-light;
+    }
     h2{
       color: $text-light;
+      margin-bottom: 1em;
     }
     &__selectors{
       color: $text-light;
       span{
-        margin: 1em;
+        margin-right: 1em;
         border: solid 1px $teal-color;
         border-radius: 0.5em;
         background: $background-dark;

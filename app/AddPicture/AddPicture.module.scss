@@ -24,6 +24,9 @@
     &__input{
       isolation: isolate;
       z-index: 99;
+      p{
+        color: $text-light
+      }
       input{
         width: 15em;
         height: 2em;
@@ -63,6 +66,7 @@
         border-radius: 0.3em;
         color: $text-light;
         text-decoration: none;
+        text-align: center;
         padding: 0.2em 0.5em 0.2em 0.5em ;
         width: 7em;
         height: 1.5em;
@@ -79,7 +83,7 @@
           color: $text-red;
           font-size: 1em;
         }
-        button{
+        a{
           width: 1.5em;
           height: 1.5em;
           color: $white-color;
@@ -87,9 +91,21 @@
           border: solid 1px $white-color;
           border-radius: 0.2em;
           margin-left: 0.5em;
+          text-align: center;
           &:hover{
             cursor: pointer;
           }
+        }
+        button{
+          background: $text-red;
+          border: solid 1px $text-light;
+          border-radius: 0.3em;
+          cursor: pointer;
+          color: $text-light;
+          text-decoration: none;
+          text-align: center;
+          width: 1.5em;
+          height: 1.5em;
         }
       }
     }

@@ -5,10 +5,10 @@ import Link from "next/link";
 
 
 function PicturePage({params}){
-    /*  FETCHING LIST OF ALL PHOTOS  */
+    /*  INITIALIZING THE GIVEN LIT OF PHOTOS  */
     const photoList = useStore((state) => state.photoList)
     const setPhotoList = useStore((state) => state.setPhotoList)
-    console.log(params)
+
     /*  TEMPORARY VARIABLES FOR INFORMATION ABOUT THE GIVEN IMAGE, AND THE LIST OF ACTIVE SELECTORS OF THAT IMAGE  */
     let imageInfo = undefined
     let selectorList = []
@@ -22,11 +22,11 @@ function PicturePage({params}){
            return imageInfo
             })
 
-    /*  PARSING INFORMATION FROM STATE OF IMAGE  */
+    /*  PARSING INFORMATION ABOUT SELECTORS FROM STATE OF IMAGE  */
     if(imageInfo){
-        imageInfo.selectors.forEach((image) => {
-            if(image.isActive){
-                selectorList.push(image.name)
+        imageInfo.selectors.forEach((selector) => {
+            if(selector.isActive){
+                selectorList.push(selector.name)
             }
         })
     }
@@ -40,7 +40,7 @@ function PicturePage({params}){
     }
 
 
-
+    /*  DELETING THE GIVEN PICTURE VIA ID AND UPDATING LOCAL STORAGE  */
     const deletePicture = () => {
         if (imageInfo) {
             const index = photoList.findIndex((i) => i.id === params.PhotoId);
@@ -49,7 +49,6 @@ function PicturePage({params}){
                 updatedPhotoList.splice(index, 1);
                 setPhotoList(updatedPhotoList);
                 localStorage.setItem('feed', JSON.stringify(updatedPhotoList));
-
             }
         }
     };
@@ -62,6 +61,7 @@ function PicturePage({params}){
                  title={imageInfo?imageInfo.name:""}
                  className={"picture__wrapper__image"}/>
             <div className={"picture__wrapper__sidebar"}>
+                <h1>{imageInfo?imageInfo.name:""}</h1>
                 <h2>Tags:</h2>
                 <div className={"picture__wrapper__sidebar__selectors"}>
                     {selectors}

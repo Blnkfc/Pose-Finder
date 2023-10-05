@@ -1,7 +1,7 @@
 @import "../../variables.module";
 .pictureBlock{
   display: inline-block;
-  width: 25%;
+  min-width: 25%;
   height: 15em;
   &__name{
     position: absolute;

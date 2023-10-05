@@ -1,0 +1,40 @@
+@import "../variables.module";
+.contacts{
+  background-color: $background-dark;
+  height: 100vh;
+  padding: 1em 0 0 1em ;
+  h1{
+    color: $teal-color;
+    margin-bottom: 1em;
+  }
+  &-list{
+    display: flex;
+    a{
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      background-color: $background-dark;
+      padding: 1em;
+      width: 10em;
+      text-decoration: none;
+      border: 1px solid $teal-color;
+      border-radius: 0.5em;
+      color: $teal-color;
+      margin-right: 1.5em;
+      &:hover{
+        padding: 0.8em;
+        cursor: pointer;
+        color: $text-light;
+        img{
+          width: 2.3em;
+          height: 2.3em;
+        }
+      }
+      img{
+        width: 2em;
+        height: 2em;
+        margin-right: 0.5em;
+      }
+    }
+  }
+}

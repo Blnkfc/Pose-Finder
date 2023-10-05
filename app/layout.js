@@ -1,11 +1,14 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Lato } from 'next/font/google'
 import Header from "@/app/Components/Header/Header";
 import Footer from "@/app/Components/Footer/Footer";
 import {useStore} from "@/src/store";
 import StoreInitializer from "@/app/StoreInitialier/storeInitializer";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Lato({
+  subsets: ['latin'],
+  weight: '400',
+})
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,6 +17,7 @@ export const metadata = {
 
   export default async function RootLayout({ children }) {
 
+  /*  INITIALIZING DATA ON THE SERVER SIDE  */
   const dataRes = await fetch("http://localhost:8080/state1.json", {cache:'no-store'})
   const data = await dataRes.json()
   useStore.setState({
@@ -22,7 +26,7 @@ export const metadata = {
     addPictureState: data.addPictureState
   })
 
-
+    /*  INITIALIZING DATA ON THE CLIENT SIDE VIA StoreInitializer COMPONENT  */
   return (
     <html lang="en">
     <body>

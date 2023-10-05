@@ -9,6 +9,9 @@
 }
 .feed{
   display: flex;
+  flex-wrap: wrap;
+  align-content: baseline;
+  row-gap: 0.4em;
   padding-right: 0.5em;
   width: 100%;
   &__content{

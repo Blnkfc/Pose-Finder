@@ -35,20 +35,14 @@
     .addPicture__load__input {
       isolation: isolate;
       z-index: 99; }
+      .addPicture__load__input p {
+        color: #cfcfcf; }
       .addPicture__load__input input {
         width: 15em;
         height: 2em;
         background: #454545;
         border: #cfcfcf;
         color: #cfcfcf; }
-      .addPicture__load__input button {
-        background: #1f1f1f;
-        height: 2em;
-        border: solid 1px #00c2bf;
-        border-radius: 0.3em;
-        color: #cfcfcf;
-        padding: 0 0.5em 0 0.5em;
-        margin-left: 0.5em; }
   .addPicture__sidebar {
     display: flex;
     flex-flow: wrap column; }
@@ -71,6 +65,7 @@
       border-radius: 0.3em;
       color: #cfcfcf;
       text-decoration: none;
+      text-align: center;
       padding: 0.2em 0.5em 0.2em 0.5em;
       width: 7em;
       height: 1.5em; }
@@ -84,15 +79,26 @@
       .addPicture__sidebar__submit__error p {
         color: #ff0000;
         font-size: 1em; }
-      .addPicture__sidebar__submit__error button {
+      .addPicture__sidebar__submit__error a {
         width: 1.5em;
         height: 1.5em;
         color: #fff;
         background-color: #ff0000;
         border: solid 1px #fff;
         border-radius: 0.2em;
-        margin-left: 0.5em; }
-        .addPicture__sidebar__submit__error button:hover {
+        margin-left: 0.5em;
+        text-align: center; }
+        .addPicture__sidebar__submit__error a:hover {
           cursor: pointer; }
+      .addPicture__sidebar__submit__error button {
+        background: #ff0000;
+        border: solid 1px #cfcfcf;
+        border-radius: 0.3em;
+        cursor: pointer;
+        color: #cfcfcf;
+        text-decoration: none;
+        text-align: center;
+        width: 1.5em;
+        height: 1.5em; }
 
 /*# sourceMappingURL=AddPicture.module.css.map */

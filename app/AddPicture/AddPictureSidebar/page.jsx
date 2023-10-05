@@ -11,6 +11,7 @@ const AddPictureSidebar = () => {
     const setFeedState = useStore((state) => state.setPhotoList);
 
     /*  CLEAN DATA SET FOR RESTORING STARTING POSITION OF THE PAGE  */
+    /*  TODO  */
     const cleanDataSet = {
         pictureId: "",
         name: "",
@@ -29,10 +30,11 @@ const AddPictureSidebar = () => {
     useEffect(() => {
         const newId = Math.random().toString(36).slice(2,7)
         setId(newId)
-    }, [])
+    }, []) //HAPPENS ONLY WHE LOADING THE PAGE
+
+
 
     /*  TITLE SETUP  */
-
     const [title, setTitle] = useState(initialData.name)
 
     useEffect(() => {
@@ -40,7 +42,7 @@ const AddPictureSidebar = () => {
         if (titleInput) {
             titleInput.value = title;
         }
-    }, [title]);
+    }, [title]);//HAPPENS ON CHANGE OF THE title
 
     const retrieveTitle = () => {
         const titleValue = document.getElementById("sidebar_title").value;
@@ -50,6 +52,7 @@ const AddPictureSidebar = () => {
             setTitle(titleValue)
             return { addPictureState: updatedAddPicture };
         });
+        handleError()
     }
 
 
@@ -68,7 +71,7 @@ const AddPictureSidebar = () => {
         return setSelectorsList(updatedSelectorsList)
     }
 
-    /*  MAPPING SELECTORS INO THE LIST OF BUTTONS  */
+    /*  MAPPING SELECTORS INTO THE LIST OF BUTTONS  */
     const selectors = selectorsList.map((S, index) => {
         return(
             <button
@@ -85,12 +88,11 @@ const AddPictureSidebar = () => {
 
     /*  ADDITION TO STATE SETUP  */
 
-
     useEffect(() => {
-        // Load the data from local storage
+        // GETTING THE DATA FROM LOCAL STORAGE
         const storedFeed = localStorage.getItem('feed');
 
-        // Parse the data and set it to the state
+        // PARSE THE DATA TO THE STATE SO IT STAY UPDATED
         if (storedFeed) {
             const parsedFeed = JSON.parse(storedFeed);
             setFeedState(parsedFeed);
@@ -98,6 +100,7 @@ const AddPictureSidebar = () => {
     }, []);
 
     /*  DATA ERROR HANDLING  SETUP  */
+    //CREATING THE OBJECT THAT WILL BE ADDED TO THE photoList
     const newPhoto = {
         id: id,
         url: initialData.url,
@@ -105,34 +108,26 @@ const AddPictureSidebar = () => {
         selectors: selectorsList
     }
 
-
-    const [error, setError] = useState(false)
-    const [path, setPath] = useState("/AddPicture   ")
-    const toggleError = (error) => {
-        setError(!error)
-    }
+    /*  STATE OF THE ERROR  */
+    const [error, setError] = useState(true)
+    /*  EXPANDER FOR THE ALERT ABOUT ERROR  */
+    const [errorExpand, setErrorExpand] = useState(false)
+    /*  ERROR HANDLER FOR NAME AND URL AVAILABILITY  */
     const handleError = () => {
-        if(JSON.stringify(newPhoto.url) || JSON.stringify(newPhoto.name) === ""){
-            toggleError()
-            setPath("/Feed")
+        if (newPhoto.url === "" || newPhoto.name === ""){
+            setErrorExpand(true)
+        }else{
+            setError(false)
+            setErrorExpand(false)
         }
-        console.log(newPhoto.url)
-        console.log(newPhoto.name)
-        console.log(JSON.stringify(newPhoto.url) || JSON.stringify(newPhoto.name) === "")
     }
 
-
-
+    /*  SENDING THE DATA TO THE STATE AND UPDATING LOCAL STORAGE  */
     const postToState = () => {
-        if (newPhoto.name || newPhoto.url === "") {
-            toggleError()
-        }else{
             const updatedFeed = [...feed];
             updatedFeed.push(newPhoto);
             localStorage.setItem('feed', JSON.stringify(updatedFeed));
             return setFeedState(updatedFeed);
-
-        }
     }
 
 
@@ -146,11 +141,19 @@ const AddPictureSidebar = () => {
         <div className="addPicture__sidebar__submit" >
             <div
                 className="addPicture__sidebar__submit__error"
-                style={{display: error?"flex":"none"}}>
+                style={{display: errorExpand?"flex":"none"}}
+                >
                 <p>Url or name for image were not set</p>
                 <button onClick={handleError} >⭮</button>
             </div>
-            <Link  onClick={postToState} href={path} >Submit</Link>
+            <Link
+                onClick={handleError}
+                href={"/AddPicture"}
+                style={{display: error?"block":"none"}} >Submit</Link>
+            <Link
+                onClick={postToState}
+                href={"/Feed"}
+                style={{display: error?"none":"block"}} >Submit</Link>
         </div>
     </div>)
 }

@@ -1,18 +1,24 @@
 'use client';
 import Link from "next/link";
-import {useEffect, useRef, useState} from "react";
+import {useState} from "react";
 import {useStore} from "@/src/store"
 
 
 const PictureBlock = (props) => {
+    /*  INITIALIZING DATA FROM FEED  */
     const initialState = useStore((state) => state.photoList)
+    /*  RETRIEVING DATA ABOUT NEEDED PICTURE VIA IT'S ID  */
     const pictureData = initialState.find(photo => JSON.stringify(photo.id) === JSON.stringify(props.id))
 
+    /*  SETTING UP A STATE FOR THE POPUP WITH INFORMATION ABOUT THE PICTURE  */
     const [expand,setExpand] = useState(false)
     const toggleExpand = () => {
         console.log(expand)
         return setExpand(!expand)
     }
+
+
+    /*  RETRIEVING SELECTORS AND LISTING THEM WITH STYLING DEPENDING ON THEIR STATE  */
     const selectors = pictureData.selectors.
     map((S, index) =>
         (<div
@@ -44,7 +50,9 @@ const PictureBlock = (props) => {
                 <button className="pictureBlock__image__expander__up"
                         onClick={toggleExpand}
                         style={{display: expand?"none":"block"}}
-                >⮝</button>
+                >
+                    ⮝
+                </button>
             </div>
         </div>
     )

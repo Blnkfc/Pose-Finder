@@ -1,0 +1,47 @@
+.selector-button-template {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #1f1f1f;
+  border: solid 1px #fff;
+  border-radius: 0.5em;
+  color: #cfcfcf;
+  transition: all 0.1s; }
+  .selector-button-template:hover {
+    background-color: #00c2bf;
+    color: #fff;
+    cursor: pointer; }
+
+.contacts {
+  background-color: #1f1f1f;
+  height: 100vh;
+  padding: 1em 0 0 1em; }
+  .contacts h1 {
+    color: #00c2bf;
+    margin-bottom: 1em; }
+  .contacts-list {
+    display: flex; }
+    .contacts-list a {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      background-color: #1f1f1f;
+      padding: 1em;
+      width: 10em;
+      text-decoration: none;
+      border: 1px solid #00c2bf;
+      border-radius: 0.5em;
+      color: #00c2bf;
+      margin-right: 1.5em; }
+      .contacts-list a:hover {
+        padding: 0.8em;
+        cursor: pointer;
+        color: #cfcfcf; }
+        .contacts-list a:hover img {
+          width: 2.3em;
+          height: 2.3em; }
+      .contacts-list a img {
+        width: 2em;
+        height: 2em;
+        margin-right: 0.5em; }
+
+/*# sourceMappingURL=Contact.module.css.map */

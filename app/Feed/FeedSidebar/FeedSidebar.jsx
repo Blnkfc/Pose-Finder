@@ -2,15 +2,15 @@
 import React, { useEffect, useState } from "react";
 import {useStore} from "@/src/store"
 
-const FeedSidebar = (props) => {
-    /*  SEARCH LIST REFERENCE FROM THE STORE  */
+const FeedSidebar = () => {
+    /*  LIST OF SELECTORS FROM THE STORE  */
     const searchList = useStore((state) => state.searchList)
 
 
     /*  SETTING STATE FOR LIST OF ACTIVE CATEGORIES  */
     const [activeCategoryList, setActiveCategoryList] = useState(searchList)
 
-    /*  ON CLICK HANDLER FOR STATE CHANGES, TOGGLES STATE OF CATEGORIES  */
+    /*  ON CLICK HANDLER FOR CATEGORY STATE CHANGES, TOGGLES STATE OF CATEGORIES FALSE\TRUE  */
     const toggleCategory = (index) => {
         useStore.setState((state) => {
             const updatedSearchList = [...state.searchList];
@@ -18,7 +18,9 @@ const FeedSidebar = (props) => {
             return { searchList: updatedSearchList };
         });
     };
-    /*  LISTING ALL EXISTING CATEGORIES  */
+
+
+    /*  LISTING ALL EXISTING CATEGORIES AND STYLING DEPENDING ON THE STATE OF CATEGORY  */
     const categories = activeCategoryList.map((C, index) => {
         return(
             <button

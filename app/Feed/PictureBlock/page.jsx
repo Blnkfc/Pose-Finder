@@ -19,13 +19,18 @@ const PictureBlock = (props) => {
 
 
     /*  RETRIEVING SELECTORS AND LISTING THEM WITH STYLING DEPENDING ON THEIR STATE  */
-    const selectors = pictureData.selectors.
-    map((S, index) =>
-        (<div
-            key={index}
-            className={"pictureBlock__image__info__selector"}
-            style={{backgroundColor: S.isActive?"#00c2bf":"#1f1f1f" }} > {S.name} </div>))
-
+    const selectors =
+        pictureData && pictureData.selectors
+            ? pictureData.selectors.map((S, index) => (
+                <div
+                    key={index}
+                    className={"pictureBlock__image__info__selector"}
+                    style={{ backgroundColor: S.isActive ? "#00c2bf" : "#1f1f1f" }}
+                >
+                    {S.name}
+                </div>
+            ))
+            : null;
 
 
 

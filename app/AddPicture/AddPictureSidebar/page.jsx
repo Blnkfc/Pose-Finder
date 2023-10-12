@@ -22,7 +22,16 @@ const AddPictureSidebar = () => {
             { name: "Hands", isActive: false },
             { name: "Legs", isActive: false },
             { name: "Head", isActive: false },
-            { name: "Waist", isActive: false }
+            { name:  "Face Features", isActive: false},
+            { name: "Waist", isActive: false },
+            { name: "Full Body", isActive: false },
+            { name:  "Upper Body", isActive: false},
+            { name:  "Lower Body", isActive: false},
+            { name:  "Standing Position", isActive: false},
+            { name:  "Sitting Position", isActive: false},
+            { name:  "Laying Position", isActive: false},
+            { name:  "Moving Position", isActive: false},
+            { name:  "Facial Expression", isActive: false}
         ]}
 
     /*  ID SETUP  */
@@ -124,10 +133,10 @@ const AddPictureSidebar = () => {
 
     /*  SENDING THE DATA TO THE STATE AND UPDATING LOCAL STORAGE  */
     const postToState = () => {
-            const updatedFeed = [...feed];
-            updatedFeed.push(newPhoto);
-            localStorage.setItem('feed', JSON.stringify(updatedFeed));
-            return setFeedState(updatedFeed);
+            const updatedFeed = [...feed]
+            updatedFeed.push(newPhoto)
+            localStorage.setItem('feed', JSON.stringify(updatedFeed))
+            return setFeedState(updatedFeed)
     }
 
 

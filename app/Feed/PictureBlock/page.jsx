@@ -39,14 +39,16 @@ const PictureBlock = (props) => {
             <h3 className={"pictureBlock__name"} >{props.name}</h3>
             <div className={"pictureBlock__image__wrapper"}>
                 <div className={"pictureBlock__image__info"} style={{display: expand?"flex":"none"}} >
-                    <div className="pictureBlock__image__info__selector__wrapper">
-                        {selectors}
-                    </div>
                     <button
-                     className="pictureBlock__image__expander__down"
-                     onClick={toggleExpand} >
+                        className="pictureBlock__image__expander__down"
+                        onClick={toggleExpand} >
                         ⮟
                     </button>
+                    <div className="pictureBlock__image__info__selector__wrapper">
+                        {selectors}
+
+                    </div>
+
                 </div>
                 <Link href={`/Feed/PictureBlock/${props.id}`}>
                     <div className="pictureBlock__image" title={props.name}

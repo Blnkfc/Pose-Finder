@@ -5,12 +5,24 @@
       "url": "https://img.freepik.com/free-photo/back-view-of-woman-doing-yoga-outdoors_23-2148769551.jpg?w=2000",
       "name": "Image1 name",
       "selectors": [
-        { "name": "Male", "isActive": true },
-        { "name": "Female", "isActive": false },
+        { "name": "Male", "isActive": false },
+        { "name": "Female", "isActive": true },
         { "name": "Hands", "isActive": false },
         { "name": "Legs", "isActive": true },
         { "name": "Head", "isActive": false },
-        { "name": "Waist", "isActive": false }]
+        { "name":  "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": true },
+        { "name":  "Upper Body", "isActive": false},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": true},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": false}
+
+
+      ]
     },
     {
       "id": "randomString2",
@@ -18,11 +30,241 @@
       "name": "Image2 name",
       "selectors": [
         { "name": "Male", "isActive": false },
+        { "name": "Female", "isActive": true },
+        { "name": "Hands", "isActive": false },
+        { "name": "Legs", "isActive": true },
+        { "name": "Head", "isActive": false },
+        { "name":  "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": true },
+        { "name":  "Upper Body", "isActive": false},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": true},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": false}
+      ]
+    },
+    {
+      "id": "rfg4R",
+      "url": "https://miro.medium.com/v2/resize:fit:1400/0*go2hwR9q35bmqcox",
+      "name": "Hands",
+      "selectors": [
+        { "name": "Male", "isActive": false },
+        { "name": "Female", "isActive": true },
+        { "name": "Hands", "isActive": true },
+        { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": false },
+        { "name":  "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": false},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": false}
+      ]
+    },
+    {
+      "id": "m5G0z",
+      "url": "https://www.amtamassage.org/contentassets/5f474c0e48b94bc6a05da8c0cb635aaf/playful_self_care_hands_wrists_1200x540.jpg",
+      "name": "Hands 2",
+      "selectors": [
+        { "name": "Male", "isActive": true },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": true },
+        { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": false },
+        { "name":  "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": false},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": false}
+      ]
+    },
+    {
+      "id": "n67yO",
+      "url": "https://pbs.twimg.com/media/FBQUHMZXsAQwrzt.jpg:large",
+      "name": "Title ",
+      "selectors": [
+        { "name": "Male", "isActive": true },
         { "name": "Female", "isActive": false },
         { "name": "Hands", "isActive": false },
         { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": true },
+        { "name":  "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": true},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": true}
+      ]
+    },
+    {
+      "id": "we7BO",
+      "url": "https://shorturl.at/dlrHN",
+      "name": "Title 1",
+      "selectors": [
+        { "name": "Male", "isActive": true },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": false },
+        { "name": "Legs", "isActive": true },
+        { "name": "Head", "isActive": true },
+        { "name":  "Face Features", "isActive": true},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": true},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": true},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": true}
+      ]
+    },
+    {
+      "id": "mn87z",
+      "url": "https://w7.pngwing.com/pngs/400/288/png-transparent-eren-yeager-light-yagami-anime-attack-on-titan-reference-face-black-hair-human.png",
+      "name": "Title 3",
+      "selectors": [
+        { "name": "Male", "isActive": true },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": false },
+        { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": true },
+        { "name":  "Face Features", "isActive": true},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": false},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": true}
+      ]
+    },
+    {
+      "id": "ntgs5",
+      "url": "https://img.freepik.com/free-vector/kawaii-girl-student-character-wearing-randoseru_52683-45040.jpg",
+      "name": "Title 3",
+      "selectors": [
+        { "name": "Male", "isActive": false },
+        { "name": "Female", "isActive": true },
+        { "name": "Hands", "isActive": true },
+        { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": true },
+        { "name":  "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": true },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": true},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": true},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": true}
+      ]
+    },
+    {
+      "id": "1fds5",
+      "url": "https://i.pinimg.com/1200x/3b/bd/a0/3bbda0aa3b65bb616f5de16b60ce7243.jpg",
+      "name": "Title 3",
+      "selectors": [
+        { "name": "Male", "isActive": false },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": true },
+        { "name": "Legs", "isActive": false },
         { "name": "Head", "isActive": false },
-        { "name": "Waist", "isActive": false }]
+        { "name":  "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": true },
+        { "name": "Full Body", "isActive": true },
+        { "name":  "Upper Body", "isActive": true},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": true},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": false}
+      ]
+    },
+    {
+      "id": "sd7z5",
+      "url": "https://static.wikia.nocookie.net/virtualyoutuber/images/5/58/HogHed%27s_Avatar.jpg/revision/latest/scale-to-width-down/1200?cb=20210330134058",
+      "name": "Title 3",
+      "selectors": [
+        { "name": "Male", "isActive": false },
+        { "name": "Female", "isActive": true },
+        { "name": "Hands", "isActive": true },
+        { "name": "Legs", "isActive": true },
+        { "name": "Head", "isActive": true },
+        { "name": "Face Features", "isActive": false},
+        { "name": "Waist", "isActive": true },
+        { "name": "Full Body", "isActive": true },
+        { "name":  "Upper Body", "isActive": false},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": true},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": true}
+      ]
+    },
+    {
+      "id": "sasz5",
+      "url": "https://i.pinimg.com/474x/99/f6/47/99f647eb07d7a97d2e8fbc87abfc4274.jpg",
+      "name": "Title 5",
+      "selectors": [
+        { "name": "Male", "isActive": true },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": false },
+        { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": true },
+        { "name": "Face Features", "isActive": true},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": false},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": false},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": true}
+      ]
+    },
+    {
+      "id": "12ac6",
+      "url": "https://drawingref.com/wp-content/uploads/2021/07/Anime_Crying_drawing_ref5.jpg",
+      "name": "Title 6",
+      "selectors": [
+        { "name": "Male", "isActive": true },
+        { "name": "Female", "isActive": false },
+        { "name": "Hands", "isActive": true },
+        { "name": "Legs", "isActive": false },
+        { "name": "Head", "isActive": true },
+        { "name": "Face Features", "isActive": true},
+        { "name": "Waist", "isActive": false },
+        { "name": "Full Body", "isActive": false },
+        { "name":  "Upper Body", "isActive": true},
+        { "name":  "Lower Body", "isActive": false},
+        { "name":  "Standing Position", "isActive": true},
+        { "name":  "Sitting Position", "isActive": false},
+        { "name":  "Laying Position", "isActive": false},
+        { "name":  "Moving Position", "isActive": false},
+        { "name":  "Facial Expression", "isActive": true}
+      ]
     }
   ],
   "searchList":[
@@ -31,7 +273,16 @@
     { "name": "Hands", "isActive": false },
     { "name": "Legs", "isActive": false },
     { "name": "Head", "isActive": false },
-    { "name": "Waist", "isActive": false }
+    { "name": "Face Features", "isActive": false},
+    { "name": "Waist", "isActive": false },
+    { "name": "Full Body", "isActive": false },
+    { "name":  "Upper Body", "isActive": false},
+    { "name":  "Lower Body", "isActive": false},
+    { "name":  "Standing Position", "isActive": false},
+    { "name":  "Sitting Position", "isActive": false},
+    { "name":  "Laying Position", "isActive": false},
+    { "name":  "Moving Position", "isActive": false},
+    { "name":  "Facial Expression", "isActive": false}
   ],
   "addPictureState": {
     "pictureId": "",
@@ -43,7 +294,16 @@
       { "name": "Hands", "isActive": false },
       { "name": "Legs", "isActive": false },
       { "name": "Head", "isActive": false },
-      { "name": "Waist", "isActive": false }
+      { "name":  "Face Features", "isActive": false},
+      { "name": "Waist", "isActive": false },
+      { "name": "Full Body", "isActive": false },
+      { "name":  "Upper Body", "isActive": false},
+      { "name":  "Lower Body", "isActive": false},
+      { "name":  "Standing Position", "isActive": false},
+      { "name":  "Sitting Position", "isActive": false},
+      { "name":  "Laying Position", "isActive": false},
+      { "name":  "Moving Position", "isActive": false},
+      { "name":  "Facial Expression", "isActive": false}
     ]
   }
 }

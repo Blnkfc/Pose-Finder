@@ -6,6 +6,8 @@
   &__name{
     position: absolute;
     transform: translateX(+0.2em) translateY(0.2em);
+    color: gray;
+    mix-blend-mode: difference;
     z-index: 2;
   }
   &__image__wrapper{
@@ -24,15 +26,17 @@
     }
     &__info{
       display: flex;
-      flex-flow: column wrap;
+      flex-flow: column-reverse nowrap;
       justify-content: space-between;
       position: absolute;
       background: $background-dark;
       padding: 0.3em 0.5em 0.3em 0.5em;
       border: solid 1px $text-light;
       border-radius: 0.5em;
-      width: 18em;
+      max-width: 18em;
       height: 7em;
+      overflow: scroll;
+      overflow-x: hidden;
       transform: translateY(+100%) translateX(+5%);
       z-index: 999;
       &__selector{
@@ -48,8 +52,11 @@
         height: 2em;
         font-size: 0.7em;
         &__wrapper {
+          position: relative;
+
+          flex-wrap: wrap;
           display: flex;
-          width: 100%;
+          max-width: 18em;
         }
       }
     }
@@ -67,11 +74,12 @@
       }
       &__down{
         width: 2em;
-        height: 2em;
+        height: 3em;
         border: 1px solid $text-light;
         border-radius: 0.5em;
         background: $background-dark;
         color: $teal-color;
+        padding: 0.2em 0;
         font-size: 0.9em;
       }
 

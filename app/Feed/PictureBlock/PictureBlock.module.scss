@@ -2,7 +2,8 @@
 .pictureBlock{
   display: inline-block;
   min-width: 25%;
-  height: 15em;
+
+
   &__name{
     position: absolute;
     transform: translateX(+0.2em) translateY(0.2em);
@@ -19,7 +20,9 @@
     height: 15em;
     aspect-ratio: auto;
     border-radius: 0.3em;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     border: solid 2px $text-light;
     &:hover{
       border: solid 2px $teal-color;

@@ -26,7 +26,7 @@ const FeedSidebar = () => {
             <button
                 key={index}
                 style={
-                {backgroundColor: C.isActive?"#00c2bf":"#1f1f1f", color: C.isActive?"#fff":"#cfcfcf" }
+                {backgroundColor: C.isActive?"#00c2bf":"#1f1f1f", color: C.isActive?"#fff":"#cfcfcf"}
             }
                 onClick={() => {
                     toggleCategory(index)

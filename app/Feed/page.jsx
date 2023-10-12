@@ -36,37 +36,7 @@ const Feed = () => {
 
     /*  CHECK FOR ACTIVE SELECTORS  */
     /*  photoList IS THE LIST OF ALL PHOTOS IN FEED, selectorList IS A SET OF SELECTORS FROM THE STATE FORM  */
-   /*function feedFilter (photoList, selectorList) {
-       const photoListFiltered = []
-       let indexList = []
-       let activeSelectorsList = []
-       for (let i = 0; i < searchList.length; i++){
-           if(selectorList[i].isActive){
-               indexList.push(i)
-               return indexList
-           }
-       }
-
-       if (JSON.stringify(selectorList) === JSON.stringify(initialSelectorList)) {
-          return photoList;
-       }
-       console.log("af")
-       for(let i=0;i<photoList.length;i++){
-           const photoSelectors = photoList[i].selectors;
-           for(let j=0;j<indexList;j++){
-               if(photoSelectors[indexList[j]].isActive === true){
-                   activeSelectorsList.push(photoSelectors[indexList[j]])
-                   console.log(activeSelectorsList)
-               }
-           }
-           if (selectorList.includes(activeSelectorsList)) {
-               photoListFiltered.push(photoList[i]);
-           }
-           activeSelectorsList = []
-       }
-
-       return photoListFiltered
-   }*/
+    /*  bless the openAI for developing chatGPT, I hope you live long and happy life  */
     function feedFilter(photoList, searchList) {
         if (!photoList || !searchList) {
             console.log("Invalid data");
@@ -112,12 +82,26 @@ const Feed = () => {
     }, [photoList, searchList])
 
 
+    const [expand, setExpand] = useState(false)
+    const toggleExpand = () => {
+        return setExpand(!expand)
+    }
+
     return (
         <div className={"feed__wrapper"}>
             <div className={"feed"}>
                 {photos}
             </div>
-            <FeedSidebar className={"feed__sidebar"}  />
+            <div className="feed__sidebar__mobile" style={{height: expand?"100%":"auto"}}  >
+                <button onClick={toggleExpand} >
+                    &#9776;
+                </button>
+                <div className={"feed__sidebar__mobile__selectors"} style={{display: expand?"block":"none"}} >
+                    <FeedSidebar  />
+                </div>
+
+            </div>
+            <div className="feed__sidebar__pc"><FeedSidebar   /></div>
         </div>
     )
 }

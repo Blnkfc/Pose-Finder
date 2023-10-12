@@ -90,10 +90,15 @@ const Feed = () => {
     return (
         <div className={"feed__wrapper"}>
             <div className={"feed"}>
+                <div
+                    className="feed__mobile"
+                    onClick={toggleExpand}
+                    style={{display: expand?"block":"none", zIndex: expand?"999":"0"}} >
+                </div>
                 {photos}
             </div>
             <div className="feed__sidebar__mobile" style={{height: expand?"100%":"auto"}}  >
-                <button onClick={toggleExpand} >
+                <button onClick={toggleExpand} style={{display: expand?"none":"block"}} >
                     &#9776;
                 </button>
                 <div className={"feed__sidebar__mobile__selectors"} style={{display: expand?"block":"none"}} >

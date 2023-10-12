@@ -41,6 +41,7 @@
       font-size: 14px;
     }
   }
+
 }
 @media (max-width: 1312px) {
   .pictureBlock__image {
@@ -56,6 +57,9 @@
   }
 }
 @media (max-width: 984px) {
+  .feed__wrapper{
+    min-height: 60em;
+  }
   .pictureBlock__image {
     height: 8em ;
     &__info{
@@ -114,6 +118,10 @@
     }
     &__mobile{
       display: block;
+      button{
+        font-size: 25px;
+        margin-right: 0.5em;
+      }
       &__selectors{
         button{
           font-size: 9px;
@@ -131,6 +139,17 @@
       max-width: 15em;
       height: 5em;
       font-size: 8px;
+    }
+  }
+  .feed__sidebar{
+    &__mobile{
+      display: block;
+      max-width: 55%;
+      &__selectors{
+        button{
+          font-size: 10px;
+        }
+      }
     }
   }
 }
@@ -159,6 +178,7 @@
     }
     &__mobile{
       display: block;
+      max-width: 55%;
       &__selectors{
         button{
           font-size: 8px;
@@ -192,6 +212,7 @@
     }
     &__mobile{
       display: block;
+      max-width: 55%;
       &__selectors{
         button{
           font-size: 6px;

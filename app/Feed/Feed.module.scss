@@ -46,12 +46,22 @@
       display: none;
       position: absolute;
       top: 0;
-      right: 0;
+
       max-width: 30%;
       height: 100%;
       background-color: $background-dark;
       z-index: 999;
+      animation: ease-in 15ms;
       button{
+        background-color: $background-dark;
+        color: $teal-color;
+        border: solid 1px $teal-color;
+        border-radius: 0.1em;
+        padding: 0 0.2em;
+        float: right;
+      }
+      a{
+        text-decoration: none;
         background-color: $background-dark;
         color: $teal-color;
         border: solid 1px $teal-color;

@@ -49,12 +49,20 @@
     display: none;
     position: absolute;
     top: 0;
-    right: 0;
     max-width: 30%;
     height: 100%;
     background-color: #1f1f1f;
-    z-index: 999; }
+    z-index: 999;
+    animation: ease-in 15ms; }
     .feed__sidebar__mobile button {
+      background-color: #1f1f1f;
+      color: #00c2bf;
+      border: solid 1px #00c2bf;
+      border-radius: 0.1em;
+      padding: 0 0.2em;
+      float: right; }
+    .feed__sidebar__mobile a {
+      text-decoration: none;
       background-color: #1f1f1f;
       color: #00c2bf;
       border: solid 1px #00c2bf;

@@ -3,6 +3,7 @@ import PictureBlock from "@/app/Feed/PictureBlock/page";
 import {useStore} from "@/src/store";
 import React, {useEffect, useState} from "react";
 import FeedSidebar from "@/app/Feed/FeedSidebar/FeedSidebar";
+import Link from "next/link";
 
 
 const Feed = () => {

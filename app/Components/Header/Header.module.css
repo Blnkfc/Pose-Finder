@@ -1,3 +1,16 @@
+.selector-button-template {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #1f1f1f;
+  border: solid 1px #fff;
+  border-radius: 0.5em;
+  color: #cfcfcf;
+  transition: all 0.1s; }
+  .selector-button-template:hover {
+    background-color: #00c2bf;
+    color: #fff;
+    cursor: pointer; }
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -11,6 +24,51 @@
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    .header__nav button {
+      display: none;
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      background-color: #1f1f1f;
+      color: #00c2bf;
+      border: solid 1px #00c2bf;
+      transform: translateX(-100%);
+      margin-right: 0.5em; }
+    .header__nav__mobile {
+      position: absolute;
+      flex-flow: column wrap;
+      background-color: #1f1f1f;
+      width: 30%;
+      height: 100%;
+      border: solid 1px #cfcfcf;
+      top: 0;
+      right: 0;
+      z-index: 999; }
+      .header__nav__mobile button {
+        height: 3em;
+        width: 3em;
+        border: 2px solid #00c2bf;
+        border-radius: 0.2em 0 0 0.2em; }
+      .header__nav__mobile__menu {
+        height: 1em;
+        width: 100%;
+        border: solid 1px #cfcfcf;
+        color: #cfcfcf;
+        font-size: 3em; }
+      .header__nav__mobile a {
+        display: flex;
+        justify-content: space-between;
+        font-size: 2em;
+        text-decoration: none;
+        width: 100%;
+        color: #cfcfcf;
+        padding-bottom: 0.5em; }
+        .header__nav__mobile a:active {
+          background-color: #5f5f5f; }
+        .header__nav__mobile a span {
+          font-size: 1em;
+          color: #00c2bf; }
     .header__nav__link {
       text-decoration: none;
       color: #cfcfcf;

@@ -157,10 +157,14 @@
       }
     }
     &__mobile{
-      display: block;
+      display: flex;
+      flex-direction: column;
+      margin-right: 0.5em;
       button{
         font-size: 25px;
-        margin-right: 0.5em;
+      }
+      a{
+        font-size: 25px
       }
       &__selectors{
         button{
@@ -176,6 +180,19 @@
       img{
         align-items: center;
         width: 100%;
+      }
+    }
+  }
+  .header{
+    &__nav{
+      &__settings{
+        display: none;
+      }
+      &__link{
+        display: none;
+      }
+      button{
+        display: block;
       }
     }
   }

@@ -13,6 +13,58 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    button{
+      display: none;
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      line-height: 2em;
+      background-color: $background-dark;
+      color: $teal-color;
+      border: solid 1px $teal-color;
+      transform: translateX(-100%);
+      margin-right: 0.5em;
+    }
+    &__mobile{
+      position: absolute;
+      flex-flow: column wrap;
+      background-color: $background-dark;
+      width: 30%;
+      height: 100%;
+      border: solid 1px $text-light;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      button{
+        height: 3em;
+        width: 3em;
+        border: 2px solid $teal-color;
+        border-radius: 0.2em 0 0 0.2em;
+      }
+      &__menu{
+        height: 1em;
+        width: 100%;
+        border: solid 1px $text-light;
+        color: $text-light;
+        font-size: 3em;
+      }
+      a{
+        display: flex;
+        justify-content: space-between;
+        font-size: 2em;
+        text-decoration: none;
+        width: 100%;
+        color: $text-light;
+        padding-bottom: 0.5em;
+        &:active{
+          background-color: lighten($background-dark, 25%);
+        }
+        span{
+          font-size: 1em;
+          color: $teal-color;
+        }
+      }
+    }
     &__link{
       text-decoration: none;
       color: $text-light;
@@ -20,6 +72,7 @@
       line-height: 3em;
       width: 7em;
       height: 100%;
+
       &:hover{
         border: solid 2px $teal-color;
         color: $white-color;

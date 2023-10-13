@@ -15,7 +15,10 @@
   display: flex; }
   .picture__wrapper__image {
     aspect-ratio: auto;
-    width: 50%; }
+    width: 50%;
+    align-items: center; }
+    .picture__wrapper__image img {
+      width: 100%; }
   .picture__wrapper__sidebar {
     margin-left: 5em; }
     .picture__wrapper__sidebar h1 {
@@ -24,7 +27,11 @@
       color: #cfcfcf;
       margin-bottom: 1em; }
     .picture__wrapper__sidebar__selectors {
-      color: #cfcfcf; }
+      display: flex;
+      flex-flow: row wrap;
+      color: #cfcfcf;
+      max-width: 80%;
+      row-gap: 0.2em; }
       .picture__wrapper__sidebar__selectors span {
         margin-right: 1em;
         border: solid 1px #00c2bf;
@@ -32,7 +39,7 @@
         background: #1f1f1f;
         padding: 0.3em 0.5em 0.3em 0.5em; }
     .picture__wrapper__sidebar__delete {
-      margin-top: 3em; }
+      margin: 3em 0; }
       .picture__wrapper__sidebar__delete a {
         text-decoration: none;
         color: #cfcfcf;

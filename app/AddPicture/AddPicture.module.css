@@ -14,20 +14,21 @@
 .addPicture {
   display: flex;
   background: #1f1f1f;
-  padding-top: 1em; }
+  padding-top: 1em;
+  min-height: 100vh; }
   .addPicture__load {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    width: 40em;
-    height: 40em;
-    aspect-ratio: auto;
+    min-width: 40%;
+    aspect-ratio: 1/1;
     margin: 0 2em 1em 1em; }
     .addPicture__load::after {
       content: "";
       position: absolute;
-      width: 40em;
-      height: 40em;
+      min-width: 100%;
+      aspect-ratio: 1/1;
       background-color: black;
       opacity: 60%;
       border: solid 2px #00c2bf;

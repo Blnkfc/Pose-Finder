@@ -5,18 +5,27 @@
   &__image{
     aspect-ratio: auto;
     width: 50%;
+    align-items: center;
+    img{
+      width: 100%;
+    }
   }
   &__sidebar{
     margin-left: 5em;
     h1{
       color: $text-light;
+
     }
     h2{
       color: $text-light;
       margin-bottom: 1em;
     }
     &__selectors{
+      display: flex;
+      flex-flow: row wrap;
       color: $text-light;
+      max-width: 80%;
+      row-gap: 0.2em;
       span{
         margin-right: 1em;
         border: solid 1px $teal-color;
@@ -27,7 +36,7 @@
       }
     }
     &__delete{
-      margin-top: 3em;
+      margin: 3em 0;
       a{
         text-decoration: none;
         color: $text-light;

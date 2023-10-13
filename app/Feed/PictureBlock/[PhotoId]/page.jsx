@@ -56,10 +56,12 @@ function PicturePage({params}){
 
     return (
         <div className={"picture__wrapper"}>
-            <img src={imageInfo?imageInfo.url:""}
-                 alt={imageInfo?imageInfo.name:""}
-                 title={imageInfo?imageInfo.name:""}
-                 className={"picture__wrapper__image"}/>
+            <div className={"picture__wrapper__image"} >
+                <img src={imageInfo?imageInfo.url:""}
+                     alt={imageInfo?imageInfo.name:""}
+                     title={imageInfo?imageInfo.name:""}
+                />
+            </div>
             <div className={"picture__wrapper__sidebar"}>
                 <h1>{imageInfo?imageInfo.name:""}</h1>
                 <h2>Tags:</h2>

@@ -55,11 +55,17 @@
   *{
     font-size: 13px;
   }
-}
-@media (max-width: 984px) {
-  .feed__wrapper{
-    min-height: 60em;
+  .addPicture__load{
+    min-width: 50%;
   }
+  .picture__wrapper__sidebar{
+    h1{
+      font-size: 2em;
+    }
+  }
+}
+
+@media (max-width: 984px) {
   .pictureBlock__image {
     height: 8em ;
     &__info{
@@ -68,6 +74,9 @@
       height: 5em;
       font-size: 10px;
     }
+  }
+  .addPicture__load{
+    min-width: 60%;
   }
   .feed__sidebar__categories{
     button{
@@ -87,6 +96,37 @@
       max-width: 16em;
       height: 5em;
       font-size: 8px;
+    }
+  }
+  .addPicture__load{
+    min-width: 70%;
+  }
+}
+
+@media (max-width: 712px) {
+  .addPicture{
+    flex-direction: column;
+    &__sidebar{
+      padding: 1em;
+      font-size: 1.4em;
+      width: 80%;
+      &__title{
+        input{
+          font-size: 2em;
+          width: 100%;
+        }
+      }
+      &__selectors{
+        button{
+          font-size: 1.5em;
+        }
+      }
+      &__submit{
+        a{
+          font-size: 2em;
+          margin-bottom: 1em;
+        }
+      }
     }
   }
 }
@@ -124,8 +164,18 @@
       }
       &__selectors{
         button{
-          font-size: 9px;
+          font-size: 15px;
         }
+      }
+    }
+  }
+  .picture__wrapper{
+    flex-flow: column wrap;
+    &__image{
+      width: 100%;
+      img{
+        align-items: center;
+        width: 100%;
       }
     }
   }
@@ -147,10 +197,13 @@
       max-width: 55%;
       &__selectors{
         button{
-          font-size: 10px;
+          font-size: 15px;
         }
       }
     }
+  }
+  .addPicture__sidebar{
+    width: 100%;
   }
 }
 
@@ -181,7 +234,7 @@
       max-width: 55%;
       &__selectors{
         button{
-          font-size: 8px;
+          font-size: 15px;
         }
       }
     }

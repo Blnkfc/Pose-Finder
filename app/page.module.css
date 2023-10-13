@@ -1,15 +1,28 @@
+.selector-button-template {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #1f1f1f;
+  border: solid 1px #fff;
+  border-radius: 0.5em;
+  color: #cfcfcf;
+  transition: all 0.1s; }
+  .selector-button-template:hover {
+    background-color: #00c2bf;
+    color: #fff;
+    cursor: pointer; }
+
 .home__page {
-  height: 88vh;
+  height: 100vh;
   background-color: #1f1f1f;
   padding: 4em 0 0 4em; }
   .home__page h1 {
     color: #fff;
-    font-size: 4em; }
+    font-size: 3em; }
     .home__page h1 span {
-      color: #00c2bf; }
+      color: #00c2bf;
+      font-size: 1em; }
   .home__page h2 {
-    color: #fff;
-    font-size: 2em; }
+    color: #fff; }
     .home__page h2 span {
       color: #00c2bf; }
   .home__page__btn {

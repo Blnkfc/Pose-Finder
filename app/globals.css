@@ -44,17 +44,17 @@
     cursor: pointer; }
 
 .home__page {
-  height: 88vh;
+  height: 100vh;
   background-color: #1f1f1f;
   padding: 4em 0 0 4em; }
   .home__page h1 {
     color: #fff;
-    font-size: 4em; }
+    font-size: 3em; }
     .home__page h1 span {
-      color: #00c2bf; }
+      color: #00c2bf;
+      font-size: 1em; }
   .home__page h2 {
-    color: #fff;
-    font-size: 2em; }
+    color: #fff; }
     .home__page h2 span {
       color: #00c2bf; }
   .home__page__btn {
@@ -165,7 +165,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  min-height: 40em;
+  min-height: 100vh;
   justify-content: space-between;
   background-color: #1f1f1f;
   padding: 0.5em 0 0 0.5em; }
@@ -317,7 +317,10 @@
   display: flex; }
   .picture__wrapper__image {
     aspect-ratio: auto;
-    width: 50%; }
+    width: 50%;
+    align-items: center; }
+    .picture__wrapper__image img {
+      width: 100%; }
   .picture__wrapper__sidebar {
     margin-left: 5em; }
     .picture__wrapper__sidebar h1 {
@@ -326,7 +329,11 @@
       color: #cfcfcf;
       margin-bottom: 1em; }
     .picture__wrapper__sidebar__selectors {
-      color: #cfcfcf; }
+      display: flex;
+      flex-flow: row wrap;
+      color: #cfcfcf;
+      max-width: 80%;
+      row-gap: 0.2em; }
       .picture__wrapper__sidebar__selectors span {
         margin-right: 1em;
         border: solid 1px #00c2bf;
@@ -334,7 +341,7 @@
         background: #1f1f1f;
         padding: 0.3em 0.5em 0.3em 0.5em; }
     .picture__wrapper__sidebar__delete {
-      margin-top: 3em; }
+      margin: 3em 0; }
       .picture__wrapper__sidebar__delete a {
         text-decoration: none;
         color: #cfcfcf;
@@ -362,20 +369,21 @@
 .addPicture {
   display: flex;
   background: #1f1f1f;
-  padding-top: 1em; }
+  padding-top: 1em;
+  min-height: 100vh; }
   .addPicture__load {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
-    width: 40em;
-    height: 40em;
-    aspect-ratio: auto;
+    min-width: 40%;
+    aspect-ratio: 1/1;
     margin: 0 2em 1em 1em; }
     .addPicture__load::after {
       content: "";
       position: absolute;
-      width: 40em;
-      height: 40em;
+      min-width: 100%;
+      aspect-ratio: 1/1;
       background-color: black;
       opacity: 60%;
       border: solid 2px #00c2bf;
@@ -512,11 +520,14 @@
       font-size: 12px; }
 
   * {
-    font-size: 13px; } }
-@media (max-width: 984px) {
-  .feed__wrapper {
-    min-height: 60em; }
+    font-size: 13px; }
 
+  .addPicture__load {
+    min-width: 50%; }
+
+  .picture__wrapper__sidebar h1 {
+    font-size: 2em; } }
+@media (max-width: 984px) {
   .pictureBlock__image {
     height: 8em; }
     .pictureBlock__image__info {
@@ -524,6 +535,9 @@
       max-width: 16em;
       height: 5em;
       font-size: 10px; }
+
+  .addPicture__load {
+    min-width: 60%; }
 
   .feed__sidebar__categories button {
     font-size: 8px; }
@@ -537,7 +551,25 @@
       transform: translatey(80%) translatex(5%);
       max-width: 16em;
       height: 5em;
-      font-size: 8px; } }
+      font-size: 8px; }
+
+  .addPicture__load {
+    min-width: 70%; } }
+@media (max-width: 712px) {
+  .addPicture {
+    flex-direction: column; }
+    .addPicture__sidebar {
+      padding: 1em;
+      font-size: 1.4em;
+      width: 80%; }
+      .addPicture__sidebar__title input {
+        font-size: 2em;
+        width: 100%; }
+      .addPicture__sidebar__selectors button {
+        font-size: 1.5em; }
+      .addPicture__sidebar__submit a {
+        font-size: 2em;
+        margin-bottom: 1em; } }
 @media (max-width: 615px) {
   * {
     font-size: 9px; }
@@ -562,7 +594,15 @@
       font-size: 25px;
       margin-right: 0.5em; }
     .feed__sidebar__mobile__selectors button {
-      font-size: 9px; } }
+      font-size: 15px; }
+
+  .picture__wrapper {
+    flex-flow: column wrap; }
+    .picture__wrapper__image {
+      width: 100%; }
+      .picture__wrapper__image img {
+        align-items: center;
+        width: 100%; } }
 @media (max-width: 506px) {
   .pictureBlock__image {
     height: 8em; }
@@ -576,7 +616,10 @@
     display: block;
     max-width: 55%; }
     .feed__sidebar__mobile__selectors button {
-      font-size: 10px; } }
+      font-size: 15px; }
+
+  .addPicture__sidebar {
+    width: 100%; } }
 @media (max-width: 406px) {
   .pictureBlock {
     min-width: 50%; }
@@ -596,7 +639,7 @@
     display: block;
     max-width: 55%; }
     .feed__sidebar__mobile__selectors button {
-      font-size: 8px; } }
+      font-size: 15px; } }
 @media (max-width: 315px) {
   .pictureBlock {
     min-width: 50%; }

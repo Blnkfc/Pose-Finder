@@ -184,6 +184,10 @@
     }
   }
   .header{
+    height: 6em;
+    &__logo{
+      width: 6em;
+    }
     &__nav{
       &__settings{
         display: none;
@@ -193,6 +197,14 @@
       }
       button{
         display: block;
+      }
+    }
+  }
+  .footer{
+    &__info{
+      a{
+        font-size: 2em;
+        line-height: 3em;
       }
     }
   }
@@ -253,6 +265,22 @@
         button{
           font-size: 15px;
         }
+      }
+    }
+  }
+  .header{
+    &__nav{
+      &__mobile{
+        a{
+          width: 60%;
+        }
+      }
+    }
+  }
+  .footer{
+    &__info{
+      a{
+        font-size: 1.6em;
       }
     }
   }

@@ -13,47 +13,60 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    button{
-      display: none;
+    //BUTTON FROM THE REGULAR NAVBAR
+    &__menu__expander{
       position: absolute;
-      width: 2em;
-      height: 2em;
-      line-height: 2em;
+      font-size: 6em;
+      width: 1em;
+      height: 1em;
+      line-height: 1em;
       background-color: $background-dark;
       color: $teal-color;
-      border: solid 1px $teal-color;
+      border: none;
       transform: translateX(-100%);
-      margin-right: 0.5em;
+      margin-right: 1.5em;
     }
     &__mobile{
       position: absolute;
       flex-flow: column wrap;
-      background-color: $background-dark;
-      width: 30%;
-      height: 100%;
+      background-color: rgba(31, 31, 31, 0.95);
+      width: 100%;
+      height: auto;
       border: solid 1px $text-light;
       top: 0;
       right: 0;
       z-index: 999;
-      button{
-        height: 3em;
-        width: 3em;
-        border: 2px solid $teal-color;
-        border-radius: 0.2em 0 0 0.2em;
-      }
       &__menu{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
         height: 1em;
         width: 100%;
-        border: solid 1px $text-light;
         color: $text-light;
-        font-size: 3em;
+        font-size: 6em;
+        span{
+          display: inline-block;
+          font-size: 1em;
+        }
+        &__expander{
+          display: inline-block;
+          font-size: 1em;
+          line-height: 1em;
+          height: 1em;
+          width: 1em;
+          border: none;
+          background-color: $background-dark;
+          color: $teal-color;
+          margin: 0;
+        }
       }
       a{
         display: flex;
         justify-content: space-between;
-        font-size: 2em;
+        font-size: 3em;
         text-decoration: none;
-        width: 100%;
+        width: 45%;
+        margin: 1em 0 0 1em ;
         color: $text-light;
         padding-bottom: 0.5em;
         &:active{

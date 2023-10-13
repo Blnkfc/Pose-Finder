@@ -26,13 +26,18 @@ const Header = () => {
             <div className={"header__nav"}>
                 <Link href={"/Feed"} className={"header__nav__link"}>Feed</Link>
                 <Link href={"/AddPicture"} className={"header__nav__link"}>Add Picture</Link>
-                <button onClick={toggleNavExpand} >&#10094;</button>
+                <button onClick={toggleNavExpand} className={"header__nav__menu__expander"} style={{display: navExpand?"none":"block"}}  >&#10094;</button>
                 <div className="header__nav__mobile" style={{display: navExpand?"flex":"none"}} >
-                    <button onClick={toggleNavExpand} >&#10095;</button>
-                    <div className={"header__nav__mobile__menu"}>Menu</div>
-                    <Link href={"/Feed"} className={""}> Feed <span>&#9783;</span></Link>
-                    <Link href={"/AddPicture"} className={""}> Add Picture <span>&#10009;</span></Link>
-                    <Link href={"/Settings"} className={""}>
+                    <div className={"header__nav__mobile__menu"}>
+                        <span>Menu</span>
+                        <button onClick={toggleNavExpand}
+                                className={"header__nav__mobile__menu__expander"} >
+                            &#10095;
+                        </button>
+                    </div>
+                    <Link href={"/Feed"} className={""} onClick={toggleNavExpand} > Feed <span>&#9783;</span></Link>
+                    <Link href={"/AddPicture"} className={""} onClick={toggleNavExpand} > Add Picture <span>&#10009;</span></Link>
+                    <Link href={"/Settings"} className={""} onClick={toggleNavExpand} >
                         Settings <span>&#9881;</span>
                     </Link>
                 </div>

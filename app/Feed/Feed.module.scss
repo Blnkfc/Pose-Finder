@@ -46,11 +46,10 @@
       display: none;
       position: absolute;
       top: 0;
-
       max-width: 30%;
       height: 100%;
       background-color: $background-dark;
-      z-index: 999;
+      z-index: 10;
       animation: ease-in 15ms;
       button{
         background-color: $background-dark;

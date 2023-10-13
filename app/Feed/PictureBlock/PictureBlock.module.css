@@ -16,6 +16,7 @@
   min-width: 25%; }
   .pictureBlock__name {
     position: absolute;
+    padding: 0.3em 0 0 0.3em;
     transform: translateX(0.2em) translateY(0.2em);
     color: gray;
     mix-blend-mode: difference;
@@ -71,11 +72,11 @@
       height: 2em;
       position: absolute;
       transform: translateY(-110%) translateX(10%);
-      border: 1px solid #cfcfcf;
-      border-radius: 0.5em;
-      background: #1f1f1f;
+      border: none;
+      background: transparent;
       color: #00c2bf;
-      font-size: 0.9em; }
+      font-size: 2em;
+      -webkit-text-stroke: 1px #000; }
     .pictureBlock__image__expander__down {
       width: 2em;
       height: 3em;

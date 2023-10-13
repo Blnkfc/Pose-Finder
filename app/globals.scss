@@ -189,6 +189,7 @@
       width: 6em;
     }
     &__nav{
+      display: flex;
       &__settings{
         display: none;
       }
@@ -196,7 +197,7 @@
         display: none;
       }
       button{
-        display: block;
+        display: block !important;
       }
     }
   }

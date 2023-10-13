@@ -26,7 +26,9 @@ const Header = () => {
             <div className={"header__nav"}>
                 <Link href={"/Feed"} className={"header__nav__link"}>Feed</Link>
                 <Link href={"/AddPicture"} className={"header__nav__link"}>Add Picture</Link>
-                <button onClick={toggleNavExpand} className={"header__nav__menu__expander"} style={{display: navExpand?"none":"block"}}  >&#10094;</button>
+                <button onClick={toggleNavExpand}
+                        className={"header__nav__menu__expander"}
+                        style={{display: navExpand?"none":"block"}}  >&#10094;</button>
                 <div className="header__nav__mobile" style={{display: navExpand?"flex":"none"}} >
                     <div className={"header__nav__mobile__menu"}>
                         <span>Menu</span>

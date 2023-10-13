@@ -25,6 +25,7 @@
     justify-content: space-between;
     align-items: center; }
     .header__nav__menu__expander {
+      display: none !important;
       position: absolute;
       font-size: 6em;
       width: 1em;

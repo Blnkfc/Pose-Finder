@@ -109,6 +109,7 @@
     justify-content: space-between;
     align-items: center; }
     .header__nav__menu__expander {
+      display: none !important;
       position: absolute;
       font-size: 6em;
       width: 1em;
@@ -681,12 +682,14 @@
     height: 6em; }
     .header__logo {
       width: 6em; }
-    .header__nav__settings {
-      display: none; }
-    .header__nav__link {
-      display: none; }
-    .header__nav button {
-      display: block; }
+    .header__nav {
+      display: flex; }
+      .header__nav__settings {
+        display: none; }
+      .header__nav__link {
+        display: none; }
+      .header__nav button {
+        display: block !important; }
 
   .footer__info a {
     font-size: 2em;

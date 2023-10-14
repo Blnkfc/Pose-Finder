@@ -94,7 +94,7 @@ const Feed = () => {
                 <div
                     className="feed__mobile"
                     onClick={toggleExpand}
-                    style={{display: expand?"block":"none", zIndex: expand?"999":"0"}} >
+                    style={{display: expand?"block":"none", zIndex: expand?"9":"0"}} >
                 </div>
                 {photos}
             </div>

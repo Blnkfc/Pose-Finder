@@ -148,6 +148,9 @@
     }
   }
   .feed__sidebar{
+    h3{
+      font-size: 2.5em;
+    }
     &__pc{
       display: none;
     }
@@ -306,7 +309,7 @@
     }
     &__categories{
       button{
-        font-size:6px;
+        font-size:11px;
       }
     }
     &__mobile{

@@ -42,7 +42,7 @@ const PictureBlock = (props) => {
                     <button
                         className="pictureBlock__image__expander__down"
                         onClick={toggleExpand} >
-                        ⮟
+                        &#62;
                     </button>
                     <div className="pictureBlock__image__info__selector__wrapper">
                         {selectors}
@@ -58,7 +58,7 @@ const PictureBlock = (props) => {
                         onClick={toggleExpand}
                         style={{display: expand?"none":"block"}}
                 >
-                    ⮝
+                    &#62;
                 </button>
             </div>
         </div>

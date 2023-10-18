@@ -48,7 +48,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-flow: column wrap;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: #1f1f1f;
   padding: 0 5% 0 5%; }
@@ -59,9 +59,11 @@
       color: #00c2bf;
       font-size: 1em; }
   .home__page h2 {
-    color: #fff; }
+    color: #fff;
+    font-size: 1.5em; }
     .home__page h2 span {
-      color: #00c2bf; }
+      color: #00c2bf;
+      font-size: 1em; }
   .home__page__btn {
     display: block;
     margin-top: 3em;
@@ -73,14 +75,12 @@
     width: 8em;
     height: 2.3em;
     border: solid 1px #cfcfcf;
+    border-radius: 0.3em;
     transition: all 0.2s; }
     .home__page__btn:hover {
       border: solid 1px #fff;
       color: #fff;
-      background-color: #00c2bf;
-      -webkit-box-shadow: 0px 0px 6px 0px white;
-      -moz-box-shadow: 0px 0px 6px 0px white;
-      box-shadow: 0px 0px 6px 0px white; }
+      background-color: #00c2bf; }
 
 .selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
   padding: 0.2em 0.5em 0.2em 0.5em;
@@ -124,12 +124,23 @@
       position: absolute;
       flex-flow: column wrap;
       background-color: rgba(31, 31, 31, 0.95);
+      padding-bottom: 1em;
       width: 100%;
       height: auto;
       border: solid 1px #cfcfcf;
       top: 0;
       right: 0;
       z-index: 999; }
+      .header__nav__mobile a {
+        display: flex;
+        justify-content: space-between;
+        font-size: 3em;
+        text-decoration: none;
+        width: 100%;
+        padding: 1em 0 0 1em;
+        color: #cfcfcf; }
+        .header__nav__mobile a:active {
+          background-color: #5f5f5f; }
       .header__nav__mobile__menu {
         display: flex;
         flex-flow: row wrap;
@@ -151,20 +162,6 @@
           background-color: #1f1f1f;
           color: #00c2bf;
           margin: 0; }
-      .header__nav__mobile a {
-        display: flex;
-        justify-content: space-between;
-        font-size: 3em;
-        text-decoration: none;
-        width: 45%;
-        margin: 1em 0 0 1em;
-        color: #cfcfcf;
-        padding-bottom: 0.5em; }
-        .header__nav__mobile a:active {
-          background-color: #5f5f5f; }
-        .header__nav__mobile a span {
-          font-size: 1em;
-          color: #00c2bf; }
     .header__nav__link {
       text-decoration: none;
       color: #cfcfcf;
@@ -248,39 +245,17 @@
   .feed__content {
     width: 100%;
     display: inline-block; }
-  .feed__sidebar__pc {
-    width: 15%;
-    display: inline-block;
-    height: 20em; }
-  .feed__sidebar h3 {
-    color: #cfcfcf; }
-  .feed__sidebar__categories {
-    display: flex;
-    flex-flow: row wrap; }
-  .feed__sidebar__mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    max-width: 30%;
-    height: 100%;
-    background-color: #1f1f1f;
-    z-index: 10;
-    animation: ease-in 15ms; }
-    .feed__sidebar__mobile button {
-      background-color: #1f1f1f;
-      color: #00c2bf;
-      border: solid 1px #00c2bf;
-      border-radius: 0.1em;
-      padding: 0 0.2em;
-      float: right; }
-    .feed__sidebar__mobile a {
-      text-decoration: none;
-      background-color: #1f1f1f;
-      color: #00c2bf;
-      border: solid 1px #00c2bf;
-      border-radius: 0.1em;
-      padding: 0 0.2em;
-      float: right; }
+  .feed__sidebar {
+    padding: 0 0.5em 0 0.5em; }
+    .feed__sidebar__pc {
+      width: 20%;
+      display: inline-block;
+      height: 20em; }
+    .feed__sidebar h3 {
+      color: #cfcfcf; }
+    .feed__sidebar__categories {
+      display: flex;
+      flex-flow: row wrap; }
 
 .selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
   padding: 0.2em 0.5em 0.2em 0.5em;
@@ -298,13 +273,6 @@
 .pictureBlock {
   display: inline-block;
   min-width: 25%; }
-  .pictureBlock__name {
-    position: absolute;
-    padding: 0.3em 0 0 0.3em;
-    transform: translateX(0.2em) translateY(0.2em);
-    color: gray;
-    mix-blend-mode: difference;
-    z-index: 2; }
   .pictureBlock__image__wrapper {
     margin: 0.2em; }
   .pictureBlock__image {
@@ -316,7 +284,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: solid 2px #cfcfcf; }
+    border: solid 2px #8f8f8f; }
     .pictureBlock__image:hover {
       border: solid 2px #00c2bf; }
     .pictureBlock__image__info {
@@ -334,6 +302,9 @@
       overflow-x: hidden;
       transform: translateY(100%) translateX(5%);
       z-index: 999; }
+      .pictureBlock__image__info h3 {
+        display: block;
+        color: #cfcfcf; }
       .pictureBlock__image__info__selector {
         display: flex;
         align-items: center;
@@ -577,6 +548,59 @@
         height: 2em;
         margin-right: 0.5em; }
 
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #1f1f1f;
+  border: solid 1px #fff;
+  border-radius: 0.5em;
+  color: #cfcfcf;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #00c2bf;
+    color: #fff;
+    cursor: pointer; }
+
+.feed__nav__mobile {
+  display: none;
+  animation: ease-in 15ms;
+  font-size: 4em; }
+  .feed__nav__mobile__selectors {
+    position: absolute;
+    max-width: 50%;
+    height: 100%;
+    background-color: #1f1f1f;
+    z-index: 10; }
+  .feed__nav__mobile__sidebar__btn {
+    text-decoration: none;
+    background-color: #1f1f1f;
+    color: #00c2bf;
+    border: solid 1px #00c2bf;
+    border-radius: 0.1em;
+    padding: 0 0.2em;
+    float: right;
+    font-size: 1em; }
+  .feed__nav__mobile__searchBar {
+    display: flex;
+    align-items: center;
+    color: #cfcfcf;
+    font-size: 1em;
+    border: 1px solid #505050; }
+    .feed__nav__mobile__searchBar button {
+      background-color: transparent;
+      border: none;
+      width: 5em;
+      height: 5em; }
+      .feed__nav__mobile__searchBar button img {
+        width: 4em;
+        height: 4em; }
+    .feed__nav__mobile__searchBar input {
+      background-color: transparent;
+      color: #cfcfcf;
+      font-size: 1em;
+      border: none;
+      outline: none; }
+
 @media (max-width: 1512px) {
   .pictureBlock__image {
     height: 12em; }
@@ -648,6 +672,16 @@
   * {
     font-size: 9px; }
 
+  .home__page {
+    font-size: 2em;
+    align-items: center; }
+    .home__page h2 {
+      display: none; }
+    .home__page__btn {
+      font-size: 2em;
+      margin-top: 2em;
+      width: 100%; }
+
   .pictureBlock {
     min-width: 33%; }
     .pictureBlock__image {
@@ -658,12 +692,17 @@
         height: 5em;
         font-size: 8px; }
 
+  .feed__nav__mobile {
+    display: flex; }
+  .feed__wrapper {
+    flex-flow: column wrap;
+    justify-content: start; }
   .feed__sidebar h3 {
     font-size: 2.5em; }
   .feed__sidebar__pc {
     display: none; }
   .feed__sidebar__categories button {
-    font-size: 6px; }
+    font-size: 1.5em; }
   .feed__sidebar__mobile {
     display: flex;
     flex-direction: column;

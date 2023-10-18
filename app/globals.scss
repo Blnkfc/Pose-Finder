@@ -30,6 +30,7 @@
 @import "./Feed/PictureBlock/[PhotoId]/PhotoId.module";
 @import "./AddPicture/AddPicture.module";
 @import "./Contact/Contact.module";
+@import "./Feed/FeedSidebarMobile/FeedSidebarMobile.module";
 
 @media (max-width: 1512px) {
   .pictureBlock__image {
@@ -135,6 +136,18 @@
   *{
     font-size: 9px;
   }
+  .home__page{
+    font-size: 2em;
+    align-items: center;
+    h2{
+      display: none;
+    }
+    &__btn{
+      font-size: 2em;
+      margin-top: 2em;
+      width: 100%;
+    }
+  }
   .pictureBlock{
     min-width:33% ;
     &__image {
@@ -147,31 +160,41 @@
       }
     }
   }
-  .feed__sidebar{
-    h3{
-      font-size: 2.5em;
+
+  .feed {
+    &__nav__mobile{
+      display: flex ;
     }
-    &__pc{
-      display: none;
+    &__wrapper{
+      flex-flow: column wrap;
+      justify-content: start;
     }
-    &__categories{
-      button{
-      font-size:6px;
+    &__sidebar {
+      h3{
+        font-size: 2.5em;
       }
-    }
-    &__mobile{
-      display: flex;
-      flex-direction: column;
-      margin-right: 0.5em;
-      button{
-        font-size: 25px;
+      &__pc{
+        display: none;
       }
-      a{
-        font-size: 25px
-      }
-      &__selectors{
+      &__categories{
         button{
-          font-size: 15px;
+          font-size:1.5em;
+        }
+      }
+      &__mobile{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0.5em;
+        button{
+          font-size: 25px;
+        }
+        a{
+          font-size: 25px
+        }
+        &__selectors{
+          button{
+            font-size: 15px;
+          }
         }
       }
     }

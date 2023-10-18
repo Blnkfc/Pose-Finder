@@ -24,11 +24,17 @@ const Header = () => {
                     height: 'auto',}}/>
             </Link>
             <div className={"header__nav"}>
+                <Link href={"/"} className={"header__nav__link"} >FAQ</Link>
+                <Link href={"/"} className={"header__nav__link"} >Help</Link>
+                <Link href={"/"} className={"header__nav__link"} >About</Link>
+                <Link href={"/Contact"} className={"header__nav__link"} >Contact</Link>
                 <Link href={"/Feed"} className={"header__nav__link"}>Feed</Link>
                 <Link href={"/AddPicture"} className={"header__nav__link"}>Add Picture</Link>
                 <button onClick={toggleNavExpand}
                         className={"header__nav__menu__expander"}
                         style={{display: navExpand?"none":"block"}}  >&#10094;</button>
+
+
                 <div className="header__nav__mobile" style={{display: navExpand?"flex":"none"}} >
                     <div className={"header__nav__mobile__menu"}>
                         <span>Menu</span>
@@ -37,11 +43,15 @@ const Header = () => {
                             &#10095;
                         </button>
                     </div>
-                    <Link href={"/Feed"} className={""} onClick={toggleNavExpand} > Feed <span>&#9783;</span></Link>
-                    <Link href={"/AddPicture"} className={""} onClick={toggleNavExpand} > Add Picture <span>&#10009;</span></Link>
-                    <Link href={"/Settings"} className={""} onClick={toggleNavExpand} >
-                        Settings <span>&#9881;</span>
-                    </Link>
+                    <Link href={"/Feed"} className={""} onClick={toggleNavExpand} > Feed </Link>
+                    <Link href={"/AddPicture"} className={""} onClick={toggleNavExpand} > Add Picture </Link>
+                    <Link href={"/"} className={""} onClick={toggleNavExpand} >FAQ</Link>
+                    <Link href={"/"} className={""} onClick={toggleNavExpand} >Help</Link>
+                    <Link href={"/"} className={""} onClick={toggleNavExpand} >About</Link>
+                    <Link href={"/Contact"} className={""} onClick={toggleNavExpand} >Contact</Link>
+                    <Link href={"/Settings"} className={""} onClick={toggleNavExpand} > Settings </Link>
+
+
                 </div>
                 <Link href={"/Settings"} className="header__nav__settings">
                     <Image

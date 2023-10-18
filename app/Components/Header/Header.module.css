@@ -40,12 +40,23 @@
       position: absolute;
       flex-flow: column wrap;
       background-color: rgba(31, 31, 31, 0.95);
+      padding-bottom: 1em;
       width: 100%;
       height: auto;
       border: solid 1px #cfcfcf;
       top: 0;
       right: 0;
       z-index: 999; }
+      .header__nav__mobile a {
+        display: flex;
+        justify-content: space-between;
+        font-size: 3em;
+        text-decoration: none;
+        width: 100%;
+        padding: 1em 0 0 1em;
+        color: #cfcfcf; }
+        .header__nav__mobile a:active {
+          background-color: #5f5f5f; }
       .header__nav__mobile__menu {
         display: flex;
         flex-flow: row wrap;
@@ -67,20 +78,6 @@
           background-color: #1f1f1f;
           color: #00c2bf;
           margin: 0; }
-      .header__nav__mobile a {
-        display: flex;
-        justify-content: space-between;
-        font-size: 3em;
-        text-decoration: none;
-        width: 45%;
-        margin: 1em 0 0 1em;
-        color: #cfcfcf;
-        padding-bottom: 0.5em; }
-        .header__nav__mobile a:active {
-          background-color: #5f5f5f; }
-        .header__nav__mobile a span {
-          font-size: 1em;
-          color: #00c2bf; }
     .header__nav__link {
       text-decoration: none;
       color: #cfcfcf;

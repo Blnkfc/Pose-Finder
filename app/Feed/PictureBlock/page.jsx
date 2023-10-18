@@ -36,7 +36,7 @@ const PictureBlock = (props) => {
 
     return (
         <div  className={"pictureBlock"}>
-            <h3 className={"pictureBlock__name"} >{props.name}</h3>
+
             <div className={"pictureBlock__image__wrapper"}>
                 <div className={"pictureBlock__image__info"} style={{display: expand?"flex":"none"}} >
                     <button
@@ -44,9 +44,9 @@ const PictureBlock = (props) => {
                         onClick={toggleExpand} >
                         &#62;
                     </button>
+                    <h3>Title: {props.name}</h3>
                     <div className="pictureBlock__image__info__selector__wrapper">
                         {selectors}
-
                     </div>
 
                 </div>

@@ -14,13 +14,6 @@
 .pictureBlock {
   display: inline-block;
   min-width: 25%; }
-  .pictureBlock__name {
-    position: absolute;
-    padding: 0.3em 0 0 0.3em;
-    transform: translateX(0.2em) translateY(0.2em);
-    color: gray;
-    mix-blend-mode: difference;
-    z-index: 2; }
   .pictureBlock__image__wrapper {
     margin: 0.2em; }
   .pictureBlock__image {
@@ -32,7 +25,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: solid 2px #cfcfcf; }
+    border: solid 2px #8f8f8f; }
     .pictureBlock__image:hover {
       border: solid 2px #00c2bf; }
     .pictureBlock__image__info {
@@ -50,6 +43,9 @@
       overflow-x: hidden;
       transform: translateY(100%) translateX(5%);
       z-index: 999; }
+      .pictureBlock__image__info h3 {
+        display: block;
+        color: #cfcfcf; }
       .pictureBlock__image__info__selector {
         display: flex;
         align-items: center;

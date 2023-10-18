@@ -4,6 +4,7 @@ import {useStore} from "@/src/store";
 import React, {useEffect, useState} from "react";
 import FeedSidebar from "@/app/Feed/FeedSidebar/FeedSidebar";
 import Link from "next/link";
+import FeedSidebarMobile from "@/app/Feed/FeedSidebarMobile/FeedSidebarMobile";
 
 
 const Feed = () => {
@@ -90,24 +91,11 @@ const Feed = () => {
 
     return (
         <div className={"feed__wrapper"}>
+            <FeedSidebarMobile />
             <div className={"feed"}>
-                <div
-                    className="feed__mobile"
-                    onClick={toggleExpand}
-                    style={{display: expand?"block":"none", zIndex: expand?"9":"0"}} >
-                </div>
                 {photos}
             </div>
-            <div className="feed__sidebar__mobile" style={{height: expand?"100%":"auto"}}  >
-                <button onClick={toggleExpand} style={{display: expand?"none":"block"}} >
-                    &#9776;
-                </button>
-                <div className={"feed__sidebar__mobile__selectors"} style={{display: expand?"block":"none"}} >
-                    <FeedSidebar  />
-                </div>
-
-            </div>
-            <div className="feed__sidebar__pc"><FeedSidebar   /></div>
+            <div className="feed__sidebar__pc"><FeedSidebar /></div>
         </div>
     )
 }

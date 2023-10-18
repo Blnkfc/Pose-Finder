@@ -30,12 +30,26 @@
       position: absolute;
       flex-flow: column wrap;
       background-color: rgba(31, 31, 31, 0.95);
+      padding-bottom: 1em;
       width: 100%;
       height: auto;
       border: solid 1px $text-light;
       top: 0;
       right: 0;
       z-index: 999;
+      a{
+        display: flex;
+        justify-content: space-between;
+        font-size: 3em;
+        text-decoration: none;
+        width: 100%;
+        padding: 1em 0 0 1em ;
+        color: $text-light;
+
+        &:active{
+          background-color: lighten($background-dark, 25%);
+        }
+      }
       &__menu{
         display: flex;
         flex-flow: row wrap;
@@ -58,23 +72,6 @@
           background-color: $background-dark;
           color: $teal-color;
           margin: 0;
-        }
-      }
-      a{
-        display: flex;
-        justify-content: space-between;
-        font-size: 3em;
-        text-decoration: none;
-        width: 45%;
-        margin: 1em 0 0 1em ;
-        color: $text-light;
-        padding-bottom: 0.5em;
-        &:active{
-          background-color: lighten($background-dark, 25%);
-        }
-        span{
-          font-size: 1em;
-          color: $teal-color;
         }
       }
     }

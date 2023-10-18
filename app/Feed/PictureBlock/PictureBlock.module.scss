@@ -2,16 +2,6 @@
 .pictureBlock{
   display: inline-block;
   min-width: 25%;
-
-
-  &__name{
-    position: absolute;
-    padding: 0.3em 0 0 0.3em;
-    transform: translateX(+0.2em) translateY(0.2em);
-    color: gray;
-    mix-blend-mode: difference;
-    z-index: 2;
-  }
   &__image__wrapper{
     margin: 0.2em;
   }
@@ -24,7 +14,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    border: solid 2px $text-light;
+    border: solid 2px darken($text-light, 25%);
     &:hover{
       border: solid 2px $teal-color;
     }
@@ -43,6 +33,10 @@
       overflow-x: hidden;
       transform: translateY(+100%) translateX(+5%);
       z-index: 999;
+      h3{
+        display: block;
+        color: $text-light;
+      }
       &__selector{
         display: flex;
         align-items: center;
@@ -57,7 +51,6 @@
         font-size: 0.7em;
         &__wrapper {
           position: relative;
-
           flex-wrap: wrap;
           display: flex;
           max-width: 18em;

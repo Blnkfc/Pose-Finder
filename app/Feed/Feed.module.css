@@ -36,38 +36,16 @@
   .feed__content {
     width: 100%;
     display: inline-block; }
-  .feed__sidebar__pc {
-    width: 15%;
-    display: inline-block;
-    height: 20em; }
-  .feed__sidebar h3 {
-    color: #cfcfcf; }
-  .feed__sidebar__categories {
-    display: flex;
-    flex-flow: row wrap; }
-  .feed__sidebar__mobile {
-    display: none;
-    position: absolute;
-    top: 0;
-    max-width: 30%;
-    height: 100%;
-    background-color: #1f1f1f;
-    z-index: 10;
-    animation: ease-in 15ms; }
-    .feed__sidebar__mobile button {
-      background-color: #1f1f1f;
-      color: #00c2bf;
-      border: solid 1px #00c2bf;
-      border-radius: 0.1em;
-      padding: 0 0.2em;
-      float: right; }
-    .feed__sidebar__mobile a {
-      text-decoration: none;
-      background-color: #1f1f1f;
-      color: #00c2bf;
-      border: solid 1px #00c2bf;
-      border-radius: 0.1em;
-      padding: 0 0.2em;
-      float: right; }
+  .feed__sidebar {
+    padding: 0 0.5em 0 0.5em; }
+    .feed__sidebar__pc {
+      width: 20%;
+      display: inline-block;
+      height: 20em; }
+    .feed__sidebar h3 {
+      color: #cfcfcf; }
+    .feed__sidebar__categories {
+      display: flex;
+      flex-flow: row wrap; }
 
 /*# sourceMappingURL=Feed.module.css.map */

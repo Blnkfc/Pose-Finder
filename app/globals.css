@@ -600,7 +600,8 @@
       color: #cfcfcf;
       font-size: 1em;
       border: none;
-      outline: none; }
+      outline: none;
+      width: 100%; }
 
 @media (max-width: 1512px) {
   .pictureBlock__image {
@@ -770,7 +771,7 @@
   .feed__sidebar__pc {
     display: none; }
   .feed__sidebar__categories button {
-    font-size: 6px; }
+    font-size: 1.5em; }
   .feed__sidebar__mobile {
     display: block;
     max-width: 55%; }

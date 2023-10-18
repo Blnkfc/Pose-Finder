@@ -585,7 +585,8 @@
     align-items: center;
     color: #cfcfcf;
     font-size: 1em;
-    border: 1px solid #505050; }
+    border: 1px solid #505050;
+    width: 88%; }
     .feed__nav__mobile__searchBar button {
       background-color: transparent;
       border: none;
@@ -815,7 +816,7 @@
   .feed__sidebar__pc {
     display: none; }
   .feed__sidebar__categories button {
-    font-size: 6px; }
+    font-size: 1em; }
   .feed__sidebar__mobile {
     display: block;
     max-width: 55%; }

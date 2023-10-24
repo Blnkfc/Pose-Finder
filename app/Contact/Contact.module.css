@@ -18,9 +18,9 @@
   .contacts h1 {
     color: #00c2bf;
     margin-bottom: 1em; }
-  .contacts-list {
+  .contacts__list {
     display: flex; }
-    .contacts-list a {
+    .contacts__list a {
       display: flex;
       flex-flow: row wrap;
       align-items: center;
@@ -32,14 +32,14 @@
       border-radius: 0.5em;
       color: #00c2bf;
       margin-right: 1.5em; }
-      .contacts-list a:hover {
+      .contacts__list a:hover {
         padding: 0.8em;
         cursor: pointer;
         color: #cfcfcf; }
-        .contacts-list a:hover img {
+        .contacts__list a:hover img {
           width: 2.3em;
           height: 2.3em; }
-      .contacts-list a img {
+      .contacts__list a img {
         width: 2em;
         height: 2em;
         margin-right: 0.5em; }

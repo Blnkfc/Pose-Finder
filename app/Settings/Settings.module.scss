@@ -1,0 +1,19 @@
+@import "../variables.module";
+
+.settings__wrapper{
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  height: 100vh;
+  background-color: $background-dark;
+  h1{
+    font-size: 3em;
+    padding: 0.5em 0 2em 2em;
+    color: $teal-color;
+  }
+  p{
+    color: $text-light;
+    font-size: 1.5em;
+    padding-left: 4em;
+  }
+}

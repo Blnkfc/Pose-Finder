@@ -1,4 +1,4 @@
-@import "../variables.module";
+  @import "../variables.module";
 .contacts{
   background-color: $background-dark;
   height: 100vh;
@@ -7,7 +7,7 @@
     color: $teal-color;
     margin-bottom: 1em;
   }
-  &-list{
+  &__list{
     display: flex;
     a{
       display: flex;

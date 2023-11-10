@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,WAAW;EACT,KAAK,EAAE,IAAI;EACX,UAAU,EAAC,KAAK;EAChB,UAAU,EAAE,KAAK",
+"sources": ["AdminPanel.scss"],
+"names": [],
+"file": "AdminPanel.css"
+}

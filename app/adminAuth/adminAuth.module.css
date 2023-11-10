@@ -1,0 +1,49 @@
+.selector-button-template {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
+
+.adminAuth {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; }
+  .adminAuth__login {
+    font-size: 1.5em;
+    border: solid 2px #066d42;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.2em;
+    margin-bottom: 1em; }
+  .adminAuth__password {
+    font-size: 1.5em;
+    border: solid 2px #066d42;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.2em;
+    margin-bottom: 1.5em; }
+  .adminAuth__btn {
+    width: 10em;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center; }
+  .adminAuth__error {
+    background-color: #ff2e70; }
+  .adminAuth__submit {
+    background-color: #066d42; }
+
+/*# sourceMappingURL=adminAuth.module.css.map */

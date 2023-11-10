@@ -52,7 +52,7 @@
       font-size: 0.7em; }
       .pictureBlock__image__info__selector__wrapper {
         flex-grow: 1;
-        align-items: end;
+        align-items: flex-end;
         position: relative;
         flex-wrap: wrap;
         display: flex;

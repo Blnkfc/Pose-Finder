@@ -1,14 +1,14 @@
-
 .selector-button-template {
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.2em 0.2em 0.2em 0.2em;
-  background-color: #1f1f1f;
-  border: solid 1px #fff;
+  background-color: #fff;
+  border: solid 1px #000;
   border-radius: 0.5em;
-  color: #cfcfcf;
+  color: #000;
+  font-weight: bold;
   transition: all 0.1s; }
   .selector-button-template:hover {
-    background-color: #00c2bf;
+    background-color: #066d42;
     color: #fff;
     cursor: pointer; }
 
@@ -20,13 +20,13 @@
     position: absolute;
     max-width: 50%;
     height: 100%;
-    background-color: #1f1f1f;
+    background-color: #fff;
     z-index: 10; }
   .feed__nav__mobile__sidebar__btn {
     text-decoration: none;
-    background-color: #1f1f1f;
-    color: #00c2bf;
-    border: solid 1px #00c2bf;
+    background-color: #fff;
+    color: #066d42;
+    border: solid 1px #066d42;
     border-radius: 0.1em;
     padding: 0 0.2em;
     float: right;
@@ -34,9 +34,9 @@
   .feed__nav__mobile__searchBar {
     display: flex;
     align-items: center;
-    color: #cfcfcf;
+    color: #000;
     font-size: 1em;
-    border: 1px solid #505050;
+    border: 1px solid black;
     width: 88%; }
     .feed__nav__mobile__searchBar button {
       background-color: transparent;
@@ -48,7 +48,7 @@
         height: 4em; }
     .feed__nav__mobile__searchBar input {
       background-color: transparent;
-      color: #cfcfcf;
+      color: #000;
       font-size: 1em;
       border: none;
       outline: none;

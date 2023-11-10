@@ -2,9 +2,10 @@
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.2em 0.2em 0.2em 0.2em;
   background-color: #fff;
-  border: solid 1px #fff;
+  border: solid 1px #000;
   border-radius: 0.5em;
   color: #000;
+  font-weight: bold;
   transition: all 0.1s; }
   .selector-button-template:hover {
     background-color: #066d42;
@@ -25,7 +26,7 @@
       font-weight: bold;
       transition: all 0.2s; }
       .footer__info a:hover {
-        color: #ff0055; }
+        color: #ff2e70; }
     .footer__info__logo {
       display: block;
       width: 3em; }

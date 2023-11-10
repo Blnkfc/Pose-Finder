@@ -23,22 +23,6 @@
   background: darken($primary-color, 15%);
 }
 
-.selector-button-template{
-  padding: 0.2em 0.5em 0.2em 0.5em ;
-  margin: 0.2em 0.2em 0.2em 0.2em ;
-  background-color: $background-color;
-  border: solid 1px $black-color;
-  border-radius: 0.5em ;
-  color: $text-light;
-  font-weight: bold;
-  transition: all 0.1s;
-  &:hover{
-    background-color: $primary-color;
-    color: $white-color;
-    cursor: pointer;
-  }
-}
-
 
 @import "page.module";
 @import "./Components/Header/Header.module";

@@ -1,2 +1,15 @@
+.selector-button-template {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 /*# sourceMappingURL=variables.module.css.map */

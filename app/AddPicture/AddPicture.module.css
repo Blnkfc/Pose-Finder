@@ -1,20 +1,20 @@
-
 .selector-button-template, .addPicture__sidebar__selectors button {
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.2em 0.2em 0.2em 0.2em;
-  background-color: #1f1f1f;
-  border: solid 1px #fff;
+  background-color: #fff;
+  border: solid 1px #000;
   border-radius: 0.5em;
-  color: #cfcfcf;
+  color: #000;
+  font-weight: bold;
   transition: all 0.1s; }
   .selector-button-template:hover, .addPicture__sidebar__selectors button:hover {
-    background-color: #00c2bf;
+    background-color: #066d42;
     color: #fff;
     cursor: pointer; }
 
 .addPicture {
   display: flex;
-  background: #1f1f1f;
+  background: #fff;
   padding-top: 1em;
   min-height: 100vh; }
   .addPicture__load {
@@ -32,40 +32,40 @@
       height: 100%;
       background-color: black;
       opacity: 60%;
-      border: solid 2px #00c2bf;
+      border: solid 2px #066d42;
       border-radius: 0.5em; }
     .addPicture__load__input {
       isolation: isolate;
       z-index: 99; }
       .addPicture__load__input p {
-        color: #cfcfcf; }
+        color: #000; }
       .addPicture__load__input input {
         width: 15em;
         height: 2em;
-        background: #454545;
-        border: #cfcfcf;
-        color: #cfcfcf; }
+        background: white;
+        border: #000;
+        color: #000; }
   .addPicture__sidebar {
     display: flex;
     flex-flow: wrap column; }
     .addPicture__sidebar p {
       font-size: 2em;
-      color: #cfcfcf; }
+      color: #000; }
     .addPicture__sidebar__title {
       padding-bottom: 2em; }
       .addPicture__sidebar__title input {
         width: 15em;
         height: 2em;
-        background: #454545;
-        border: #cfcfcf;
-        color: #cfcfcf; }
+        background: white;
+        border: #000;
+        color: #000; }
     .addPicture__sidebar__selectors {
       padding-bottom: 2em; }
     .addPicture__sidebar__submit a {
-      background: #1f1f1f;
-      border: solid 1px #00c2bf;
+      background: #fff;
+      border: solid 1px #066d42;
       border-radius: 0.3em;
-      color: #cfcfcf;
+      color: #000;
       text-decoration: none;
       text-align: center;
       padding: 0.2em 0.5em 0.2em 0.5em;
@@ -73,7 +73,7 @@
       height: 1.5em; }
       .addPicture__sidebar__submit a:hover {
         cursor: pointer;
-        background-color: #00c2bf;
+        background-color: #066d42;
         border: solid 1px #fff;
         color: #fff; }
     .addPicture__sidebar__submit__error {
@@ -94,10 +94,10 @@
           cursor: pointer; }
       .addPicture__sidebar__submit__error button {
         background: #ff0000;
-        border: solid 1px #cfcfcf;
+        border: solid 1px #000;
         border-radius: 0.3em;
         cursor: pointer;
-        color: #cfcfcf;
+        color: #000;
         text-decoration: none;
         text-align: center;
         width: 1.5em;

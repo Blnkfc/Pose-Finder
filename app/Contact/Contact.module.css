@@ -1,23 +1,23 @@
-
 .selector-button-template {
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.2em 0.2em 0.2em 0.2em;
-  background-color: #1f1f1f;
-  border: solid 1px #fff;
+  background-color: #fff;
+  border: solid 1px #000;
   border-radius: 0.5em;
-  color: #cfcfcf;
+  color: #000;
+  font-weight: bold;
   transition: all 0.1s; }
   .selector-button-template:hover {
-    background-color: #00c2bf;
+    background-color: #066d42;
     color: #fff;
     cursor: pointer; }
 
 .contacts {
-  background-color: #1f1f1f;
+  background-color: #fff;
   height: 100vh;
   padding: 1em 0 0 1em; }
   .contacts h1 {
-    color: #00c2bf;
+    color: #066d42;
     margin-bottom: 1em; }
   .contacts__list {
     display: flex; }
@@ -25,18 +25,18 @@
       display: flex;
       flex-flow: row wrap;
       align-items: center;
-      background-color: #1f1f1f;
+      background-color: #fff;
       padding: 1em;
       width: 10em;
       text-decoration: none;
-      border: 1px solid #00c2bf;
+      border: 1px solid #066d42;
       border-radius: 0.5em;
-      color: #00c2bf;
+      color: #066d42;
       margin-right: 1.5em; }
       .contacts__list a:hover {
         padding: 0.8em;
         cursor: pointer;
-        color: #cfcfcf; }
+        color: #000; }
         .contacts__list a:hover img {
           width: 2.3em;
           height: 2.3em; }

@@ -1,14 +1,14 @@
-
 .selector-button-template {
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.2em 0.2em 0.2em 0.2em;
-  background-color: #1f1f1f;
-  border: solid 1px #fff;
+  background-color: #fff;
+  border: solid 1px #000;
   border-radius: 0.5em;
-  color: #cfcfcf;
+  color: #000;
+  font-weight: bold;
   transition: all 0.1s; }
   .selector-button-template:hover {
-    background-color: #00c2bf;
+    background-color: #066d42;
     color: #fff;
     cursor: pointer; }
 
@@ -23,27 +23,27 @@
   .picture__wrapper__sidebar {
     margin-left: 5em; }
     .picture__wrapper__sidebar h1 {
-      color: #cfcfcf; }
+      color: #000; }
     .picture__wrapper__sidebar h2 {
-      color: #cfcfcf;
+      color: #000;
       margin-bottom: 1em; }
     .picture__wrapper__sidebar__selectors {
       display: flex;
       flex-flow: row wrap;
-      color: #cfcfcf;
+      color: #000;
       max-width: 80%;
       row-gap: 0.2em; }
       .picture__wrapper__sidebar__selectors span {
         margin-right: 1em;
-        border: solid 1px #00c2bf;
+        border: solid 1px #066d42;
         border-radius: 0.5em;
-        background: #1f1f1f;
+        background: #fff;
         padding: 0.3em 0.5em 0.3em 0.5em; }
     .picture__wrapper__sidebar__delete {
       margin: 3em 0; }
       .picture__wrapper__sidebar__delete a {
         text-decoration: none;
-        color: #cfcfcf;
+        color: #000;
         border: solid 1px #ff0000;
         border-radius: 0.5em;
         padding: 0.3em 0.5em 0.3em 0.5em; }

@@ -4,8 +4,19 @@
   padding: 0;
   font-family: Lato, sans-serif; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 ::-webkit-scrollbar {
   width: 0.5em; }
@@ -33,9 +44,6 @@
     background-color: #066d42;
     color: #fff;
     cursor: pointer; }
-
-:export {
-  primaryColor: #066d42; }
 
 .home__page {
   display: flex;
@@ -76,8 +84,19 @@
       color: #fff;
       background-color: #066d42; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .header {
   display: flex;
@@ -163,8 +182,19 @@
       display: block;
       width: 3em; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .footer {
   width: 100%;
@@ -185,8 +215,19 @@
       display: block;
       width: 3em; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .feed__wrapper {
   display: flex;
@@ -225,8 +266,19 @@
       display: flex;
       flex-flow: row wrap; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .pictureBlock {
   display: inline-block;
@@ -303,8 +355,19 @@
       font-weight: 900;
       transform: rotate(90deg); }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .picture__wrapper {
   display: flex; }
@@ -346,8 +409,19 @@
           color: #fff;
           border: #fff solid 1px; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .addPicture {
   display: flex;
@@ -440,8 +514,19 @@
         width: 1.5em;
         height: 1.5em; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .contacts {
   background-color: #fff;
@@ -476,8 +561,19 @@
         height: 2em;
         margin-right: 0.5em; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .feed__nav__mobile {
   display: none;
@@ -521,8 +617,19 @@
       outline: none;
       width: 100%; }
 
-:export {
-  primaryColor: #066d42; }
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
 
 .settings__wrapper {
   display: flex;

@@ -1,14 +1,14 @@
-
 .selector-button-template {
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.2em 0.2em 0.2em 0.2em;
-  background-color: #1f1f1f;
-  border: solid 1px #fff;
+  background-color: #fff;
+  border: solid 1px #000;
   border-radius: 0.5em;
-  color: #cfcfcf;
+  color: #000;
+  font-weight: bold;
   transition: all 0.1s; }
   .selector-button-template:hover {
-    background-color: #00c2bf;
+    background-color: #066d42;
     color: #fff;
     cursor: pointer; }
 
@@ -19,19 +19,19 @@
   flex-flow: column wrap;
   min-height: 100vh;
   width: 100%;
-  background-color: #1f1f1f;
+  background-color: #fff;
   padding: 0 5% 0 5%; }
   .home__page h1 {
     color: #fff;
     font-size: 3em; }
     .home__page h1 span {
-      color: #00c2bf;
+      color: #066d42;
       font-size: 1em; }
   .home__page h2 {
     color: #fff;
     font-size: 1.5em; }
     .home__page h2 span {
-      color: #00c2bf;
+      color: #066d42;
       font-size: 1em; }
   .home__page__btn {
     display: block;
@@ -40,15 +40,15 @@
     text-align: center;
     font-size: 1.5em;
     line-height: 2.3em;
-    color: #cfcfcf;
+    color: #000;
     width: 8em;
     height: 2.3em;
-    border: solid 1px #cfcfcf;
+    border: solid 1px #000;
     border-radius: 0.3em;
     transition: all 0.2s; }
     .home__page__btn:hover {
       border: solid 1px #fff;
       color: #fff;
-      background-color: #00c2bf; }
+      background-color: #066d42; }
 
 /*# sourceMappingURL=page.module.css.map */

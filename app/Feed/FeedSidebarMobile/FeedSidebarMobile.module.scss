@@ -7,14 +7,14 @@
     position: absolute;
     max-width: 50%;
     height: 100%;
-    background-color: $background-dark;
+    background-color: $background-color;
     z-index: 10;
   }
   &__sidebar__btn{
     text-decoration: none;
-    background-color: $background-dark;
-    color: $teal-color;
-    border: solid 1px $teal-color;
+    background-color: $background-color;
+    color: $primary-color;
+    border: solid 1px $primary-color;
     border-radius: 0.1em;
     padding: 0 0.2em;
     float: right;

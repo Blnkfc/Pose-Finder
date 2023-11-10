@@ -1,14 +1,2 @@
-.selector-button-template {
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  margin: 0.2em 0.2em 0.2em 0.2em;
-  background-color: #1f1f1f;
-  border: solid 1px #fff;
-  border-radius: 0.5em;
-  color: #cfcfcf;
-  transition: all 0.1s; }
-  .selector-button-template:hover {
-    background-color: #00c2bf;
-    color: #fff;
-    cursor: pointer; }
 
 /*# sourceMappingURL=variables.module.css.map */

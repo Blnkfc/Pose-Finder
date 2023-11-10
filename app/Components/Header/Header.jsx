@@ -2,7 +2,7 @@
 import styles from "./Header.module.css"
 import Image from "next/image";
 import Link from "next/link";
-import header_logo from '@/public/assets/header-logo.png'
+import header_logo from '@/public/assets/logo.png'
 import header_settings from '@/public/assets/header-settings.png'
 import {useState} from "react";
 

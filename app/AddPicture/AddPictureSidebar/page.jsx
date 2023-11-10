@@ -17,21 +17,13 @@ const AddPictureSidebar = () => {
         name: "",
         url: "",
         selectors: [
-            { name: "Male", isActive: false },
-            { name: "Female", isActive: false },
-            { name: "Hands", isActive: false },
-            { name: "Legs", isActive: false },
-            { name: "Head", isActive: false },
-            { name:  "Face Features", isActive: false},
-            { name: "Waist", isActive: false },
-            { name: "Full Body", isActive: false },
-            { name:  "Upper Body", isActive: false},
-            { name:  "Lower Body", isActive: false},
-            { name:  "Standing Position", isActive: false},
-            { name:  "Sitting Position", isActive: false},
-            { name:  "Laying Position", isActive: false},
-            { name:  "Moving Position", isActive: false},
-            { name:  "Facial Expression", isActive: false}
+            { name: "Special", isActive: false },
+            { name: "Milky", isActive: false },
+            { name: "Powder", isActive: false },
+            { name: "Tapioca", isActive: false },
+            { name: "Syrup", isActive: false },
+            { name: "Juice balls", isActive: false},
+            { name: "Food", isActive: false }
         ]}
 
     /*  ID SETUP  */

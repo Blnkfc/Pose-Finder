@@ -1,5 +1,19 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-}
+// next.config.js
+const path = require('path');
 
-module.exports = nextConfig
+module.exports = {
+    // ... other configurations
+
+    webpack: (config, { isServer }) => {
+        config.module.rules.push({
+            test: /\.scss$/,
+            use: [
+                'css-loader',
+                'sass-loader'
+            ],
+            include: path.resolve(__dirname, 'styles'),
+        });
+
+        return config;
+    },
+};

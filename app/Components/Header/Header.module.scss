@@ -2,12 +2,14 @@
 .header{
   display: flex;
   justify-content: space-between;
-  background-color: $background-dark;
+  align-items: center;
+  background-color: $primary-color;
   height: 3em;
   border-bottom: solid 1px $white-color;
   &__logo{
     display: block;
-    width: 3em;
+    width: 2.7em;
+    height: 2.7em;
   }
   &__nav{
     display: flex;
@@ -20,8 +22,8 @@
       width: 1em;
       height: 1em;
       line-height: 1em;
-      background-color: $background-dark;
-      color: $teal-color;
+      background-color: $background-color;
+      color: $primary-color;
       border: none;
       transform: translateX(-100%);
       margin-right: 1.5em;
@@ -47,7 +49,7 @@
         color: $text-light;
 
         &:active{
-          background-color: lighten($background-dark, 25%);
+          background-color: lighten($background-color, 25%);
         }
       }
       &__menu{
@@ -69,23 +71,23 @@
           height: 1em;
           width: 1em;
           border: none;
-          background-color: $background-dark;
-          color: $teal-color;
+          background-color: $background-color;
+          color: $primary-color;
           margin: 0;
         }
       }
     }
     &__link{
       text-decoration: none;
-      color: $text-light;
+      color: $white-color;
       text-align: center;
       line-height: 3em;
+      font-weight: bold;
       width: 7em;
       height: 100%;
-
+      transition: all 0.2s;
       &:hover{
-        border: solid 2px $teal-color;
-        color: $white-color;
+        color: $secondary-color;
       }
     }
     &__settings{

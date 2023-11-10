@@ -2,6 +2,11 @@
 import React, { useEffect, useState } from "react";
 import {useStore} from "@/src/store"
 
+import variables from "@/app/variables.module.scss"
+
+
+
+
 const FeedSidebar = () => {
     /*  LIST OF SELECTORS FROM THE STORE  */
     const searchList = useStore((state) => state.searchList)
@@ -26,7 +31,7 @@ const FeedSidebar = () => {
             <button
                 key={index}
                 style={
-                {backgroundColor: C.isActive?"#00c2bf":"#1f1f1f", color: C.isActive?"#fff":"#cfcfcf"}
+                {backgroundColor: C.isActive?"#066d42":"#fff", color: C.isActive?"#fff":"#000"}
             }
                 onClick={() => {
                     toggleCategory(index)

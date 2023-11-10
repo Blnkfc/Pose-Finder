@@ -1,10 +1,10 @@
   @import "../variables.module";
 .contacts{
-  background-color: $background-dark;
+  background-color: $background-color;
   height: 100vh;
   padding: 1em 0 0 1em ;
   h1{
-    color: $teal-color;
+    color: $primary-color;
     margin-bottom: 1em;
   }
   &__list{
@@ -13,13 +13,13 @@
       display: flex;
       flex-flow: row wrap;
       align-items: center;
-      background-color: $background-dark;
+      background-color: $background-color;
       padding: 1em;
       width: 10em;
       text-decoration: none;
-      border: 1px solid $teal-color;
+      border: 1px solid $primary-color;
       border-radius: 0.5em;
-      color: $teal-color;
+      color: $primary-color;
       margin-right: 1.5em;
       &:hover{
         padding: 0.8em;

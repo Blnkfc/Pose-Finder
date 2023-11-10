@@ -1,3 +1,4 @@
+
 .selector-button-template {
   padding: 0.2em 0.5em 0.2em 0.5em;
   margin: 0.2em 0.2em 0.2em 0.2em;
@@ -14,27 +15,43 @@
 .feed__nav__mobile {
   display: none;
   animation: ease-in 15ms;
-  font-size: 3em; }
+  font-size: 4em; }
   .feed__nav__mobile__selectors {
     position: absolute;
-    max-width: 30%;
+    max-width: 50%;
     height: 100%;
     background-color: #1f1f1f;
     z-index: 10; }
-  .feed__nav__mobile button {
-    background-color: #1f1f1f;
-    color: #00c2bf;
-    border: solid 1px #00c2bf;
-    border-radius: 0.1em;
-    padding: 0 0.2em;
-    float: right; }
-  .feed__nav__mobile a {
+  .feed__nav__mobile__sidebar__btn {
     text-decoration: none;
     background-color: #1f1f1f;
     color: #00c2bf;
     border: solid 1px #00c2bf;
     border-radius: 0.1em;
     padding: 0 0.2em;
-    float: right; }
+    float: right;
+    font-size: 1em; }
+  .feed__nav__mobile__searchBar {
+    display: flex;
+    align-items: center;
+    color: #cfcfcf;
+    font-size: 1em;
+    border: 1px solid #505050;
+    width: 88%; }
+    .feed__nav__mobile__searchBar button {
+      background-color: transparent;
+      border: none;
+      width: 5em;
+      height: 5em; }
+      .feed__nav__mobile__searchBar button img {
+        width: 4em;
+        height: 4em; }
+    .feed__nav__mobile__searchBar input {
+      background-color: transparent;
+      color: #cfcfcf;
+      font-size: 1em;
+      border: none;
+      outline: none;
+      width: 100%; }
 
 /*# sourceMappingURL=FeedSidebarMobile.module.css.map */

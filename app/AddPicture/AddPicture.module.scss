@@ -1,7 +1,7 @@
 @import "../variables.module";
 .addPicture{
   display: flex;
-  background: $background-dark;
+  background: $background-color;
   padding-top: 1em;
   min-height: 100vh;
   &__load{
@@ -19,7 +19,7 @@
       height: 100%;
       background-color: black;
       opacity: 60%;
-      border: solid 2px $teal-color;
+      border: solid 2px $primary-color;
       border-radius: 0.5em;
     }
     &__input{
@@ -31,7 +31,7 @@
       input{
         width: 15em;
         height: 2em;
-        background: lighten($background-dark, 15%);
+        background: lighten($background-color, 15%);
         border: $text-light;
         color: $text-light;
       }
@@ -49,7 +49,7 @@
       input{
         width: 15em;
         height: 2em;
-        background:lighten( $background-dark, 15%);
+        background:lighten( $background-color, 15%);
         border: $text-light;
         color: $text-light;
       }
@@ -62,8 +62,8 @@
     }
     &__submit{
       a{
-        background: $background-dark;
-        border: solid 1px $teal-color;
+        background: $background-color;
+        border: solid 1px $primary-color;
         border-radius: 0.3em;
         color: $text-light;
         text-decoration: none;
@@ -73,7 +73,7 @@
         height: 1.5em;
         &:hover{
           cursor: pointer;
-          background-color: $teal-color;
+          background-color: $primary-color;
           border: solid 1px $white-color;
           color: $white-color;
         }

@@ -7,6 +7,8 @@ import Link from "next/link";
 import FeedSidebarMobile from "@/app/Feed/FeedSidebarMobile/FeedSidebarMobile";
 
 
+
+
 const Feed = () => {
       /*  INITIALIZING FEED(PHOTOLIST) AND SELECTORS FOR SEARCH(SEACRCHLIST)  */
     const photoList = useStore((state) => state.photoList)

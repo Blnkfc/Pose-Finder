@@ -4,6 +4,8 @@
   padding: 0;
   font-family: Lato, sans-serif; }
 
+:export {
+  primaryColor: #066d42; }
 
 ::-webkit-scrollbar {
   width: 0.5em; }
@@ -18,6 +20,22 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #022416; }
 
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
+
+:export {
+  primaryColor: #066d42; }
 
 .home__page {
   display: flex;
@@ -58,6 +76,8 @@
       color: #fff;
       background-color: #066d42; }
 
+:export {
+  primaryColor: #066d42; }
 
 .header {
   display: flex;
@@ -143,6 +163,8 @@
       display: block;
       width: 3em; }
 
+:export {
+  primaryColor: #066d42; }
 
 .footer {
   width: 100%;
@@ -163,6 +185,8 @@
       display: block;
       width: 3em; }
 
+:export {
+  primaryColor: #066d42; }
 
 .feed__wrapper {
   display: flex;
@@ -201,6 +225,8 @@
       display: flex;
       flex-flow: row wrap; }
 
+:export {
+  primaryColor: #066d42; }
 
 .pictureBlock {
   display: inline-block;
@@ -277,6 +303,9 @@
       font-weight: 900;
       transform: rotate(90deg); }
 
+:export {
+  primaryColor: #066d42; }
+
 .picture__wrapper {
   display: flex; }
   .picture__wrapper__image {
@@ -317,6 +346,8 @@
           color: #fff;
           border: #fff solid 1px; }
 
+:export {
+  primaryColor: #066d42; }
 
 .addPicture {
   display: flex;
@@ -409,6 +440,8 @@
         width: 1.5em;
         height: 1.5em; }
 
+:export {
+  primaryColor: #066d42; }
 
 .contacts {
   background-color: #fff;
@@ -442,6 +475,9 @@
         width: 2em;
         height: 2em;
         margin-right: 0.5em; }
+
+:export {
+  primaryColor: #066d42; }
 
 .feed__nav__mobile {
   display: none;
@@ -485,6 +521,8 @@
       outline: none;
       width: 100%; }
 
+:export {
+  primaryColor: #066d42; }
 
 .settings__wrapper {
   display: flex;
@@ -500,20 +538,6 @@
     color: #000;
     font-size: 1.5em;
     padding-left: 4em; }
-
-.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  margin: 0.2em 0.2em 0.2em 0.2em;
-  background-color: #fff;
-  border: solid 1px #000;
-  border-radius: 0.5em;
-  color: #000;
-  font-weight: bold;
-  transition: all 0.1s; }
-  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
-    background-color: #066d42;
-    color: #fff;
-    cursor: pointer; }
 
 @media (max-width: 1512px) {
   .pictureBlock__image {

@@ -22,16 +22,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: darken($primary-color, 15%);
 }
-@import "page.module";
-@import "./Components/Header/Header.module";
-@import "./Components/Footer/Footer.module";
-@import "./Feed/Feed.module";
-@import "./Feed/PictureBlock/PictureBlock.module";
-@import "./Feed/PictureBlock/[PhotoId]/PhotoId.module";
-@import "./AddPicture/AddPicture.module";
-@import "./Contact/Contact.module";
-@import "./Feed/FeedSidebarMobile/FeedSidebarMobile.module";
-@import "./Settings/Settings.module";
 
 .selector-button-template{
   padding: 0.2em 0.5em 0.2em 0.5em ;
@@ -48,6 +38,20 @@
     cursor: pointer;
   }
 }
+
+
+@import "page.module";
+@import "./Components/Header/Header.module";
+@import "./Components/Footer/Footer.module";
+@import "./Feed/Feed.module";
+@import "./Feed/PictureBlock/PictureBlock.module";
+@import "./Feed/PictureBlock/[PhotoId]/PhotoId.module";
+@import "./AddPicture/AddPicture.module";
+@import "./Contact/Contact.module";
+@import "./Feed/FeedSidebarMobile/FeedSidebarMobile.module";
+@import "./Settings/Settings.module";
+
+
 
 
 

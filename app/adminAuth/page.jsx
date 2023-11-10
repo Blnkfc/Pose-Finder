@@ -1,9 +1,9 @@
 'use client';
 import Link from "next/link";
 import {useStore} from "@/src/store";
-import {useEffect, useState} from "react";
+import React, {useEffect, useState} from "react";
 
-const adminAuth = () => {
+const AdminAuth = () => {
     const inputData = useStore((state) => state.authorisation)
 
     const [loginValue, setLoginValue] = useState("");
@@ -58,4 +58,4 @@ const adminAuth = () => {
 }
 
 
-export default adminAuth;
+export default AdminAuth;

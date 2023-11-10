@@ -1,0 +1,41 @@
+@import "../variables.module";
+
+.adminAuth{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  &__login{
+    font-size: 1.5em;
+    border: solid 2px $primary-color;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.2em;
+    margin-bottom: 1em;
+  }
+  &__password{
+    font-size: 1.5em;
+    border: solid 2px $primary-color;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.2em;
+    margin-bottom: 1.5em;
+  }
+  &__btn{
+    width: 10em;
+    color: $white-color;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__error{
+    background-color: $secondary-color;
+  }
+  &__submit{
+    background-color: $primary-color;
+  }
+}

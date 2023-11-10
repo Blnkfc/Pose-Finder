@@ -14,23 +14,24 @@ const Feed = () => {
     const photoList = useStore((state) => state.photoList)
     const searchList = useStore((state) => state.searchList)
 
+    useEffect(() => {
+        // GETTING THE DATA FROM LOCAL STORAGE
+        const storedFeed = localStorage.getItem('feed');
+
+        // PARSE THE DATA TO THE STATE SO IT STAY UPDATED
+        if (storedFeed) {
+            const parsedFeed = JSON.parse(storedFeed);
+        }
+    }, []);
     /*  OBJECT WITH GENERAL LIST OF SELECTORS TO CHECK FOR ACTIVE SELECTORS LATER  */
     const initialSelectorList = [
-        { name: "Male", isActive: false },
-        { name: "Female", isActive: false },
-        { name: "Hands", isActive: false },
-        { name: "Legs", isActive: false },
-        { name: "Head", isActive: false },
-        { name:  "Face Features", isActive: false},
-        { name: "Waist", isActive: false },
-        { name: "Full Body", isActive: false },
-        { name:  "Upper Body", isActive: false},
-        { name:  "Lower Body", isActive: false},
-        { name:  "Standing Position", isActive: false},
-        { name:  "Sitting Position", isActive: false},
-        { name:  "Laying Position", isActive: false},
-        { name:  "Moving Position", isActive: false},
-        { name:  "Facial Expression", isActive: false}
+        { name: "Special", isActive: false },
+        { name: "Milky", isActive: false },
+        { name: "Powder", isActive: false },
+        { name: "Tapioca", isActive: false },
+        { name: "Syrup", isActive: false },
+        { name: "Juice balls", isActive: false},
+        { name: "Food", isActive: false }
     ]
 
 
@@ -81,6 +82,7 @@ const Feed = () => {
                     name={PhotoUnit.name}
                     url={PhotoUnit.url}
                     id={PhotoUnit.id}
+                    description={PhotoUnit.description}
                     searchlist={searchList} />))
         )
     }, [photoList, searchList])

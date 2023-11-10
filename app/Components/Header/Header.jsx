@@ -29,7 +29,9 @@ const Header = () => {
                 <Link href={"/"} className={"header__nav__link"} >About</Link>
                 <Link href={"/Contact"} className={"header__nav__link"} >Contact</Link>
                 <Link href={"/Feed"} className={"header__nav__link"}>Feed</Link>
-                <Link href={"/AddPicture"} className={"header__nav__link"}>Add Picture</Link>
+
+                {/*  IT WILL APPEAR ONLY FOR ADMINS  */}
+                {/*<Link href={"/AddPicture"} className={"header__nav__link"}>Add Picture</Link>*/}
                 <button onClick={toggleNavExpand}
                         className={"header__nav__menu__expander"}
                         style={{display: navExpand?"none":"block"}}  >&#10094;</button>

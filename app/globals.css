@@ -55,16 +55,16 @@
   background-color: #fff;
   padding: 0 5% 0 5%; }
   .home__page h1 {
-    color: #fff;
+    color: #066d42;
     font-size: 3em; }
     .home__page h1 span {
-      color: #066d42;
+      color: #ff2e70;
       font-size: 1em; }
   .home__page h2 {
-    color: #fff;
+    color: #066d42;
     font-size: 1.5em; }
     .home__page h2 span {
-      color: #066d42;
+      color: #ff2e70;
       font-size: 1em; }
   .home__page__btn {
     display: block;
@@ -72,6 +72,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 1.5em;
+    font-weight: bold;
     line-height: 2.3em;
     color: #000;
     width: 8em;
@@ -81,7 +82,7 @@
     transition: all 0.2s; }
     .home__page__btn:hover {
       border: solid 1px #fff;
-      color: #fff;
+      color: #ff2e70;
       background-color: #066d42; }
 
 .selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
@@ -282,78 +283,71 @@
 
 .pictureBlock {
   display: inline-block;
-  min-width: 25%; }
+  width: 49%;
+  border: solid 1px #000;
+  margin: 0 0.5%;
+  background-image: url("../public/assets/pictureBlock-background.png");
+  background-size: cover; }
   .pictureBlock__image__wrapper {
-    margin: 0.2em; }
-  .pictureBlock__image {
-    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0.2em;
+    background-color: rgba(255, 255, 255, 0.5); }
+    .pictureBlock__image__wrapper a {
+      width: 15%;
+      height: 10em; }
+  .pictureBlock__image__info {
+    display: flex;
+    flex-flow: column nowrap;
+    background: transparent;
+    padding: 0.3em 1em 0.3em 1em;
+    border-radius: 0.5em;
     width: 100%;
-    height: 15em;
-    aspect-ratio: auto;
-    border-radius: 0.3em;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: solid 2px black; }
-    .pictureBlock__image:hover {
-      border: solid 2px #066d42; }
-    .pictureBlock__image__info {
+    height: 10em; }
+    .pictureBlock__image__info h3 {
+      display: block;
+      color: #ff2e70; }
+    .pictureBlock__image__info__selector {
       display: flex;
-      flex-flow: column-reverse nowrap;
-      justify-content: space-between;
-      position: absolute;
-      background: #fff;
-      padding: 0.3em 0.5em 0.3em 0.5em;
-      border: solid 1px #000;
+      align-items: center;
+      text-decoration: none;
+      padding: 0.2em 0.5em 0.2em 0.5em;
+      margin: 0.2em 0.2em 0.2em 0.2em;
+      background-color: #fff;
+      border: solid 1px #ff2e70;
       border-radius: 0.5em;
-      max-width: 18em;
-      height: 7em;
-      overflow: scroll;
-      overflow-x: hidden;
-      transform: translateY(100%) translateX(5%);
-      z-index: 999; }
-      .pictureBlock__image__info h3 {
-        display: block;
-        color: #000; }
-      .pictureBlock__image__info__selector {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        padding: 0.2em 0.5em 0.2em 0.5em;
-        margin: 0.2em 0.2em 0.2em 0.2em;
-        background-color: #fff;
-        border: solid 1px #fff;
-        border-radius: 0.5em;
-        color: #000;
-        height: 2em;
-        font-size: 0.7em; }
-        .pictureBlock__image__info__selector__wrapper {
-          position: relative;
-          flex-wrap: wrap;
-          display: flex;
-          max-width: 18em; }
-    .pictureBlock__image__expander__up {
-      width: 2em;
+      color: #fff;
       height: 2em;
-      position: absolute;
-      transform: translateY(-110%) translateX(10%) rotate(-90deg);
-      border: none;
-      background: transparent;
-      color: #ff2e70;
-      font-size: 2em;
-      font-weight: 900;
-      -webkit-text-stroke: 1px #000; }
-    .pictureBlock__image__expander__down {
-      width: 2em;
-      height: 3em;
-      border: 1px solid #000;
-      border-radius: 0.5em;
-      background: #fff;
-      color: #066d42;
-      padding: 0.2em 0;
-      font-size: 0.9em;
-      font-weight: 900;
-      transform: rotate(90deg); }
+      font-size: 0.7em; }
+      .pictureBlock__image__info__selector__wrapper {
+        flex-grow: 1;
+        align-items: end;
+        position: relative;
+        flex-wrap: wrap;
+        display: flex;
+        width: 100%; }
+  .pictureBlock__image__expander__up {
+    width: 2em;
+    height: 2em;
+    position: absolute;
+    transform: translateY(-110%) translateX(10%) rotate(-90deg);
+    border: none;
+    background: transparent;
+    color: #ff2e70;
+    font-size: 2em;
+    font-weight: 900;
+    -webkit-text-stroke: 1px #000; }
+  .pictureBlock__image__expander__down {
+    width: 2em;
+    height: 3em;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    background: #fff;
+    color: #066d42;
+    padding: 0.2em 0;
+    font-size: 0.9em;
+    font-weight: 900;
+    transform: rotate(90deg); }
 
 .selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
   padding: 0.2em 0.5em 0.2em 0.5em;
@@ -646,13 +640,60 @@
     font-size: 1.5em;
     padding-left: 4em; }
 
+.selector-button-template, .feed__sidebar__categories button, .addPicture__sidebar__selectors button {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover, .feed__sidebar__categories button:hover, .addPicture__sidebar__selectors button:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
+
+.adminAuth {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh; }
+  .adminAuth__login {
+    font-size: 1.5em;
+    border: solid 2px #066d42;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.2em;
+    margin-bottom: 1em; }
+  .adminAuth__password {
+    font-size: 1.5em;
+    border: solid 2px #066d42;
+    border-radius: 0.5em;
+    outline: none;
+    padding: 0.2em;
+    margin-bottom: 1.5em; }
+  .adminAuth__btn {
+    width: 10em;
+    color: #fff;
+    font-size: 1.5em;
+    line-height: 2em;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center; }
+  .adminAuth__error {
+    background-color: #ff2e70; }
+  .adminAuth__submit {
+    background-color: #066d42; }
+
 @media (max-width: 1512px) {
   .pictureBlock__image {
     height: 12em; }
     .pictureBlock__image__info {
-      transform: translatey(90%) translatex(5%);
-      max-width: 16em;
-      height: 6em;
+      max-width: 100%;
+      min-height: 100%;
       font-size: 14px; } }
 @media (max-width: 1312px) {
   .pictureBlock__image {

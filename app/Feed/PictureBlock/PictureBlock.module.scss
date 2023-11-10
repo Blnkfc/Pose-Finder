@@ -1,41 +1,33 @@
 @import "../../variables.module";
 .pictureBlock{
   display: inline-block;
-  min-width: 25%;
+  width: 49%;
+  border: solid 1px $black-color;
+  margin: 0 0.5%;
+  background-image: url("../public/assets/pictureBlock-background.png");
+  background-size: cover;
   &__image__wrapper{
+    display: flex;
+    align-items: center;
     margin: 0.2em;
+    background-color: rgba(255,255,255,0.5);
+    a{
+      width: 15%;
+      height: 10em;
+    }
   }
   &__image{
-    position: relative;
-    width: 100%;
-    height: 15em;
-    aspect-ratio: auto;
-    border-radius: 0.3em;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: solid 2px darken($text-light, 25%);
-    &:hover{
-      border: solid 2px $primary-color;
-    }
     &__info{
       display: flex;
-      flex-flow: column-reverse nowrap;
-      justify-content: space-between;
-      position: absolute;
-      background: $background-color;
-      padding: 0.3em 0.5em 0.3em 0.5em;
-      border: solid 1px $text-light;
+      flex-flow: column nowrap;
+      background: transparent;
+      padding: 0.3em 1em 0.3em 1em;
       border-radius: 0.5em;
-      max-width: 18em;
-      height: 7em;
-      overflow: scroll;
-      overflow-x: hidden;
-      transform: translateY(+100%) translateX(+5%);
-      z-index: 999;
+      width: 100% ;
+      height: 10em;
       h3{
         display: block;
-        color: $text-light;
+        color: $secondary-color;
       }
       &__selector{
         display: flex;
@@ -44,16 +36,18 @@
         padding: 0.2em 0.5em 0.2em 0.5em ;
         margin: 0.2em 0.2em 0.2em 0.2em ;
         background-color: $background-color;
-        border: solid 1px $white-color;
+        border: solid 1px $secondary-color;
         border-radius: 0.5em ;
-        color: $text-light;
+        color: $white-color;
         height: 2em;
         font-size: 0.7em;
         &__wrapper {
+          flex-grow: 1;
+          align-items: end;
           position: relative;
           flex-wrap: wrap;
           display: flex;
-          max-width: 18em;
+          width: 100%;
         }
       }
     }

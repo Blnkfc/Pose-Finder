@@ -2,6 +2,8 @@
 import Link from "next/link";
 import {useState} from "react";
 import {useStore} from "@/src/store"
+import Image from "next/image";
+import header_logo from "@/public/assets/logo.png";
 
 
 const PictureBlock = (props) => {
@@ -11,11 +13,7 @@ const PictureBlock = (props) => {
     const pictureData = initialState.find(photo => JSON.stringify(photo.id) === JSON.stringify(props.id))
 
     /*  SETTING UP A STATE FOR THE POPUP WITH INFORMATION ABOUT THE PICTURE  */
-    const [expand,setExpand] = useState(false)
-    const toggleExpand = () => {
-        console.log(expand)
-        return setExpand(!expand)
-    }
+
 
 
     /*  RETRIEVING SELECTORS AND LISTING THEM WITH STYLING DEPENDING ON THEIR STATE  */
@@ -25,7 +23,7 @@ const PictureBlock = (props) => {
                 <div
                     key={index}
                     className={"pictureBlock__image__info__selector"}
-                    style={{ backgroundColor: S.isActive ? "#00c2bf" : "#1f1f1f" }}
+                    style={{ backgroundColor: S.isActive ? "#066d42" : "#fff", color: S.isActive ?"#fff21qew":"#000" }}
                 >
                     {S.name}
                 </div>
@@ -38,28 +36,21 @@ const PictureBlock = (props) => {
         <div  className={"pictureBlock"}>
 
             <div className={"pictureBlock__image__wrapper"}>
-                <div className={"pictureBlock__image__info"} style={{display: expand?"flex":"none"}} >
-                    <button
-                        className="pictureBlock__image__expander__down"
-                        onClick={toggleExpand} >
-                        &#62;
-                    </button>
-                    <h3>Title: {props.name}</h3>
+                <Link
+                    href={`/Feed/PictureBlock/${props.id}`}
+                    style={{backgroundImage: `url("${props.url}")`, backgroundSize: "cover",
+                    backgroundPosition: "center"}} >
+                </Link>
+                <div className={"pictureBlock__image__info"}  >
+                    <h3>{props.name}</h3>
+                    <div className="pictureBlock__image__info__description">
+                        {props.description}
+                    </div>
                     <div className="pictureBlock__image__info__selector__wrapper">
                         {selectors}
                     </div>
-
                 </div>
-                <Link href={`/Feed/PictureBlock/${props.id}`}>
-                    <div className="pictureBlock__image" title={props.name}
-                         style={{backgroundImage: `url(${props.url})`}}></div>
-                </Link>
-                <button className="pictureBlock__image__expander__up"
-                        onClick={toggleExpand}
-                        style={{display: expand?"none":"block"}}
-                >
-                    &#62;
-                </button>
+
             </div>
         </div>
     )

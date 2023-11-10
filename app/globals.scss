@@ -34,7 +34,7 @@
 @import "./Contact/Contact.module";
 @import "./Feed/FeedSidebarMobile/FeedSidebarMobile.module";
 @import "./Settings/Settings.module";
-
+@import "./adminAuth/adminAuth.module";
 
 
 
@@ -43,9 +43,8 @@
   .pictureBlock__image {
     height: 12em ;
     &__info{
-      transform: translatey(90%) translatex(5%);
-      max-width: 16em;
-      height: 6em;
+      max-width: 100%;
+      min-height: 100%;
       font-size: 14px;
     }
   }

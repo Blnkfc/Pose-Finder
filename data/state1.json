@@ -4,9 +4,29 @@
       "id": "12ac6",
       "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png",
       "name": "Title",
+      "description": "Oolong with milk and tapioca",
       "selectors": [
         { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": false },
+        { "name": "Milky", "isActive": true },
+        { "name": "Coffee", "isActive": false },
+        { "name": "Tea", "isActive": true },
+        { "name": "Powder", "isActive": false },
+        { "name": "Tapioca", "isActive": false },
+        { "name": "Syrup", "isActive": false },
+        { "name": "Juice balls", "isActive": false},
+        { "name": "Food", "isActive": false }
+      ]
+    },
+    {
+      "id": "12sdv",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png",
+      "name": "Title1",
+      "description": "Oolong with milk and tapioca",
+      "selectors": [
+        { "name": "Special", "isActive": false },
+        { "name": "Milky", "isActive": true },
+        { "name": "Coffee", "isActive": false },
+        { "name": "Tea", "isActive": true },
         { "name": "Powder", "isActive": false },
         { "name": "Tapioca", "isActive": false },
         { "name": "Syrup", "isActive": false },
@@ -18,6 +38,8 @@
   "searchList":[
     { "name": "Special", "isActive": false },
     { "name": "Milky", "isActive": false },
+    { "name": "Coffee", "isActive": false },
+    { "name": "Tea", "isActive": false },
     { "name": "Powder", "isActive": false },
     { "name": "Tapioca", "isActive": false },
     { "name": "Syrup", "isActive": false },
@@ -31,11 +53,18 @@
     "selectors": [
       { "name": "Special", "isActive": false },
       { "name": "Milky", "isActive": false },
+      { "name": "Coffee", "isActive": false },
+      { "name": "Tea", "isActive": false },
       { "name": "Powder", "isActive": false },
       { "name": "Tapioca", "isActive": false },
       { "name": "Syrup", "isActive": false },
       { "name": "Juice balls", "isActive": false},
       { "name": "Food", "isActive": false }
     ]
+  },
+  "authorisation": {
+    "log": "log",
+    "pass": "pass",
+    "path": "/AddPicture"
   }
 }

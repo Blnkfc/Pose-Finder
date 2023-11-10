@@ -10,18 +10,18 @@
   background-color: $background-color;
   padding: 0 5% 0 5% ;
   h1{
-    color: $white-color;
+    color: $primary-color;
     font-size: 3em;
     span{
-      color: $primary-color;
+      color: $secondary-color;
       font-size: 1em;
     }
   }
   h2{
-    color: $white-color;
+    color: $primary-color;
     font-size: 1.5em;
     span{
-      color: $primary-color;
+      color: $secondary-color;
       font-size: 1em;
     }
   }
@@ -31,6 +31,7 @@
     text-decoration: none;
     text-align: center;
     font-size: 1.5em;
+    font-weight: bold;
     line-height: 2.3em;
     color: $text-light;
     width: 8em;
@@ -40,7 +41,7 @@
     transition: all 0.2s;
     &:hover{
       border: solid 1px $white-color;
-      color: $white-color;
+      color: $secondary-color;
       background-color: $primary-color;
 
     }

@@ -31,7 +31,8 @@ export const metadata = {
   useStore.setState({
     photoList: data.photoList,
     searchList: data.searchList,
-    addPictureState: data.addPictureState
+    addPictureState: data.addPictureState,
+    authorisation: data.authorisation
   })
 
     /*  INITIALIZING DATA ON THE CLIENT SIDE VIA StoreInitializer COMPONENT  */
@@ -42,7 +43,8 @@ export const metadata = {
       <StoreInitializer
           photoList={data.photoList}
           searchList={data.searchList}
-          addPictureState={data.addPictureState} />
+          addPictureState={data.addPictureState}
+          authorisation={data.authorisation}/>
       <Header  />
       <main>{children}</main>
       <Footer />

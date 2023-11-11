@@ -3,13 +3,14 @@ import {useRef} from "react";
 import {useStore} from "@/src/store";
 
 
-const StoreInitializer = ({searchList, photoList, addPictureState, authorisation}) => {
+const StoreInitializer = ({searchList, photoList, addPictureState, authorisation, feedLayout}) => {
 
 
     const initializedPhoto = useRef(false)
     const initializedSearch = useRef(false)
     const initializedAddPicture = useRef(false)
     const initializedAuthorisation = useRef(false)
+    const initializedFeedLayout = useRef(false)
 
 
     if(!initializedPhoto.current) {
@@ -27,6 +28,10 @@ const StoreInitializer = ({searchList, photoList, addPictureState, authorisation
     if(!initializedAuthorisation.current) {
         useStore.setState({authorisation})
         initializedAuthorisation.current = true
+    }
+    if(!initializedFeedLayout.current) {
+        useStore.setState({feedLayout})
+        initializedFeedLayout.current = true
     }
 
 

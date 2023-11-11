@@ -12,13 +12,35 @@
     color: #fff;
     cursor: pointer; }
 
+.drop__animation {
+  animation: drop 0.4s linear forwards; }
+
+@keyframes drop {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  50% {
+    transform: translateY(-75%);
+    opacity: 25%; }
+  75% {
+    transform: translateY(-30%);
+    opacity: 75%; }
+  100% {
+    transform: translateY(0%); } }
 .pictureBlock {
   display: inline-block;
+  position: sticky;
   width: 49%;
   border: solid 1px #000;
   margin: 0 0.5%;
   background-image: url("../public/assets/pictureBlock-background.png");
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  transition: all ease-in 0.3s; }
+  .pictureBlock:hover {
+    background-position: bottom;
+    background-size: cover; }
   .pictureBlock__image__wrapper {
     display: flex;
     align-items: center;
@@ -26,7 +48,7 @@
     background-color: rgba(255, 255, 255, 0.5); }
     .pictureBlock__image__wrapper a {
       width: 15%;
-      height: 10em; }
+      height: 100%; }
   .pictureBlock__image__info {
     display: flex;
     flex-flow: column nowrap;

@@ -4,6 +4,8 @@
   width: 100%;
   background-color: $primary-color;
   padding-top: 0.5em;
+  position: relative;
+  z-index: 999;
   &__info{
     display: flex;
     justify-content: space-around;

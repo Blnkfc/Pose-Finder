@@ -30,6 +30,7 @@ export const metadata = {
 
   useStore.setState({
     photoList: data.photoList,
+    feedLayout: data.feedLayout,
     searchList: data.searchList,
     addPictureState: data.addPictureState,
     authorisation: data.authorisation
@@ -44,7 +45,8 @@ export const metadata = {
           photoList={data.photoList}
           searchList={data.searchList}
           addPictureState={data.addPictureState}
-          authorisation={data.authorisation}/>
+          authorisation={data.authorisation}
+          feedLayout={data.feedLayout}/>
       <Header  />
       <main>{children}</main>
       <Footer />

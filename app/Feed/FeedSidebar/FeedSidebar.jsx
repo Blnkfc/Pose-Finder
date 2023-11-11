@@ -10,6 +10,7 @@ import variables from "@/app/variables.module.scss"
 const FeedSidebar = () => {
     /*  LIST OF SELECTORS FROM THE STORE  */
     const searchList = useStore((state) => state.searchList)
+    const layoutInfo = useStore((state) => state.feedLayout)
 
 
     /*  SETTING STATE FOR LIST OF ACTIVE CATEGORIES  */
@@ -41,10 +42,42 @@ const FeedSidebar = () => {
         )
     })
 
+    const [grid, setGrid] = useState(layoutInfo.grid)
+    const [list, setList] = useState(layoutInfo.list)
+    const toggleGrid = () => {
+        useStore.setState((state) => {
+            const updatedLayoutInfo = [state.feedLayout];
+            updatedLayoutInfo.grid = true;
+            updatedLayoutInfo.list = false;
+            return { feedLayout: updatedLayoutInfo };
+        });
+    }
+    const toggleList = () => {
+        useStore.setState((state) => {
+            const updatedLayoutInfo = [state.feedLayout];
+            updatedLayoutInfo.grid = false;
+            updatedLayoutInfo.list = true;
+            return { feedLayout: updatedLayoutInfo };
+        });
+    }
+
+
 
     return (
         <div className={"feed__sidebar"}>
-            <h3>Categories</h3>
+            <div className="feed__layoutPicker">
+                <h3>Categories</h3>
+                <button className="feed__layoutPicker__btn"
+                        onClick={toggleGrid}
+                        style={{border:layoutInfo.grid?"solid 1px black":"none"}} >
+                    <img src="/assets/feed-sidebar-grid.png" alt=""/>
+                </button>
+                <button className="feed__layoutPicker__btn"
+                        onClick={toggleList}
+                        style={{border:layoutInfo.grid?"none":"solid 1px black"}} >
+                    <img src="/assets/feed-sidebar-list.png" alt=""/>
+                </button>
+            </div>
             <div className={"feed__sidebar__categories"}>{categories}</div>
         </div>
     );

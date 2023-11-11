@@ -6,6 +6,8 @@
   background-color: $primary-color;
   height: 3em;
   border-bottom: solid 1px $white-color;
+  position: relative;
+  z-index: 99;
   &__logo{
     display: block;
     width: 2.7em;

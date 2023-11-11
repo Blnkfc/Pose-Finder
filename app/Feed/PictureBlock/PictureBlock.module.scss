@@ -1,11 +1,19 @@
 @import "../../variables.module";
 .pictureBlock{
   display: inline-block;
+  position: sticky;
   width: 49%;
   border: solid 1px $black-color;
   margin: 0 0.5%;
   background-image: url("../public/assets/pictureBlock-background.png");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  transition: all ease-in 0.3s;
+  &:hover{
+    background-position: bottom;
+    background-size: cover;
+  }
   &__image__wrapper{
     display: flex;
     align-items: center;
@@ -13,7 +21,7 @@
     background-color: rgba(255,255,255,0.5);
     a{
       width: 15%;
-      height: 10em;
+      height: 100%;
     }
   }
   &__image{

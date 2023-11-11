@@ -1,6 +1,6 @@
 'use client';
 import Link from "next/link";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {useStore} from "@/src/store"
 import Image from "next/image";
 import header_logo from "@/public/assets/logo.png";
@@ -12,6 +12,13 @@ const PictureBlock = (props) => {
     /*  RETRIEVING DATA ABOUT NEEDED PICTURE VIA IT'S ID  */
     const pictureData = initialState.find(photo => JSON.stringify(photo.id) === JSON.stringify(props.id))
 
+
+    /*  RETRIEVING DATA ABOUT LAYOUT  */
+    const layoutData = useStore((state) => state.feedLayout)
+    const [grid, setGrid] = useState(true); // Default to grid
+    useEffect(() => {
+        setGrid(layoutData.grid);
+    }, [layoutData.grid]);
     /*  SETTING UP A STATE FOR THE POPUP WITH INFORMATION ABOUT THE PICTURE  */
 
 
@@ -30,16 +37,14 @@ const PictureBlock = (props) => {
             ))
             : null;
 
-
-
     return (
-        <div  className={"pictureBlock"}>
-
+        <div  className={"pictureBlock"}
+              style={{width: grid?"49%":"99%", height: grid?"10em":"17em"}} >
             <div className={"pictureBlock__image__wrapper"}>
                 <Link
                     href={`/Feed/PictureBlock/${props.id}`}
                     style={{backgroundImage: `url("${props.url}")`, backgroundSize: "cover",
-                    backgroundPosition: "center"}} >
+                    backgroundPosition: "center", height: grid?"9.5em":"16em"}} >
                 </Link>
                 <div className={"pictureBlock__image__info"}  >
                     <h3>{props.name}</h3>

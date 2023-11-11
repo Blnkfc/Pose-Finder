@@ -12,13 +12,29 @@
     color: #fff;
     cursor: pointer; }
 
+.drop__animation {
+  animation: drop 0.4s linear forwards; }
+
+@keyframes drop {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  50% {
+    transform: translateY(-75%);
+    opacity: 25%; }
+  75% {
+    transform: translateY(-30%);
+    opacity: 75%; }
+  100% {
+    transform: translateY(0%); } }
 .feed__wrapper {
   display: flex;
   position: relative;
   width: 100%;
   min-height: 100vh;
   justify-content: space-between;
-  background-color: #fff;
+  background: url("../public/assets/feed-background.png");
+  background-size: cover;
   padding: 0.5em 0 0 0.5em; }
 
 .feed {
@@ -34,6 +50,20 @@
     height: 100%;
     background-color: #000;
     opacity: 50%; }
+  .feed__layoutPicker {
+    display: flex; }
+    .feed__layoutPicker h3 {
+      flex-grow: 1;
+      display: inline-block; }
+    .feed__layoutPicker__btn {
+      display: inline-block;
+      border: none;
+      background: transparent;
+      margin-right: 0.2em;
+      padding: 0.2em; }
+      .feed__layoutPicker__btn img {
+        width: 1.5em;
+        height: 1.5em; }
   .feed__content {
     width: 100%;
     display: inline-block; }

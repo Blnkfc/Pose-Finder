@@ -30,8 +30,8 @@ const PictureBlock = (props) => {
     }
     const ballsList = fruitMenuData.balls
     const juiceList = fruitMenuData.juice
-    const balls = ballsList.map((ballType) => (<span>{ballType}</span> ))
-    const juices = juiceList.map((juiceType) => (<span>{juiceType}</span>))
+    const balls = ballsList.map((ballType, index) => (<span key={index} >{ballType}</span> ))
+    const juices = juiceList.map((juiceType, index) => (<span key={index}  >{juiceType}</span>))
 
 
 

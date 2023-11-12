@@ -100,12 +100,14 @@ const PictureBlock = (props) => {
                         {props.description}
                     </div>
                     <div className="pictureBlock__image__info__lists" style={{display: listDisplay?"flex":"none"}} >
+
                         <button className="pictureBlock__image__info__lists__btn" onClick={toggleBalls} >
                             <img src="/assets/pictureBlock-list-balls.png" alt=""/>
                         </button>
                         <button className="pictureBlock__image__info__lists__btn" onClick={toggleJuice} >
                             <img src="/assets/pictureBlock-list-juice.png" alt=""/>
                         </button>
+                        <span style={{transform:"rotate(180deg)"}} >&#10142;</span> Menu
                     </div>
                     <div className="pictureBlock__image__info__selector__wrapper">
                         {selectors}

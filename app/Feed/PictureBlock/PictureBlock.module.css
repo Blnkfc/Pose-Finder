@@ -106,11 +106,15 @@
       font-weight: 900; }
     .pictureBlock__image__info__lists {
       display: flex;
+      align-items: center;
+      color: #ff2e70;
+      font-weight: 900;
       width: 2em;
       height: 2em; }
       .pictureBlock__image__info__lists__btn {
         background: transparent;
         border: none;
+        cursor: pointer;
         margin: 0 0.3em; }
         .pictureBlock__image__info__lists__btn img {
           width: 2em;

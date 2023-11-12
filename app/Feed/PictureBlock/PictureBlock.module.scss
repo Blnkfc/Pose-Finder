@@ -95,11 +95,15 @@
       }
       &__lists{
         display: flex;
+        align-items: center;
+        color: $secondary-color;
+        font-weight: 900;
         width: 2em;
         height: 2em;
         &__btn{
           background: transparent;
           border: none;
+          cursor: pointer;
           margin: 0 0.3em;
           img{
             width: 2em;

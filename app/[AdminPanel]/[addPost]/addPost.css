@@ -1,0 +1,80 @@
+.selector-button-template {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
+
+.drop__animation {
+  animation: drop 0.4s linear forwards; }
+
+@keyframes drop {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  50% {
+    transform: translateY(-75%);
+    opacity: 25%; }
+  75% {
+    transform: translateY(-30%);
+    opacity: 75%; }
+  100% {
+    transform: translateY(0%); } }
+.addPost {
+  display: flex;
+  min-height: 100vh; }
+  .addPost__loadImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    border: solid 2px #066d42;
+    border-radius: 0.5em;
+    margin: 1%;
+    background-repeat: no-repeat;
+    background-position: center; }
+    .addPost__loadImg__inputWrapper {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(3, 59, 35, 0.4); }
+  .addPost__sidebar {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1%;
+    flex-grow: 1; }
+    .addPost__sidebar__title {
+      width: 40%;
+      font-size: 2em;
+      margin-bottom: 2em; }
+    .addPost__sidebar__description {
+      margin-bottom: 3em;
+      font-size: 1.5em; }
+    .addPost__sidebar__selectors {
+      margin-bottom: 1em; }
+      .addPost__sidebar__selectors button {
+        margin: 0.5em;
+        padding: 0.2em;
+        border-radius: 0.3em;
+        transition: all ease-in 0.15s; }
+    .addPost__sidebar__createBtn {
+      text-align: center;
+      line-height: 1.5em;
+      width: 30%;
+      transition: all 0.1s ease-in;
+      font-size: 2em;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 0.3em; }
+
+/*# sourceMappingURL=addPost.css.map */

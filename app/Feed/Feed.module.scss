@@ -35,6 +35,12 @@
       background: transparent;
       margin-right: 0.2em;
       padding: 0.2em;
+      &__active{
+        img{
+          width: 2em;
+          height: 2em;
+        }
+      }
       img{
         width: 1.5em;
         height: 1.5em;
@@ -46,11 +52,28 @@
     display: inline-block;
   }
   &__sidebar{
+    position: relative;
     padding: 0 0.5em 0 0.5em;
+    &::after{
+      content:"我愛貓咪" ;
+      position: absolute;
+      font-size: 10em;
+      top: 0;
+      left: 0;
+      font-weight: bold;
+      color: rgba(6,109,66,0.5);
+      text-align: center;
+      z-index: -1;
+    }
+    &__layoutPicker{
+      z-index: 999;
+    }
     &__pc{
       width: 20%;
       display: inline-block;
       height:20em;
+
+      z-index: 999;
     }
     h3{
       color: $text-light;
@@ -58,6 +81,7 @@
     &__categories{
       display: flex;
       flex-flow: row wrap;
+      z-index: 999;
       button{
         @extend .selector-button-template;
       }

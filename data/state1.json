@@ -207,6 +207,7 @@
     "pictureId": "",
     "name": "",
     "url": "",
+    "description": "",
     "selectors": [
       { "name": "Special", "isActive": false },
       { "name": "Milky", "isActive": false },
@@ -222,6 +223,6 @@
   "authorisation": {
     "log": "log",
     "pass": "pass",
-    "path": "/AddPicture"
+    "path": ""
   }
 }

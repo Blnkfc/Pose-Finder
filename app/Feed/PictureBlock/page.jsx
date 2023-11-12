@@ -43,7 +43,7 @@ const PictureBlock = (props) => {
             <div className={"pictureBlock__image__wrapper"}>
                 <Link
                     href={`/Feed/PictureBlock/${props.id}`}
-                    style={{backgroundImage: `url("${props.url}")`, backgroundSize: "cover",
+                    style={{backgroundImage: `url("${props.url}")`, backgroundSize: "contain",
                     backgroundPosition: "center", height: grid?"9.5em":"16em"}} >
                 </Link>
                 <div className={"pictureBlock__image__info"}  >

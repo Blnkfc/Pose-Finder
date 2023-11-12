@@ -67,15 +67,15 @@ const FeedSidebar = () => {
         <div className={"feed__sidebar"}>
             <div className="feed__layoutPicker">
                 <h3>Categories</h3>
-                <button className="feed__layoutPicker__btn"
-                        onClick={toggleGrid}
-                        style={{border:layoutInfo.grid?"solid 1px black":"none"}} >
-                    <img src="/assets/feed-sidebar-grid.png" alt=""/>
+                <button className={`${grid?'feed__layoutPicker__btn__active':"feed__layoutPicker__btn"} `}
+                        onClick={toggleGrid} >
+                    <img src="/assets/feed-sidebar-grid.png"
+                         alt="Grid"/>
                 </button>
-                <button className="feed__layoutPicker__btn"
-                        onClick={toggleList}
-                        style={{border:layoutInfo.grid?"none":"solid 1px black"}} >
-                    <img src="/assets/feed-sidebar-list.png" alt=""/>
+                <button className={`${list?'feed__layoutPicker__btn__active':"feed__layoutPicker__btn"} `}
+                        onClick={toggleList} >
+                    <img src="/assets/feed-sidebar-list.png"
+                         alt="List"/>
                 </button>
             </div>
             <div className={"feed__sidebar__categories"}>{categories}</div>

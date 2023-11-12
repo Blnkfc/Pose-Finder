@@ -8,12 +8,10 @@ const AddPictureLoadUi =  () => {
     const initialData = useStore((state) => state.addPictureState)
 
     /*  LOAD SETUP  */
-
     const [link, setLink] = useState(initialData.url)
 
 
     /*  SETTING VALUE FOR INPUT ACCORDING TO STATE, HAPPENS ON link CHANGE  */
-
     useEffect(() => {
         const loadInput = document.querySelector('input[name=load_link]');
         if (loadInput) {

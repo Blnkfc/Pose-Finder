@@ -1,6 +1,64 @@
+.selector-button-template {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+  background-color: #fff;
+  border: solid 1px #000;
+  border-radius: 0.5em;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.1s; }
+  .selector-button-template:hover {
+    background-color: #066d42;
+    color: #fff;
+    cursor: pointer; }
+
+.drop__animation {
+  animation: drop 0.4s linear forwards; }
+
+@keyframes drop {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  50% {
+    transform: translateY(-75%);
+    opacity: 25%; }
+  75% {
+    transform: translateY(-30%);
+    opacity: 75%; }
+  100% {
+    transform: translateY(0%); } }
 .adminPanel {
   width: 100%;
   min-height: 100vh;
   margin-top: 0.5em; }
+  .adminPanel__feed__addPost {
+    display: block;
+    width: 49%;
+    margin: 0 0.5%;
+    padding: 0.5%;
+    border: solid 2px #066d42;
+    transition: all 0.2s ease-in;
+    background-color: rgba(6, 109, 66, 0.2); }
+    .adminPanel__feed__addPost:hover {
+      border: solid 2px #ff2e70;
+      background-color: rgba(6, 109, 66, 0.3); }
+    .adminPanel__feed__addPost__img {
+      width: 30%;
+      border: solid 1px #066d42;
+      border-radius: 0.5em;
+      padding: 0.5%;
+      background-color: rgba(6, 109, 66, 0.2); }
+  .adminPanel__feed__options {
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    z-index: 9999;
+    right: 0;
+    transform: translateY(-120%) translateX(-50%); }
+    .adminPanel__feed__options img {
+      width: 1.5em;
+      height: 1.5em;
+      margin-bottom: 0.5em;
+      cursor: pointer; }
 
 /*# sourceMappingURL=AdminPanel.css.map */

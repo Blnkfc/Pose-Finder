@@ -24,7 +24,7 @@ const AdminPanel = () => {
     }, []);
 
     const postList = photoList.map((PhotoUnit, index) => (
-        <div style={{display:"inline", position:"relative"}} >
+        <div key={index} style={{display:"inline", position:"relative"}} >
             <PictureBlock
                 key={index}
                 name={PhotoUnit.name}

@@ -23,7 +23,7 @@
       "id": "1cavs",
       "url": "./products/cocomilk(1).png",
       "name": "Coco Milk",
-      "description": "Fresh taste of coca in your cup to clear up your mind! It is as tasty as it is original, control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste. ",
+      "description": "Coco powder mixed with milk and tapioca. Chose 1-4 levels of sweetness",
       "selectors": [
         { "name": "Special", "isActive": false },
         { "name": "Milky", "isActive": true },
@@ -61,7 +61,7 @@
       "id": "1cab2",
       "url": "./products/matcha.png",
       "name": "Matcha Milk",
-      "description": "Green powdered tea 'Matcha' a gift that Japan gave us all. Has energising and fresh properties of green tea, while sharing a distinct taste, for true tea enthusiasts. Control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste.  ",
+      "description": "Matcha powder mixed with milk and tapioca. Chose 1-4 levels of sweetness ",
       "selectors": [
         { "name": "Special", "isActive": false },
         { "name": "Milky", "isActive": true },
@@ -80,7 +80,7 @@
       "id": "Bmas6",
       "url": "./products/taromilk.png",
       "name": "Taro Milk",
-      "description": "Truly a star of the show. Taste that is impossible to put into words. Gentle and sweet with a special aftertaste. Powder made of 'Taro root' with milk and tapioca, experience to never forget. Control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste.  ",
+      "description": "Taro powder mixed with milk and tapioca. Chose 1-4 levels of sweetness ",
       "selectors": [
         { "name": "Special", "isActive": false },
         { "name": "Milky", "isActive": true },

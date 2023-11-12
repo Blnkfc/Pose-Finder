@@ -107,7 +107,7 @@ const PictureBlock = (props) => {
                         <button className="pictureBlock__image__info__lists__btn" onClick={toggleJuice} >
                             <img src="/assets/pictureBlock-list-juice.png" alt=""/>
                         </button>
-                        <span style={{transform:"rotate(180deg)"}} >&#10142;</span> Menu
+                        <span style={{transform:"rotate(180deg)"}}  >&#10142;</span> Menu
                     </div>
                     <div className="pictureBlock__image__info__selector__wrapper">
                         {selectors}

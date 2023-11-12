@@ -62,17 +62,16 @@ const FeedSidebar = () => {
     }
 
 
-
     return (
         <div className={"feed__sidebar"}>
             <div className="feed__layoutPicker">
                 <h3>Categories</h3>
-                <button className={`${grid?'feed__layoutPicker__btn__active':"feed__layoutPicker__btn"} `}
+                <button className={layoutInfo.grid?'feed__layoutPicker__btn__active':"feed__layoutPicker__btn"}
                         onClick={toggleGrid} >
                     <img src="/assets/feed-sidebar-grid.png"
                          alt="Grid"/>
                 </button>
-                <button className={`${list?'feed__layoutPicker__btn__active':"feed__layoutPicker__btn"} `}
+                <button className={layoutInfo.grid?'feed__layoutPicker__btn':"feed__layoutPicker__btn__active"}
                         onClick={toggleList} >
                     <img src="/assets/feed-sidebar-list.png"
                          alt="List"/>

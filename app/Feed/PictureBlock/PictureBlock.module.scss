@@ -1,7 +1,7 @@
 @import "../../variables.module";
 .pictureBlock{
   display: inline-block;
-  position: sticky;
+  position: relative;
   width: 49%;
   border: solid 1px $black-color;
   margin: 0.5% 0.5%;
@@ -14,11 +14,42 @@
     background-position: bottom;
     background-size: cover;
   }
+  &__fruitMenu{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.9);
+    span{
+      display: inline-block;
+      padding: 0.3em;
+      margin: 0.3em 0.2em;
+      border: solid 1px $primary-color;
+      border-radius: 0.2em;
+    }
+  }
+  &__balls {
+    &__wrapper {
+      width: 90%;
+    }
+    &__menu {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-weight: 900;
+      margin: 0.5em;
+      cursor: pointer;
+    }
+  }
+  &__juice{
+    &__wrapper{
+      width: 90%;
+    }
+  }
   &__image__wrapper{
     display: flex;
     align-items: center;
-    margin: 0.2em;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.7);
+    height: 100%;
     a{
       width: 30%;
       height: 100%;
@@ -40,12 +71,10 @@
         color: $secondary-color;
       }
       &__selector{
-        display: flex;
         align-items: center;
         text-decoration: none;
         padding: 0.2em 0.5em 0.2em 0.5em ;
         margin: 0.2em 0.2em 0.2em 0.2em ;
-        background-color: $background-color;
         border: solid 1px $secondary-color;
         border-radius: 0.5em ;
         color: $white-color;
@@ -54,10 +83,28 @@
         &__wrapper {
           flex-grow: 1;
           align-items: flex-end;
-          position: relative;
           flex-wrap: wrap;
           display: flex;
           width: 100%;
+        }
+      }
+      &__description{
+        max-height: 60%;
+        overflow: auto;
+        font-weight: 900;
+      }
+      &__lists{
+        display: flex;
+        width: 2em;
+        height: 2em;
+        &__btn{
+          background: transparent;
+          border: none;
+          margin: 0 0.3em;
+          img{
+            width: 2em;
+            height: 2em;
+          }
         }
       }
     }

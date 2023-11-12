@@ -7,5 +7,6 @@ export const useStore = create((set) => ({
     setPhotoList: (newList) => set({ photoList: newList }),
     searchList:[],
     addPictureState:{},
-    authorisation:{}
+    authorisation:{},
+    fruitMenu:{}
 }))

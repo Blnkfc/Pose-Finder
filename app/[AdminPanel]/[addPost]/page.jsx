@@ -3,12 +3,17 @@ import styles from "./addPost.css"
 import {useEffect, useState} from "react";
 import {useStore} from "@/src/store";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 const AddPost = () => {
     const [initialData, setInitialData] = useState(useStore((state) => state.addPictureState))
     const feed = useStore((state) => state.photoList)
     const setFeedState = useStore((state) => state.setPhotoList);
     const authorisationData = useStore((state) => state.authorisation)
+    /*  CURRENT PATH  */
+    const path = usePathname()
+
+
     /*  LOAD SETUP  */
     const [link, setLink] = useState(initialData.url)
 
@@ -134,7 +139,7 @@ const AddPost = () => {
 
     /*  DATA ERROR HANDLING  SETUP  */
     //CREATING THE OBJECT THAT WILL BE ADDED TO THE photoList
-    const newPhoto = {
+    let newPhoto = {
         id: id,
         url: initialData.url,
         name: title,
@@ -173,6 +178,15 @@ const AddPost = () => {
         const updatedFeed = [...feed]
         updatedFeed.push(newPhoto)
         localStorage.setItem('feed', JSON.stringify(updatedFeed))
+        console.log(newPhoto)
+        newPhoto={
+            id: "",
+            url: "",
+            name: "",
+            selectors: [],
+            description: ""
+        }
+        console.log(newPhoto)
         return setFeedState(updatedFeed)
     }
 
@@ -204,13 +218,13 @@ const AddPost = () => {
                 className="addPicture__sidebar__submit__error"
                 style={{display: errorExpand?"flex":"none"}}
             >
-                <p>Url or name for image were not set</p>
+                <p>Url, name or description for image were not set</p>
                 <button onClick={handleError} >⭮</button>
             </div>
             <Link
                 className={"addPost__sidebar__createBtn"}
                 onClick={handleError}
-                href={""}
+                href={"/"+path}
                 style={{display: error?"block":"none", background:error?"#066d42":""}} >Submit</Link>
             <Link
                 className={"addPost__sidebar__createBtn"}

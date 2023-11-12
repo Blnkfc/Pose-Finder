@@ -17,7 +17,6 @@ const Feed = () => {
     useEffect(() => {
         // GETTING THE DATA FROM LOCAL STORAGE
         const storedFeed = localStorage.getItem('feed');
-
         // PARSE THE DATA TO THE STATE SO IT STAY UPDATED
         if (storedFeed) {
             const parsedFeed = JSON.parse(storedFeed);
@@ -47,7 +46,6 @@ const Feed = () => {
             console.log("Invalid data");
             return [];
         }
-
         // Get the indices of active selectors in the searchList
         const activeSelectorIndices = searchList
             .map((selector, index) => (selector.isActive ? index : -1))
@@ -60,10 +58,12 @@ const Feed = () => {
 
         // Filter the photoList based on active selectors
         const feedFiltered = photoList.filter((photo) =>
-            photo.selectors.some(
-                (selector) =>
-                    selector.isActive &&
-                    activeSelectorIndices.includes(searchList.findIndex((s, index) => s.name === selector.name))
+            activeSelectorIndices.every((activeIndex) =>
+                photo.selectors.some(
+                    (selector) =>
+                        selector.isActive &&
+                        searchList[activeIndex].name === selector.name
+                )
             )
         );
 

@@ -1,189 +1,116 @@
 {
   "photoList":[
     {
-      "id": "12ac6",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png",
-      "name": "Title",
-      "description": "Oolong with milk and tapioca",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": false },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "12sdv",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png",
-      "name": "Title1",
-      "description": "Oolong with milk and tapioca",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": false },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "11gdv",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png",
-      "name": "Title1",
-      "description": "Oolong with milk and tapioca",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": false },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "1advv",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png",
-      "name": "Title1",
-      "description": "Oolong with milk and tapioca",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": false },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "jalxd",
-      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Bubble_Tea.png",
-      "name": "Title1",
-      "description": "Oolong with milk and tapioca",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": false },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "14cvs",
-      "url": "./assets/example1.png",
-      "name": "Title2",
-      "description": "Matcha green tea with milk and tapioca.",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": true },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "sbtdv",
-      "url": "./assets/example1.png",
-      "name": "Title2",
-      "description": "Matcha green tea with milk and tapioca.",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": true },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "1svyv",
-      "url": "./assets/example1.png",
-      "name": "Title2",
-      "description": "Matcha green tea with milk and tapioca.",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": true },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "18jcv",
-      "url": "./assets/example1.png",
-      "name": "Title2",
-      "description": "Matcha green tea with milk and tapioca.",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": true },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
-      "id": "1wscs",
-      "url": "./assets/example1.png",
-      "name": "Title2",
-      "description": "Matcha green tea with milk and tapioca.",
-      "selectors": [
-        { "name": "Special", "isActive": false },
-        { "name": "Milky", "isActive": true },
-        { "name": "Coffee", "isActive": false },
-        { "name": "Tea", "isActive": true },
-        { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": true },
-        { "name": "Syrup", "isActive": false },
-        { "name": "Juice balls", "isActive": false},
-        { "name": "Food", "isActive": false }
-      ]
-    },
-    {
       "id": "1cccs",
-      "url": "./assets/example1.png",
-      "name": "Title2",
-      "description": "Matcha green tea with milk and tapioca.",
+      "url": "./products/caramel late.png",
+      "name": "Caramel milk tea",
+      "description": "Milk powder mixed with tea, caramel and tapioca. Chose 1-4 levels of caramel.",
       "selectors": [
         { "name": "Special", "isActive": false },
         { "name": "Milky", "isActive": true },
+        { "name": "Fruity", "isActive": false },
         { "name": "Coffee", "isActive": false },
         { "name": "Tea", "isActive": true },
         { "name": "Powder", "isActive": false },
-        { "name": "Tapioca", "isActive": true },
+        { "name": "With Tapioca", "isActive": true },
+        { "name": "Without Tapioca", "isActive": true },
         { "name": "Syrup", "isActive": false },
         { "name": "Juice balls", "isActive": false},
+        { "name": "Food", "isActive": false }
+      ]
+    },
+    {
+      "id": "1cavs",
+      "url": "./products/cocomilk(1).png",
+      "name": "Coco Milk",
+      "description": "Fresh taste of coca in your cup to clear up your mind! It is as tasty as it is original, control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste. ",
+      "selectors": [
+        { "name": "Special", "isActive": false },
+        { "name": "Milky", "isActive": true },
+        { "name": "Fruity", "isActive": false },
+        { "name": "Coffee", "isActive": false },
+        { "name": "Tea", "isActive": false },
+        { "name": "Powder", "isActive": true },
+        { "name": "With Tapioca", "isActive": true },
+        { "name": "Without Tapioca", "isActive": true },
+        { "name": "Syrup", "isActive": false },
+        { "name": "Juice balls", "isActive": false},
+        { "name": "Food", "isActive": false }
+      ]
+    },
+    {
+      "id": "1cVs6",
+      "url": "./products/cocomilk.png",
+      "name": "Milk tea",
+      "description": "Fresh taste of coca in your cup to clear up your mind! It is as tasty as it is original, control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste.",
+      "selectors": [
+        { "name": "Special", "isActive": false },
+        { "name": "Milky", "isActive": true },
+        { "name": "Fruity", "isActive": false },
+        { "name": "Coffee", "isActive": false },
+        { "name": "Tea", "isActive": false },
+        { "name": "Powder", "isActive": true },
+        { "name": "With Tapioca", "isActive": true },
+        { "name": "Without Tapioca", "isActive": true },
+        { "name": "Syrup", "isActive": false },
+        { "name": "Juice balls", "isActive": false},
+        { "name": "Food", "isActive": false }
+      ]
+    },
+    {
+      "id": "1cab2",
+      "url": "./products/matcha.png",
+      "name": "Matcha Milk",
+      "description": "Green powdered tea 'Matcha' a gift that Japan gave us all. Has energising and fresh properties of green tea, while sharing a distinct taste, for true tea enthusiasts. Control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste.  ",
+      "selectors": [
+        { "name": "Special", "isActive": false },
+        { "name": "Milky", "isActive": true },
+        { "name": "Fruity", "isActive": false },
+        { "name": "Coffee", "isActive": false },
+        { "name": "Tea", "isActive": true },
+        { "name": "Powder", "isActive": true },
+        { "name": "With Tapioca", "isActive": true },
+        { "name": "Without Tapioca", "isActive": true },
+        { "name": "Syrup", "isActive": false },
+        { "name": "Juice balls", "isActive": false},
+        { "name": "Food", "isActive": false }
+      ]
+    },
+    {
+      "id": "Bmas6",
+      "url": "./products/taromilk.png",
+      "name": "Taro Milk",
+      "description": "Truly a star of the show. Taste that is impossible to put into words. Gentle and sweet with a special aftertaste. Powder made of 'Taro root' with milk and tapioca, experience to never forget. Control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste.  ",
+      "selectors": [
+        { "name": "Special", "isActive": false },
+        { "name": "Milky", "isActive": true },
+        { "name": "Fruity", "isActive": false },
+        { "name": "Coffee", "isActive": false },
+        { "name": "Tea", "isActive": false },
+        { "name": "Powder", "isActive": true },
+        { "name": "With Tapioca", "isActive": true },
+        { "name": "Without Tapioca", "isActive": true },
+        { "name": "Syrup", "isActive": false },
+        { "name": "Juice balls", "isActive": false},
+        { "name": "Food", "isActive": false }
+      ]
+    },
+    {
+      "id": "9xzvD",
+      "url": "./products/lychee.png",
+      "name": "Fruit balls + syrup of choice",
+      "description": "Fruits fruits fruits!! Fruity collection of drinks explosion of taste and happiness. Great way of splashing your day with bright colors. Combine juice balls with fruit syrup of your choice!",
+      "selectors": [
+        { "name": "Special", "isActive": false },
+        { "name": "Milky", "isActive": false },
+        { "name": "Fruity", "isActive": true },
+        { "name": "Coffee", "isActive": false },
+        { "name": "Tea", "isActive": true },
+        { "name": "Powder", "isActive": false },
+        { "name": "With Tapioca", "isActive": false },
+        { "name": "Without Tapioca", "isActive": true },
+        { "name": "Syrup", "isActive": true },
+        { "name": "Juice balls", "isActive": true},
         { "name": "Food", "isActive": false }
       ]
     }
@@ -198,11 +125,45 @@
     { "name": "Coffee", "isActive": false },
     { "name": "Tea", "isActive": false },
     { "name": "Powder", "isActive": false },
-    { "name": "Tapioca", "isActive": false },
+    { "name": "With Tapioca", "isActive": false },
+    { "name": "Without Tapioca", "isActive": false },
     { "name": "Syrup", "isActive": false },
     { "name": "Juice balls", "isActive": false},
     { "name": "Food", "isActive": false }
   ],
+  "fruitMenu":{
+    "balls": [
+      "Strawberry",
+      "Peach",
+      "Lychee",
+      "Passion fruit",
+      "Tropical jolly",
+      "Aloe",
+      "Apple",
+      "Pineapple",
+      "Pitahaya",
+      "Mango",
+      "Watermelon",
+      "Lime"
+    ],
+    "juice": [
+      "Strawberry",
+      "Mango",
+      "Cherry",
+      "Peach",
+      "Lychee",
+      "Watermelon",
+      "White peach",
+      "Melon",
+      "Apple",
+      "Kiwi",
+      "Pineapple",
+      "Blueberry",
+      "Raspberry",
+      "Passion fruit",
+      "Kumquat-Lemon"
+    ]
+  },
   "addPictureState": {
     "pictureId": "",
     "name": "",
@@ -214,7 +175,8 @@
       { "name": "Coffee", "isActive": false },
       { "name": "Tea", "isActive": false },
       { "name": "Powder", "isActive": false },
-      { "name": "Tapioca", "isActive": false },
+      { "name": "With Tapioca", "isActive": false },
+      { "name": "Without Tapioca", "isActive": false },
       { "name": "Syrup", "isActive": false },
       { "name": "Juice balls", "isActive": false},
       { "name": "Food", "isActive": false }

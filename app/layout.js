@@ -1,15 +1,17 @@
 import './globals.css'
-import { Lato } from 'next/font/google'
 import Header from "@/app/Components/Header/Header";
 import Footer from "@/app/Components/Footer/Footer";
 import {useStore} from "@/src/store";
 import StoreInitializer from "@/app/StoreInitialier/storeInitializer";
 import data from "@/data/state1.json"
+import { Lato } from 'next/font/google'
 
-const inter = Lato({
-  subsets: ['latin'],
+const lato = Lato({
   weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
 })
+
 
 export const metadata = {
   title: 'Pose Finder',
@@ -33,12 +35,13 @@ export const metadata = {
     feedLayout: data.feedLayout,
     searchList: data.searchList,
     addPictureState: data.addPictureState,
-    authorisation: data.authorisation
+    authorisation: data.authorisation,
+    fruitMenu: data.fruitMenu
   })
 
     /*  INITIALIZING DATA ON THE CLIENT SIDE VIA StoreInitializer COMPONENT  */
   return (
-    <html lang="en">
+    <html lang="en" className={lato.className}>
     <body>
     <div className="wrapper">
       <StoreInitializer
@@ -46,7 +49,9 @@ export const metadata = {
           searchList={data.searchList}
           addPictureState={data.addPictureState}
           authorisation={data.authorisation}
-          feedLayout={data.feedLayout}/>
+          feedLayout={data.feedLayout}
+          fruitMenu={data.fruitMenu}
+      />
       <Header  />
       <main>{children}</main>
       <Footer />

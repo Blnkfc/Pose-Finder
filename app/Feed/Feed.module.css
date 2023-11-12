@@ -32,7 +32,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
   justify-content: space-between;
   background: url("../public/assets/feed-background.png");
   background-size: cover;
@@ -60,11 +60,14 @@
       display: inline-block;
       border: none;
       background: transparent;
-      margin-right: 0.2em;
       padding: 0.2em; }
-      .feed__layoutPicker__btn__active img {
-        width: 2em;
-        height: 2em; }
+      .feed__layoutPicker__btn__active {
+        border: none;
+        background: transparent;
+        margin: 0 0.3em; }
+        .feed__layoutPicker__btn__active img {
+          width: 2em;
+          height: 2em; }
       .feed__layoutPicker__btn img {
         width: 1.5em;
         height: 1.5em; }
@@ -76,6 +79,7 @@
     padding: 0 0.5em 0 0.5em; }
     .feed__sidebar::after {
       content: "我愛貓咪";
+      overflow: hidden;
       position: absolute;
       font-size: 10em;
       top: 0;

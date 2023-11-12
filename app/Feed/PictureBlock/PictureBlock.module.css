@@ -29,7 +29,7 @@
     transform: translateY(0%); } }
 .pictureBlock {
   display: inline-block;
-  position: sticky;
+  position: relative;
   width: 49%;
   border: solid 1px #000;
   margin: 0.5% 0.5%;
@@ -41,11 +41,33 @@
   .pictureBlock:hover {
     background-position: bottom;
     background-size: cover; }
+  .pictureBlock__fruitMenu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); }
+    .pictureBlock__fruitMenu span {
+      display: inline-block;
+      padding: 0.3em;
+      margin: 0.3em 0.2em;
+      border: solid 1px #066d42;
+      border-radius: 0.2em; }
+  .pictureBlock__balls__wrapper {
+    width: 90%; }
+  .pictureBlock__balls__menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: 900;
+    margin: 0.5em;
+    cursor: pointer; }
+  .pictureBlock__juice__wrapper {
+    width: 90%; }
   .pictureBlock__image__wrapper {
     display: flex;
     align-items: center;
-    margin: 0.2em;
-    background-color: rgba(255, 255, 255, 0.5); }
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100%; }
     .pictureBlock__image__wrapper a {
       width: 30%;
       height: 100%;
@@ -63,12 +85,10 @@
       display: block;
       color: #ff2e70; }
     .pictureBlock__image__info__selector {
-      display: flex;
       align-items: center;
       text-decoration: none;
       padding: 0.2em 0.5em 0.2em 0.5em;
       margin: 0.2em 0.2em 0.2em 0.2em;
-      background-color: #fff;
       border: solid 1px #ff2e70;
       border-radius: 0.5em;
       color: #fff;
@@ -77,10 +97,24 @@
       .pictureBlock__image__info__selector__wrapper {
         flex-grow: 1;
         align-items: flex-end;
-        position: relative;
         flex-wrap: wrap;
         display: flex;
         width: 100%; }
+    .pictureBlock__image__info__description {
+      max-height: 60%;
+      overflow: auto;
+      font-weight: 900; }
+    .pictureBlock__image__info__lists {
+      display: flex;
+      width: 2em;
+      height: 2em; }
+      .pictureBlock__image__info__lists__btn {
+        background: transparent;
+        border: none;
+        margin: 0 0.3em; }
+        .pictureBlock__image__info__lists__btn img {
+          width: 2em;
+          height: 2em; }
   .pictureBlock__image__expander__up {
     width: 2em;
     height: 2em;

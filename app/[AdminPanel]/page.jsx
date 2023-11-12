@@ -11,7 +11,7 @@ import {usePathname} from "next/navigation";
 
 const AdminPanel = () => {
     const photoList = useStore((state) => state.photoList)
-
+    const setPhotoList = useStore((state) => state.setPhotoList)
 
     useEffect(() => {
         // GETTING THE DATA FROM LOCAL STORAGE
@@ -22,6 +22,17 @@ const AdminPanel = () => {
             const parsedFeed = JSON.parse(storedFeed);
         }
     }, []);
+    /*  DELETING THE GIVEN PICTURE VIA ID AND UPDATING LOCAL STORAGE  */
+    function deletePicture (PhotoId) {
+        const index = photoList.findIndex((i) => i.id === PhotoId);
+        if (index !== -1) {
+            const updatedPhotoList = [...photoList];
+            updatedPhotoList.splice(index, 1);
+            setPhotoList(updatedPhotoList);
+            localStorage.setItem('feed', JSON.stringify(updatedPhotoList));
+        }
+    }
+
 
     const postList = photoList.map((PhotoUnit, index) => (
         <div key={index} style={{display:"inline", position:"relative"}} >
@@ -34,7 +45,7 @@ const AdminPanel = () => {
             />
             <div className={"adminPanel__feed__options"} >
                 <img src="/assets/adminPanel-edit.png" alt=""/>
-                <img src="/assets/adminPanel-delete.png" alt=""/>
+                <img src="/assets/adminPanel-delete.png" alt="" onClick={() => deletePicture(PhotoUnit.id)} />
             </div>
         </div>
         ))

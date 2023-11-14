@@ -53,7 +53,7 @@ const PictureBlock = (props) => {
                 <div
                     key={index}
                     className={"pictureBlock__image__info__selector"}
-                    style={{ backgroundColor: S.isActive ? "#066d42" : "#fff", display:S.isActive?"flex":"none"}}
+                    style={{ backgroundColor: S.isActive ? "#066d42" : "#fff", display:S.isActive?"flex":"none", fontSize:grid?"":"1.5em"}}
                 >
                     {S.name}
                 </div>

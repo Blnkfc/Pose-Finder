@@ -30,7 +30,9 @@
 .adminPanel {
   width: 100%;
   min-height: 100vh;
-  margin-top: 0.5em; }
+  margin-top: 0.5em;
+  background: url("/assets/universal-background.svg");
+  background-size: cover; }
   .adminPanel__feed__addPost {
     display: block;
     width: 49%;
@@ -38,10 +40,10 @@
     padding: 0.5%;
     border: solid 2px #066d42;
     transition: all 0.2s ease-in;
-    background-color: rgba(6, 109, 66, 0.2); }
+    background-color: rgba(6, 109, 66, 0.4); }
     .adminPanel__feed__addPost:hover {
       border: solid 2px #ff2e70;
-      background-color: rgba(6, 109, 66, 0.3); }
+      background-color: rgba(6, 109, 66, 0.5); }
     .adminPanel__feed__addPost__img {
       width: 30%;
       border: solid 1px #066d42;

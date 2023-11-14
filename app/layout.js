@@ -36,7 +36,9 @@ export const metadata = {
     searchList: data.searchList,
     addPictureState: data.addPictureState,
     authorisation: data.authorisation,
-    fruitMenu: data.fruitMenu
+    fruitMenu: data.fruitMenu,
+    FAQList: data.FAQList,
+    contactsList: data.contactsList
   })
 
     /*  INITIALIZING DATA ON THE CLIENT SIDE VIA StoreInitializer COMPONENT  */
@@ -51,6 +53,8 @@ export const metadata = {
           authorisation={data.authorisation}
           feedLayout={data.feedLayout}
           fruitMenu={data.fruitMenu}
+          FAQList={data.FAQList}
+          contactsList={data.contactsList}
       />
       <Header  />
       <main>{children}</main>

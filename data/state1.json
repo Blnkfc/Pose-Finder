@@ -186,5 +186,53 @@
     "log": "log",
     "pass": "pass",
     "path": ""
-  }
+  },
+  "FAQList": [
+    {
+      "title": "Where can I find Maomi?",
+      "description": "Addresses here."
+    },
+    {
+      "title": "What are the sizes of the drinks?",
+      "description": "There are two sizes: small - 500ml  and large - 700ml."
+    },
+    {
+      "title": "What are your work hours?",
+      "description": "We are opening at 11:00 and closing at 20:30."
+    },
+    {
+      "title": "More questions",
+      "description": "More answers"
+    },
+    {
+      "title": "More questions",
+      "description": "More answers"
+    },
+    {
+      "title": "More questions",
+      "description": "More answers"
+    }
+  ],
+  "contactsList": [
+    {
+      "title":"Instagram",
+      "img": "/assets/contacts-instagram.png",
+      "url": "https://www.instagram.com/maomi.cafe/"
+    },
+    {
+      "title":"Ticktok",
+      "img": "/assets/contacts-ticktok.png",
+      "url": "https://www.tiktok.com/@maomi.cafe?_t=8hMLjkMWAQo&_r=1"
+    },
+    {
+      "title":"Email",
+      "img": "/assets/contacts-google.png",
+      "url": "/"
+    },
+    {
+      "title":"Something else",
+      "img": "",
+      "url": "/"
+    }
+  ]
 }

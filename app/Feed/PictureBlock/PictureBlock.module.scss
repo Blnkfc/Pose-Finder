@@ -5,7 +5,7 @@
   width: 49%;
   border: solid 1px $black-color;
   margin: 0.5% 0.5%;
-  background-image: url("../public/assets/pictureBlock-background.png");
+  background-image: url("../public/assets/pictureBlock-background.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -84,9 +84,10 @@
         &__wrapper {
           flex-grow: 1;
           align-items: flex-end;
-          flex-wrap: wrap;
           display: flex;
           width: 100%;
+          overflow:hidden;
+          white-space: nowrap;
         }
       }
       &__description{
@@ -95,6 +96,7 @@
       }
       &__lists{
         display: flex;
+        flex-grow: 1;
         align-items: center;
         color: $secondary-color;
         font-weight: 900;
@@ -106,8 +108,7 @@
           cursor: pointer;
           margin: 0 0.3em;
           img{
-            width: 2em;
-            height: 2em;
+            width: 3em;
           }
         }
       }

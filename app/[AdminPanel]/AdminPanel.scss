@@ -4,6 +4,8 @@
   width: 100%;
   min-height:100vh ;
   margin-top: 0.5em;
+  background: url("/assets/universal-background.svg");
+  background-size: cover;
   &__feed{
     &__addPost{
       display: block;
@@ -12,10 +14,10 @@
       padding: 0.5%;
       border: solid 2px $primary-color;
       transition: all 0.2s ease-in;
-      background-color: rgba(6,109,66,0.2);
+      background-color: rgba(6,109,66,0.4);
       &:hover{
         border: solid 2px $secondary-color;
-        background-color: rgba(6,109,66,0.3);
+        background-color: rgba(6,109,66,0.5);
       }
       &__img{
         width: 30%;

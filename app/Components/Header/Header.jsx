@@ -2,7 +2,7 @@
 import styles from "./Header.module.css"
 import Image from "next/image";
 import Link from "next/link";
-import header_logo from '@/public/assets/logo.png'
+import header_logo from '@/public/assets/logo.svg'
 import header_settings from '@/public/assets/header-settings.png'
 import {useState} from "react";
 
@@ -24,14 +24,11 @@ const Header = () => {
                     height: 'auto',}}/>
             </Link>
             <div className={"header__nav"}>
-                <Link href={"/"} className={"header__nav__link"} >FAQ</Link>
-                <Link href={"/"} className={"header__nav__link"} >Help</Link>
+                <Link href={"/FAQ"} className={"header__nav__link"} >FAQ</Link>
                 <Link href={"/"} className={"header__nav__link"} >About</Link>
                 <Link href={"/Contact"} className={"header__nav__link"} >Contact</Link>
                 <Link href={"/Feed"} className={"header__nav__link"}>Feed</Link>
 
-                {/*  IT WILL APPEAR ONLY FOR ADMINS  */}
-                {/*<Link href={"/AddPicture"} className={"header__nav__link"}>Add Picture</Link>*/}
                 <button onClick={toggleNavExpand}
                         className={"header__nav__menu__expander"}
                         style={{display: navExpand?"none":"block"}}  >&#10094;</button>
@@ -46,9 +43,7 @@ const Header = () => {
                         </button>
                     </div>
                     <Link href={"/Feed"} className={""} onClick={toggleNavExpand} > Feed </Link>
-                    <Link href={"/AddPicture"} className={""} onClick={toggleNavExpand} > Add Picture </Link>
-                    <Link href={"/"} className={""} onClick={toggleNavExpand} >FAQ</Link>
-                    <Link href={"/"} className={""} onClick={toggleNavExpand} >Help</Link>
+                    <Link href={"/FAQ"} className={""} onClick={toggleNavExpand} >FAQ</Link>
                     <Link href={"/"} className={""} onClick={toggleNavExpand} >About</Link>
                     <Link href={"/Contact"} className={""} onClick={toggleNavExpand} >Contact</Link>
                     <Link href={"/Settings"} className={""} onClick={toggleNavExpand} > Settings </Link>

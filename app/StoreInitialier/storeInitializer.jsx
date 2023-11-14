@@ -3,7 +3,7 @@ import {useRef} from "react";
 import {useStore} from "@/src/store";
 
 
-const StoreInitializer = ({searchList, photoList, addPictureState, authorisation, feedLayout, fruitMenu}) => {
+const StoreInitializer = ({searchList, photoList, addPictureState, authorisation, feedLayout, fruitMenu, FAQList, contactsList}) => {
 
 
     const initializedPhoto = useRef(false)
@@ -12,6 +12,8 @@ const StoreInitializer = ({searchList, photoList, addPictureState, authorisation
     const initializedAuthorisation = useRef(false)
     const initializedFeedLayout = useRef(false)
     const initializedFruitMenu = useRef(false)
+    const initializedFAQList = useRef(false)
+    const initializedContactsList = useRef(false)
 
 
     if(!initializedPhoto.current) {
@@ -37,6 +39,14 @@ const StoreInitializer = ({searchList, photoList, addPictureState, authorisation
     if(!initializedFruitMenu.current) {
         useStore.setState({fruitMenu})
         initializedFruitMenu.current = true
+    }
+    if(!initializedFAQList.current) {
+        useStore.setState({FAQList})
+        initializedFAQList.current = true
+    }
+    if(!initializedContactsList.current) {
+        useStore.setState({contactsList})
+        initializedContactsList.current = true
     }
 
 

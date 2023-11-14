@@ -1,4 +1,5 @@
 'use client';
+import styles from "./adminAuth.css"
 import Link from "next/link";
 import {useStore} from "@/src/store";
 import React, {useEffect, useState} from "react";

@@ -8,5 +8,7 @@ export const useStore = create((set) => ({
     searchList:[],
     addPictureState:{},
     authorisation:{},
-    fruitMenu:{}
+    fruitMenu:{},
+    FAQList: [],
+    contactsList: [],
 }))

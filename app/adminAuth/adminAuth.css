@@ -12,27 +12,50 @@
     color: #fff;
     cursor: pointer; }
 
+.drop__animation {
+  animation: drop 0.4s linear forwards; }
+
+@keyframes drop {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0; }
+  50% {
+    transform: translateY(-75%);
+    opacity: 25%; }
+  75% {
+    transform: translateY(-30%);
+    opacity: 75%; }
+  100% {
+    transform: translateY(0%); } }
 .adminAuth {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: url("/assets/universal-background.svg");
+  background-size: cover; }
   .adminAuth__login {
     font-size: 1.5em;
     border: solid 2px #066d42;
     border-radius: 0.5em;
     outline: none;
     padding: 0.2em;
-    margin-bottom: 1em; }
+    margin-bottom: 1em;
+    background-color: rgba(255, 255, 255, 0.7); }
+    .adminAuth__login:focus {
+      background-color: rgba(255, 255, 255, 0.9); }
   .adminAuth__password {
     font-size: 1.5em;
     border: solid 2px #066d42;
     border-radius: 0.5em;
     outline: none;
     padding: 0.2em;
-    margin-bottom: 1.5em; }
+    margin-bottom: 1.5em;
+    background-color: rgba(255, 255, 255, 0.7); }
+    .adminAuth__password:focus {
+      background-color: rgba(255, 255, 255, 0.9); }
   .adminAuth__btn {
     width: 10em;
     color: #fff;
@@ -46,4 +69,4 @@
   .adminAuth__submit {
     background-color: #066d42; }
 
-/*# sourceMappingURL=adminAuth.module.css.map */
+/*# sourceMappingURL=adminAuth.css.map */

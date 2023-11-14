@@ -29,7 +29,9 @@
     transform: translateY(0%); } }
 .addPost {
   display: flex;
-  min-height: 100vh; }
+  min-height: 100vh;
+  background: url("/assets/universal-background.svg");
+  background-size: cover; }
   .addPost__loadImg {
     display: flex;
     justify-content: center;
@@ -38,6 +40,7 @@
     border: solid 2px #066d42;
     border-radius: 0.5em;
     margin: 1%;
+    background-color: #fff;
     background-repeat: no-repeat;
     background-position: center; }
     .addPost__loadImg__inputWrapper {

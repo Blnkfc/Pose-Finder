@@ -7,6 +7,8 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
+  background: url("/assets/universal-background.svg");
+  background-size: cover;
   &__login{
     font-size: 1.5em;
     border: solid 2px $primary-color;
@@ -14,6 +16,10 @@
     outline: none;
     padding: 0.2em;
     margin-bottom: 1em;
+    background-color: rgba(255,255,255,0.7);
+    &:focus{
+      background-color: rgba(255,255,255,0.9);
+    }
   }
   &__password{
     font-size: 1.5em;
@@ -22,6 +28,10 @@
     outline: none;
     padding: 0.2em;
     margin-bottom: 1.5em;
+    background-color: rgba(255,255,255,0.7);
+    &:focus{
+      background-color: rgba(255,255,255,0.9);
+    }
   }
   &__btn{
     width: 10em;

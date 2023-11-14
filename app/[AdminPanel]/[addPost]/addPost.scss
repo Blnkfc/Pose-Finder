@@ -3,6 +3,8 @@
 .addPost{
   display: flex;
   min-height: 100vh;
+  background: url("/assets/universal-background.svg");
+  background-size: cover;
   &__loadImg{
     display: flex;
     justify-content: center;
@@ -11,6 +13,7 @@
     border: solid 2px $primary-color;
     border-radius: 0.5em;
     margin: 1%;
+    background-color: $white-color;
     background-repeat: no-repeat;
     background-position: center;
     &__inputWrapper{

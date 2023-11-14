@@ -1,30 +1,43 @@
   @import "../variables.module";
 .contacts{
-  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("/assets/universal-background.svg") ;
+  background-size: cover;
   height: 100vh;
   padding: 1em 0 0 1em ;
-  h1{
-    color: $primary-color;
-    margin-bottom: 1em;
-  }
   &__list{
     display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    background-color: rgba(255,255,255,0.5);
+    border: 3px solid $primary-color;
+    border-radius: 0.5em;
+    padding: 1em;
+    width:40%;
+    height: 90%;
+    h1{
+      color: $primary-color;
+      margin-bottom: 1em;
+    }
     a{
       display: flex;
       flex-flow: row wrap;
       align-items: center;
-      background-color: $background-color;
+      background-color: rgba(255,255,255,0.5);
       padding: 1em;
-      width: 10em;
+      width: 90%;
       text-decoration: none;
       border: 1px solid $primary-color;
       border-radius: 0.5em;
       color: $primary-color;
-      margin-right: 1.5em;
+      margin-bottom: 1em;
       &:hover{
         padding: 0.8em;
         cursor: pointer;
         color: $text-light;
+        background-color: rgba(255,255,255,0.7);
         img{
           width: 2.3em;
           height: 2.3em;

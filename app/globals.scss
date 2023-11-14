@@ -34,12 +34,15 @@
 @import "./Contact/Contact.module";
 @import "./Feed/FeedSidebarMobile/FeedSidebarMobile.module";
 @import "./Settings/Settings.module";
-@import "./adminAuth/adminAuth.module";
+@import "./FAQ/FAQ.module";
 
 
 
 
 @media (max-width: 1512px) {
+  .header__nav__menu__expander{
+    display: none !important;
+  }
   .pictureBlock__image {
     height: 12em ;
     &__info{
@@ -55,8 +58,6 @@
   .pictureBlock__image {
     height: 10em ;
     &__info{
-      transform: translatey(60%) translatex(5%);
-      max-width: 16em;
       font-size: 12px;
     }
   }
@@ -77,10 +78,8 @@
   .pictureBlock__image {
     height: 8em ;
     &__info{
-      transform: translatey(60%) translatex(5%);
-      max-width: 16em;
       height: 5em;
-      font-size: 10px;
+      font-size: 11px;
     }
   }
   .addPicture__load{
@@ -88,7 +87,7 @@
   }
   .feed__sidebar__categories{
     button{
-      font-size:8px;
+      font-size:11px;
     }
   }
   *{
@@ -100,10 +99,13 @@
   .pictureBlock__image {
     height: 8em ;
     &__info{
-      transform: translatey(80%) translatex(5%);
-      max-width: 16em;
       height: 5em;
-      font-size: 8px;
+      font-size: 10px;
+      &__selector{
+        &__wrapper{
+          font-size: 9px;
+        }
+      }
     }
   }
   .addPicture__load{
@@ -112,6 +114,20 @@
 }
 
 @media (max-width: 712px) {
+  .header__nav__menu__expander{
+    display: none ;
+  }
+  .pictureBlock__image {
+    height: 8em ;
+    &__info{
+      height: 5em;
+      &__selector{
+        &__wrapper{
+          font-size: 8px;
+        }
+      }
+    }
+  }
   .addPicture{
     flex-direction: column;
     &__sidebar{
@@ -160,10 +176,21 @@
     &__image {
       height: 8em ;
       &__info{
-        transform: translatey(60%) translatex(5%);
-        max-width: 18em;
         height: 5em;
         font-size: 8px;
+        h3{
+          flex-grow: 1;
+          font-size: 2em !important;
+        }
+        &__selector{
+          &__wrapper{
+            font-size: 1.3em;
+            flex-grow: 0;
+          }
+        }
+        &__description{
+          display: none;
+        }
       }
     }
   }
@@ -205,6 +232,18 @@
         }
       }
     }
+    &__layoutPicker__btn{
+      img{
+        width: 3em;
+        height: 3em;
+      }
+      &__active{
+        img{
+          width: 5em;
+          height: 5em;
+        }
+      }
+    }
   }
   .picture__wrapper{
     flex-flow: column wrap;
@@ -217,9 +256,10 @@
     }
   }
   .header{
-    height: 6em;
+    height: 10em;
     &__logo{
-      width: 6em;
+    width: 7em ;
+      height: auto;
     }
     &__nav{
       display: flex;
@@ -230,7 +270,15 @@
         display: none;
       }
       button{
+        display: block ;
+      }
+      &__menu__expander{
         display: block !important;
+      }
+      &__mobile{
+        &__menu{
+          height: 2em;
+        }
       }
     }
   }

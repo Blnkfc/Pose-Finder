@@ -1,7 +1,7 @@
 import styles from "./Footer.module.css"
 import Link from "next/link";
 import Image from "next/image";
-import footer_logo from "@/public/assets/logo.png";
+import footer_logo from "@/public/assets/logo.svg";
 
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
                             width: '100%',
                             height: 'auto',}}/>
                 </Link>
-                <Link href={"/"}>FAQ</Link>
+                <Link href={"/FAQ"}>FAQ</Link>
                 <Link href={"/"}>Help</Link>
             </div>
         </div>

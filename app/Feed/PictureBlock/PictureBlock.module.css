@@ -33,7 +33,7 @@
   width: 49%;
   border: solid 1px #000;
   margin: 0.5% 0.5%;
-  background-image: url("../public/assets/pictureBlock-background.png");
+  background-image: url("../public/assets/pictureBlock-background.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -98,14 +98,16 @@
       .pictureBlock__image__info__selector__wrapper {
         flex-grow: 1;
         align-items: flex-end;
-        flex-wrap: wrap;
         display: flex;
-        width: 100%; }
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap; }
     .pictureBlock__image__info__description {
       max-height: 60%;
       overflow: auto; }
     .pictureBlock__image__info__lists {
       display: flex;
+      flex-grow: 1;
       align-items: center;
       color: #ff2e70;
       font-weight: 900;
@@ -117,8 +119,7 @@
         cursor: pointer;
         margin: 0 0.3em; }
         .pictureBlock__image__info__lists__btn img {
-          width: 2em;
-          height: 2em; }
+          width: 3em; }
   .pictureBlock__image__expander__up {
     width: 2em;
     height: 2em;

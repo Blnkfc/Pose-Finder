@@ -14,6 +14,8 @@
     background-position: bottom;
     background-size: cover;
   }
+
+  //LIST OF SYRUPS AND BALLS FLAVOURS
   &__fruitMenu{
     position: absolute;
     width: 100%;
@@ -46,6 +48,7 @@
       width: 90%;
     }
   }
+  //IMAGE OF THE PRODUCT
   &__image__wrapper{
     display: flex;
     align-items: center;
@@ -57,7 +60,11 @@
       background-repeat: no-repeat;
     }
   }
+
   &__image{
+
+
+    //INFORMATION ABOUT PRODUCT(DESCRIPTION AND SELECTORS)
     &__info{
       display: flex;
       flex-flow: column nowrap;
@@ -71,6 +78,9 @@
         display: block;
         color: $secondary-color;
       }
+
+
+      //STYLES FOR EACH SELECTOR
       &__selector{
         align-items: center;
         text-decoration: none;

@@ -5,9 +5,9 @@ import {useStore} from "@/src/store";
 const Contact = () => {
     const contactsData = useStore((state) => state.contactsList)
 
-    const contactsList = contactsData.map((E) => {
+    const contactsList = contactsData.map((E, index) => {
         return(
-            <a href={E.url} ><img src={E.img} alt={E.title}/> {E.title} </a>
+            <a key={index} href={E.url} ><img src={E.img} alt={E.title}/> {E.title} </a>
         )
     })
 

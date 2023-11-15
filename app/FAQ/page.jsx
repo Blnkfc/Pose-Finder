@@ -2,12 +2,21 @@
 import {useStore} from "@/src/store";
 import {useState} from "react";
 
+const useExpandState = () => {
+    const [expand, setExpand] = useState(false);
+
+    const toggleExpand = () => {
+        setExpand(prevExpand => !prevExpand);
+    };
+
+    return [expand, toggleExpand];
+};
+
 const FAQ = () => {
     const FAQData = useStore((state) => state.FAQList)
 
     const FQAList = FAQData.map((E, index) => {
-        const [expand, setExpand] = useState(false)
-        const toggleExpand = () => {setExpand(!expand)}
+        const [expand, toggleExpand] = useExpandState();
         return(
             <div className={"FAQ__item"} key={index} onClick={toggleExpand}>
                 <div

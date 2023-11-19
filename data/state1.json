@@ -2,7 +2,7 @@
   "photoList":[
     {
       "id": "1cccs",
-      "url": "./products/caramel late.png",
+      "url": "/products/caramel-late.png",
       "name": "Caramel milk tea",
       "description": "Milk powder mixed with tea, caramel and tapioca. Chose 1-4 levels of caramel.",
       "selectors": [
@@ -21,7 +21,7 @@
     },
     {
       "id": "1cavs",
-      "url": "./products/cocomilk(1).png",
+      "url": "/products/cocomilk.png",
       "name": "Coco Milk",
       "description": "Coco powder mixed with milk and tapioca. Chose 1-4 levels of sweetness",
       "selectors": [
@@ -40,7 +40,7 @@
     },
     {
       "id": "1cVs6",
-      "url": "./products/cocomilk.png",
+      "url": "/products/milk-tea.png",
       "name": "Milk tea",
       "description": "Fresh taste of coca in your cup to clear up your mind! It is as tasty as it is original, control your sweetness between 4 levels (4 being the sweetest) and enjoy a beautiful taste.",
       "selectors": [
@@ -59,7 +59,7 @@
     },
     {
       "id": "1cab2",
-      "url": "./products/matcha.png",
+      "url": "/products/matcha.png",
       "name": "Matcha Milk",
       "description": "Matcha powder mixed with milk and tapioca. Chose 1-4 levels of sweetness ",
       "selectors": [
@@ -78,7 +78,7 @@
     },
     {
       "id": "Bmas6",
-      "url": "./products/taromilk.png",
+      "url": "/products/taromilk.png",
       "name": "Taro Milk",
       "description": "Taro powder mixed with milk and tapioca. Chose 1-4 levels of sweetness ",
       "selectors": [
@@ -97,7 +97,7 @@
     },
     {
       "id": "9xzvD",
-      "url": "./products/lychee.png",
+      "url": "/products/lychee.png",
       "name": "Fruit balls + syrup of choice",
       "description": "Fruits fruits fruits!! Fruity collection of drinks explosion of taste and happiness. Great way of splashing your day with bright colors. Combine juice balls with fruit syrup of your choice!",
       "selectors": [

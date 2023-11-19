@@ -83,7 +83,8 @@ const Feed = () => {
                     url={PhotoUnit.url}
                     id={PhotoUnit.id}
                     description={PhotoUnit.description}
-                    searchlist={searchList} />))
+                    searchlist={searchList}
+                />))
         )
     }, [photoList, searchList])
 

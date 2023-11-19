@@ -27,6 +27,10 @@
         background-color: rgba(6,109,66,0.2);
       }
     }
+    &__productList{
+      display: flex;
+      flex-flow: row wrap;
+    }
     &__options{
       display: flex;
       flex-flow: column wrap;

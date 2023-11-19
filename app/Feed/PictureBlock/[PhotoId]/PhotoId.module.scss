@@ -2,9 +2,10 @@
 
 .picture__wrapper{
   display: flex;
+  justify-content: center;
   &__image{
     aspect-ratio: auto;
-    width: 50%;
+    width: 30%;
     align-items: center;
     img{
       width: 100%;
@@ -12,13 +13,19 @@
   }
   &__sidebar{
     margin-left: 5em;
+    width: 30%;
+    padding-top: 2em;
     h1{
-      color: $text-light;
+      color: $secondary-color;
 
     }
     h2{
-      color: $text-light;
-      margin-bottom: 1em;
+      color: $secondary-color;
+      margin: 1em  0;
+    }
+    &__description{
+      margin-top: 1em;
+      font-size: 1.5em;
     }
     &__selectors{
       display: flex;
@@ -35,20 +42,85 @@
 
       }
     }
-    &__delete{
-      margin: 3em 0;
-      a{
-        text-decoration: none;
-        color: $text-light;
-        border: solid 1px $text-red;
+    &__fruitMenu{
+      img{
+        width: 2em;
+        height: 2em;
+      }
+      &__btn{
+        display: flex;
+        align-items: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        color: $secondary-color;
+        margin-top: 0.5em;
+      }
+      &__list{
+        display: flex;
+        position: relative;
+        flex-flow: row wrap;
+        background-color: rgba(255,255,255,0.5);
+        border: solid 2px $primary-color;
         border-radius: 0.5em;
-        padding: 0.3em 0.5em 0.3em 0.5em ;
-        &:hover{
-          background: $text-red;
-          color: $white-color;
-          border: $white-color solid 1px;
+        padding: 1em;
+        max-width: 100% ;
+        span{
+          margin: 0.2em;
+        }
+        &__close{
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 1em;
+          cursor: pointer;
         }
       }
     }
+    &__order{
+      margin-top: 1em;
+      span{
+        display: block;
+        font-size: 2em;
+        color: $secondary-color;
+        font-weight: bold;
+      }
+      a{
+        display: block;
+        border: solid 2px $primary-color;
+        border-radius: 0.5em;
+        width: 4em;
+        height: 4em;
+        transition: all ease-in 0.15s;
+        &:hover{
+          border: solid 3px $primary-color;
+          img{
+            animation: flick forwards 0.4s;
+          }
+        }
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes flick {
+  0%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  33%{
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  66%{
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1;
   }
 }

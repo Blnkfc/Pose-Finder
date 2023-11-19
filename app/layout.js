@@ -5,6 +5,7 @@ import {useStore} from "@/src/store";
 import StoreInitializer from "@/app/StoreInitialier/storeInitializer";
 import data from "@/data/state1.json"
 import { Lato } from 'next/font/google'
+import axios from "axios";
 
 const lato = Lato({
   weight: '400',
@@ -19,15 +20,25 @@ export const metadata = {
 }
 
   export default async function RootLayout({ children }) {
-
+  const axios = require('axios')
   /*  INITIALIZING DATA ON THE SERVER SIDE  */
-
 
       /*  FETCHING FROM THE SERVER IS A LIABILITY FOT THE PORTFOLIO PROJECT
       SO DATA IS IMPORTED DIRECTLY FROM JSON FILE INSTEAD  */
+    async function fetchData() {
+      try {
+        const response = await axios.get('https://raw.githubusercontent.com/Blnkfc/Pose-Finder/maomi-test/data/state1.json');
+        return response.data;
+      } catch (error) {
+        console.error(error);
+        throw error;
+      }
+    }
 
- /* const dataRes = await fetch("http://localhost:8080/state1.json", {cache:'no-store'})
-  const data = await dataRes.json()*/
+    async function getData() {
+      return await fetchData();
+    }
+    const data = await getData();
 
 
   useStore.setState({

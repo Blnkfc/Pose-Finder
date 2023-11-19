@@ -35,7 +35,7 @@ const AdminPanel = () => {
 
 
     const postList = photoList.map((PhotoUnit, index) => (
-        <div key={index} style={{display:"inline", position:"relative"}} >
+        <div key={index} style={{display:"contents", position:"relative"}} >
             <PictureBlock
                 key={index}
                 name={PhotoUnit.name}
@@ -63,7 +63,9 @@ const AdminPanel = () => {
                 <Link href={`./${pathname}/${generatedLink}`}  className="adminPanel__feed__addPost" >
                     <img src="/assets/adminPanel-addPost.png" alt="" className="adminPanel__feed__addPost__img"/>
                 </Link>
-                {postList}
+                <div className="adminPanel__feed__productList">
+                    {postList}
+                </div>
             </div>
         </div>
     )

@@ -11,28 +11,7 @@ const PictureBlock = (props) => {
     const initialState = useStore((state) => state.photoList)
     /*  RETRIEVING DATA ABOUT NEEDED PICTURE VIA IT'S ID  */
     const pictureData = initialState.find(photo => JSON.stringify(photo.id) === JSON.stringify(props.id))
-    /*  RETRIEVING DATA ABOUT FRUIT MENU  */
-    const fruitMenuData = useStore((state) => state.fruitMenu)
 
-    /*  STATE FOR INDICATING THE FRUIT DRINK  */
-    const[listDisplay, setListDisplay] = useState(false)
-    /*  STATE FOR BALLS LIST  */
-    const[ballsDisplay, setBallsDisplay] = useState(false)
-    /*  STATE FOR JUICE LIST  */
-    const[juiceDisplay, setJuiceDisplay] = useState(false)
-    /*  TOGGLE TO MAKE BALLS APPEAR  */
-    const toggleBalls = () => {
-        setBallsDisplay(!ballsDisplay)
-    }
-    /*  TOGGLE TO MAKE JUICE APPEAR  */
-    const toggleJuice = () => {
-        setJuiceDisplay(!juiceDisplay)
-    }
-    const ballsList = fruitMenuData.balls
-    const juiceList = fruitMenuData.juice
-    /*  KIZMA  */
-    const balls = ballsList.map((ballType, index) => (<span key={index} >{ballType}</span> ))
-    const juices = juiceList.map((juiceType, index) => (<span key={index}  >{juiceType}</span>))
 
 
 
@@ -52,7 +31,7 @@ const PictureBlock = (props) => {
             ? pictureData.selectors.map((S, index) => (
                 <div
                     key={index}
-                    className={"pictureBlock__image__info__selector"}
+                    className={"pictureBlock__info__selectorList__selector pictureBlock__backgroundSizing"}
                     style={{ backgroundColor: S.isActive ? "#066d42" : "#fff", display:S.isActive?"flex":"none", fontSize:grid?"":"1.5em"}}
                 >
                     {S.name}
@@ -60,63 +39,15 @@ const PictureBlock = (props) => {
             ))
             : null;
 
-    useEffect(() => {
-        pictureData.selectors.forEach((selector)=>{
-            if(selector.name === "Fruity" && selector.isActive){
-                setListDisplay(true)
-            }
-        })
-    },[])
+
     return (
-        <div  className={"pictureBlock"}
-              style={{width: grid?"49%":"99%", height: grid?"10em":"17em"}} >
-
-            <div className="pictureBlock__balls pictureBlock__fruitMenu" style={{display:!ballsDisplay?"none":"block"}} >
-                <div className="pictureBlock__balls__wrapper ">
-                    {balls}
-                </div>
-                <div className="pictureBlock__balls__menu" onClick={toggleBalls} >x</div>
+        <Link href={`/Feed/PictureBlock/${props.id}`}  className={"pictureBlock"} style={{background:`url(${pictureData.url})`}} >
+            <div className="pictureBlock__info">
+                <div className="pictureBlock__info__title">{pictureData.name}</div>
+                <div className="pictureBlock__info__description">{pictureData.description}</div>
+                <div className="pictureBlock__info__selectorList">{selectors}</div>
             </div>
-            <div className="pictureBlock__juice pictureBlock__fruitMenu" style={{display:!juiceDisplay?"none":"block"}} >
-                <div className="pictureBlock__juice__wrapper">
-                    {juices}
-                </div>
-                <div className="pictureBlock__balls__menu" onClick={toggleJuice} >x</div>
-            </div>
-
-
-
-            <div className={"pictureBlock__image__wrapper"}>
-                <Link
-                    href={`/Feed/PictureBlock/${props.id}`}
-                    style={{backgroundImage: `url("${props.url}")`, backgroundSize: "contain",
-                    backgroundPosition: "center", height: grid?"9.5em":"16em"}} >
-                </Link>
-
-                <div className={"pictureBlock__image__info"}  >
-                    <h3 style={{fontSize:grid?"1.7em":"3em"}} >{props.name}</h3>
-                    <div
-                        className="pictureBlock__image__info__description"
-                        style={{fontSize:grid?"1em":"1.7em"}}>
-                        {props.description}
-                    </div>
-                    <div className="pictureBlock__image__info__lists" style={{display: listDisplay?"flex":"none"}} >
-
-                        <button className="pictureBlock__image__info__lists__btn" onClick={toggleBalls} >
-                            <img src="/assets/pictureBlock-list-balls.png" alt=""/>
-                        </button>
-                        <button className="pictureBlock__image__info__lists__btn" onClick={toggleJuice} >
-                            <img src="/assets/pictureBlock-list-juice.png" alt=""/>
-                        </button>
-                        <span style={{transform:"rotate(180deg)"}}  >&#10142;</span> Menu
-                    </div>
-                    <div className="pictureBlock__image__info__selector__wrapper">
-                        {selectors}
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        </Link>
     )
 }
 export default PictureBlock

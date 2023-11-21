@@ -17,15 +17,23 @@ export const metadata = {
 }
 
   export default async function RootLayout({ children }) {
-
+    const axios = require('axios')
   /*  INITIALIZING DATA ON THE SERVER SIDE  */
+    async function fetchData() {
+      try {
+        const response = await axios.get('https://raw.githubusercontent.com/Blnkfc/Pose-Finder/master/data/state1.json');
+        return response.data;
+      } catch (error) {
+        console.error(error);
+        throw error;
+      }
+    }
 
+    async function getData() {
+      return await fetchData();
+    }
+    const data = await getData();
 
-      /*  FETCHING FROM THE SERVER IS A LIABILITY FOT THE PORTFOLIO PROJECT
-      SO DATA IS IMPORTED DIRECTLY FROM JSON FILE INSTEAD  */
-
- /* const dataRes = await fetch("http://localhost:8080/state1.json", {cache:'no-store'})
-  const data = await dataRes.json()*/
 
 
   useStore.setState({

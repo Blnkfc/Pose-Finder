@@ -8,9 +8,10 @@ interface Store {
     addPictureState: IPhotoUnit;
 }
 
-export const useStore = create((set) => ({
+export const useStore = create<Store>()((set) => ({
     photoList:[],
     setPhotoList: (newList) => set({ photoList: newList }),
     searchList:[],
+    // @ts-ignore
     addPictureState:{}
 }))

@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from "react";
 import {useStore} from "../../../src/store";
 import Link from "next/link";
-import {IPhotoUnit, ISearchListUnit, ISelectorUnit} from "../../interfaceList";
+import {IPhotoUnit, ISearchListUnit} from "../../interfaceList";
 
 
 const AddPictureSidebar = () => {
@@ -36,7 +36,7 @@ const AddPictureSidebar = () => {
         ]}
 
     /*  ID SETUP  */
-    const [id, setId] = useState(initialData.pictureId)
+    const [id, setId] = useState(initialData.id)
     useEffect(() => {
         const newId: string = Math.random().toString(36).slice(2,7)
         setId(newId)
@@ -55,11 +55,11 @@ const AddPictureSidebar = () => {
     }, [title]);//HAPPENS ON CHANGE OF THE title
 
     const retrieveTitle = () => {
-        const titleValue: HTMLInputElement = document.querySelector('input[name=sidebar_title]');
+        const titleValue  = (document.querySelector('input[name=sidebar_title]') as HTMLInputElement);
         useStore.setState((state) => {
-            const updatedAddPicture: ISearchListUnit = state.addPictureState;
+            const updatedAddPicture: IPhotoUnit = state.addPictureState;
             updatedAddPicture.name = titleValue.value;
-            setTitle(titleValue)
+            setTitle(updatedAddPicture.name)
             return { addPictureState: updatedAddPicture };
         });
         handleError()
@@ -75,7 +75,7 @@ const AddPictureSidebar = () => {
     /*  FUNCTION FOR CHANGING THE VALUE OF GIVEN SELECTOR TO OPPOSITE  */
     const toggleSelector = (index: number) => {
         /*  COPY THE INITIAL DATA TO PREVENT MUTABILITY  */
-        const updatedSelectorsList: ISelectorUnit[] = [...selectorsList];
+        const updatedSelectorsList: ISearchListUnit[] = [...selectorsList];
         /*  REVERSING THE BOOL VALUE OF THE SELECTOR  */
         updatedSelectorsList[index].isActive = !updatedSelectorsList[index].isActive;
         return setSelectorsList(updatedSelectorsList)

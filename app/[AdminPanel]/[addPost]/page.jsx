@@ -178,7 +178,6 @@ const AddPost = () => {
         const updatedFeed = [...feed]
         updatedFeed.push(newPhoto)
         localStorage.setItem('feed', JSON.stringify(updatedFeed))
-        console.log(newPhoto)
         newPhoto={
             id: "",
             url: "",
@@ -186,7 +185,6 @@ const AddPost = () => {
             selectors: [],
             description: ""
         }
-        console.log(newPhoto)
         return setFeedState(updatedFeed)
     }
 

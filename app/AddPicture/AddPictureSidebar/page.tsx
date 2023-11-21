@@ -1,21 +1,22 @@
 'use client';
-import {useEffect, useState} from "react";
-import {useStore} from "@/src/store";
+import React, {useEffect, useState} from "react";
+import {useStore} from "../../../src/store";
 import Link from "next/link";
+import {IPhotoUnit, ISearchListUnit, ISelectorUnit} from "../../interfaceList";
 
 
 const AddPictureSidebar = () => {
     /*  INITIAL DATA FOR THE NEW PICTURE OBJECT  */
     const [initialData, setInitialData] = useState(useStore((state) => state.addPictureState))
-    const feed = useStore((state) => state.photoList)
+    const feed: IPhotoUnit[] = useStore((state) => state.photoList)
     const setFeedState = useStore((state) => state.setPhotoList);
 
     /*  CLEAN DATA SET FOR RESTORING STARTING POSITION OF THE PAGE  */
     /*  TODO  */
-    const cleanDataSet = {
-        pictureId: "",
-        name: "",
+    const cleanDataSet: IPhotoUnit = {
+        id: "",
         url: "",
+        name: "",
         selectors: [
             { name: "Male", isActive: false },
             { name: "Female", isActive: false },
@@ -37,7 +38,7 @@ const AddPictureSidebar = () => {
     /*  ID SETUP  */
     const [id, setId] = useState(initialData.pictureId)
     useEffect(() => {
-        const newId = Math.random().toString(36).slice(2,7)
+        const newId: string = Math.random().toString(36).slice(2,7)
         setId(newId)
     }, []) //HAPPENS ONLY WHE LOADING THE PAGE
 
@@ -47,17 +48,17 @@ const AddPictureSidebar = () => {
     const [title, setTitle] = useState(initialData.name)
 
     useEffect(() => {
-        const titleInput = document.querySelector('input[name=sidebar_title]');
+        const titleInput: HTMLInputElement = document.querySelector('input[name=sidebar_title]');
         if (titleInput) {
             titleInput.value = title;
         }
     }, [title]);//HAPPENS ON CHANGE OF THE title
 
     const retrieveTitle = () => {
-        const titleValue = document.getElementById("sidebar_title").value;
+        const titleValue: HTMLInputElement = document.querySelector('input[name=sidebar_title]');
         useStore.setState((state) => {
-            const updatedAddPicture = state.addPictureState;
-            updatedAddPicture.name = titleValue;
+            const updatedAddPicture: ISearchListUnit = state.addPictureState;
+            updatedAddPicture.name = titleValue.value;
             setTitle(titleValue)
             return { addPictureState: updatedAddPicture };
         });
@@ -72,16 +73,16 @@ const AddPictureSidebar = () => {
     const [selectorsList, setSelectorsList] = useState(initialData.selectors)
 
     /*  FUNCTION FOR CHANGING THE VALUE OF GIVEN SELECTOR TO OPPOSITE  */
-    const toggleSelector = (index) => {
+    const toggleSelector = (index: number) => {
         /*  COPY THE INITIAL DATA TO PREVENT MUTABILITY  */
-        const updatedSelectorsList = [...selectorsList];
+        const updatedSelectorsList: ISelectorUnit[] = [...selectorsList];
         /*  REVERSING THE BOOL VALUE OF THE SELECTOR  */
         updatedSelectorsList[index].isActive = !updatedSelectorsList[index].isActive;
         return setSelectorsList(updatedSelectorsList)
     }
 
     /*  MAPPING SELECTORS INTO THE LIST OF BUTTONS  */
-    const selectors = selectorsList.map((S, index) => {
+    const selectors: React.JSX.Element[] = selectorsList.map((S, index) => {
         return(
             <button
                 key={index}
@@ -103,7 +104,7 @@ const AddPictureSidebar = () => {
 
         // PARSE THE DATA TO THE STATE SO IT STAY UPDATED
         if (storedFeed) {
-            const parsedFeed = JSON.parse(storedFeed);
+            const parsedFeed: IPhotoUnit[] = JSON.parse(storedFeed);
             setFeedState(parsedFeed);
         }
     }, []);
@@ -133,7 +134,7 @@ const AddPictureSidebar = () => {
 
     /*  SENDING THE DATA TO THE STATE AND UPDATING LOCAL STORAGE  */
     const postToState = () => {
-            const updatedFeed = [...feed]
+            const updatedFeed: IPhotoUnit[] = [...feed]
             updatedFeed.push(newPhoto)
             localStorage.setItem('feed', JSON.stringify(updatedFeed))
             return setFeedState(updatedFeed)

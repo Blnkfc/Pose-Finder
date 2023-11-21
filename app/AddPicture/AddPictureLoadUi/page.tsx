@@ -1,21 +1,20 @@
 'use client'
-import {useStore} from "@/src/store";
+import {useStore} from "../../../src/store";
 import {useEffect, useState} from "react";
+import {IPhotoUnit, ISearchListUnit} from "../../interfaceList";
 
 
 const AddPictureLoadUi =  () => {
     /*  INITIAL DATA FOR THE ADDPICTURE PAGE  */
-    const initialData = useStore((state) => state.addPictureState)
+    const initialData: IPhotoUnit = useStore((state) => state.addPictureState)
 
     /*  LOAD SETUP  */
-
     const [link, setLink] = useState(initialData.url)
 
 
     /*  SETTING VALUE FOR INPUT ACCORDING TO STATE, HAPPENS ON link CHANGE  */
-
     useEffect(() => {
-        const loadInput = document.querySelector('input[name=load_link]');
+        const loadInput: HTMLInputElement = document.querySelector('input[name=load_link]');
         if (loadInput) {
             loadInput.value = link;
         }
@@ -26,11 +25,11 @@ const AddPictureLoadUi =  () => {
 
     /*  RETRIEVING LINK VALUE AND UPDATING THE STORE  */
     const retrieveLink = () => {
-        const linkValue = document.getElementById("load_link").value;
+        const linkValue: string = (document.querySelector('input[name=load_link]') as HTMLInputElement).value;
         useStore.setState((state) => {
-            const updatedAddPicture = state.addPictureState;
+            const updatedAddPicture: IPhotoUnit = state.addPictureState;
             updatedAddPicture.url = linkValue;
-            setLink(linkValue)
+            setLink(updatedAddPicture.url)
             return { addPictureState: updatedAddPicture };
         });
         if(linkValue === ""){

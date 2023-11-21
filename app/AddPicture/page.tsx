@@ -1,8 +1,7 @@
 'use client';
-import {useStore} from "@/src/store";
 import {useEffect, useState} from "react";
-import AddPictureLoadUi from "@/app/AddPicture/AddPictureLoadUi/page";
-import AddPictureSidebar from "@/app/AddPicture/AddPictureSidebar/page";
+import AddPictureLoadUi from "./AddPictureLoadUi/page";
+import AddPictureSidebar from "./AddPictureSidebar/page";
 
 
 const AddPicture = () => {

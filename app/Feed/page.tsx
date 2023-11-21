@@ -1,19 +1,21 @@
 'use client'
-import PictureBlock from "@/app/Feed/PictureBlock/page";
-import {useStore} from "@/src/store";
+import PictureBlock from "./PictureBlock/page";
+import {useStore} from "../../src/store";
 import React, {useEffect, useState} from "react";
-import FeedSidebar from "@/app/Feed/FeedSidebar/FeedSidebar";
+import FeedSidebar from "./FeedSidebar/FeedSidebar";
 import Link from "next/link";
-import FeedSidebarMobile from "@/app/Feed/FeedSidebarMobile/FeedSidebarMobile";
+import FeedSidebarMobile from "./FeedSidebarMobile/FeedSidebarMobile";
+import type {IPhotoUnit, ISearchListUnit} from "../interfaceList";
 
 
 const Feed = () => {
+    /*  CREATING INTERFACES  */
       /*  INITIALIZING FEED(PHOTOLIST) AND SELECTORS FOR SEARCH(SEACRCHLIST)  */
-    const photoList = useStore((state) => state.photoList)
-    const searchList = useStore((state) => state.searchList)
+    const photoList: IPhotoUnit[] = useStore((state) => state.photoList)
+    const searchList: ISearchListUnit[] = useStore((state) => state.searchList)
 
     /*  OBJECT WITH GENERAL LIST OF SELECTORS TO CHECK FOR ACTIVE SELECTORS LATER  */
-    const initialSelectorList = [
+    const initialSelectorList: ISearchListUnit[] = [
         { name: "Male", isActive: false },
         { name: "Female", isActive: false },
         { name: "Hands", isActive: false },
@@ -39,13 +41,13 @@ const Feed = () => {
     /*  CHECK FOR ACTIVE SELECTORS  */
     /*  photoList IS THE LIST OF ALL PHOTOS IN FEED, selectorList IS A SET OF SELECTORS FROM THE STATE FORM  */
     /*  bless the openAI for developing chatGPT, I hope you live long and happy life  */
-    function feedFilter(photoList, searchList) {
+    function feedFilter(photoList: IPhotoUnit[], searchList: ISearchListUnit[]) {
         if (!photoList || !searchList) {
             console.log("Invalid data");
             return [];
         }
         // Get the indices of active selectors in the searchList
-        const activeSelectorIndices = searchList
+        const activeSelectorIndices: number[] = searchList
             .map((selector, index) => (selector.isActive ? index : -1))
             .filter((index) => index !== -1);
 
@@ -55,7 +57,7 @@ const Feed = () => {
         }
 
         // Filter the photoList based on active selectors
-        const feedFiltered = photoList.filter((photo) =>
+        const feedFiltered: IPhotoUnit[] = photoList.filter((photo) =>
             activeSelectorIndices.every((activeIndex) =>
                 photo.selectors.some(
                     (selector) =>

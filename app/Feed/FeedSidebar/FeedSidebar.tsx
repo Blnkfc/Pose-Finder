@@ -1,10 +1,11 @@
 'use client';
 import React, { useEffect, useState } from "react";
-import {useStore} from "@/src/store"
+import {useStore} from "../../../src/store"
+import type {ISearchListUnit} from "../../interfaceList";
 
 const FeedSidebar = () => {
     /*  LIST OF SELECTORS FROM THE STORE  */
-    const searchList = useStore((state) => state.searchList)
+    const searchList: ISearchListUnit[] = useStore((state) => state.searchList)
 
 
     /*  SETTING STATE FOR LIST OF ACTIVE CATEGORIES  */
@@ -13,7 +14,7 @@ const FeedSidebar = () => {
     /*  ON CLICK HANDLER FOR CATEGORY STATE CHANGES, TOGGLES STATE OF CATEGORIES FALSE\TRUE  */
     const toggleCategory = (index) => {
         useStore.setState((state) => {
-            const updatedSearchList = [...state.searchList];
+            const updatedSearchList: ISearchListUnit[] = [...state.searchList];
             updatedSearchList[index].isActive = !updatedSearchList[index].isActive;
             return { searchList: updatedSearchList };
         });
@@ -21,7 +22,7 @@ const FeedSidebar = () => {
 
 
     /*  LISTING ALL EXISTING CATEGORIES AND STYLING DEPENDING ON THE STATE OF CATEGORY  */
-    const categories = activeCategoryList.map((C, index) => {
+    const categories: React.JSX.Element[] = activeCategoryList.map((C, index) => {
         return(
             <button
                 key={index}

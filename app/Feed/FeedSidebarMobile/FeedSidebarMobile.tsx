@@ -1,5 +1,5 @@
 'use client';
-import FeedSidebar from "@/app/Feed/FeedSidebar/FeedSidebar";
+import FeedSidebar from "../FeedSidebar/FeedSidebar";
 import styles from "./FeedSidebarMobile.module.css"
 import React, {useState} from "react";
 

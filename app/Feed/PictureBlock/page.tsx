@@ -1,14 +1,15 @@
 'use client';
 import Link from "next/link";
-import {useState} from "react";
-import {useStore} from "@/src/store"
+import React, {FC, useState} from "react";
+import {useStore} from "../../../src/store"
+import type {IPhotoUnit, ISearchListUnit} from "../../interfaceList";
 
 
 const PictureBlock = (props) => {
     /*  INITIALIZING DATA FROM FEED  */
-    const initialState = useStore((state) => state.photoList)
+    const initialState: IPhotoUnit[] = useStore((state) => state.photoList)
     /*  RETRIEVING DATA ABOUT NEEDED PICTURE VIA IT'S ID  */
-    const pictureData = initialState.find(photo => JSON.stringify(photo.id) === JSON.stringify(props.id))
+    const pictureData: IPhotoUnit = initialState.find(photo => JSON.stringify(photo.id) === JSON.stringify(props.id))
 
     /*  SETTING UP A STATE FOR THE POPUP WITH INFORMATION ABOUT THE PICTURE  */
     const [expand,setExpand] = useState(false)
@@ -19,7 +20,7 @@ const PictureBlock = (props) => {
 
 
     /*  RETRIEVING SELECTORS AND LISTING THEM WITH STYLING DEPENDING ON THEIR STATE  */
-    const selectors =
+    const selectors: React.JSX.Element[] =
         pictureData && pictureData.selectors
             ? pictureData.selectors.map((S, index) => (
                 <div

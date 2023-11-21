@@ -1,10 +1,10 @@
 import './globals.css'
 import { Lato } from 'next/font/google'
-import Header from "@/app/Components/Header/Header";
-import Footer from "@/app/Components/Footer/Footer";
-import {useStore} from "@/src/store";
-import StoreInitializer from "@/app/StoreInitialier/storeInitializer";
-import data from "@/data/state1.json"
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+import {useStore} from "../src/store";
+import StoreInitializer from './StoreInitialier/storeInitializer';
+
 
 const inter = Lato({
   subsets: ['latin'],

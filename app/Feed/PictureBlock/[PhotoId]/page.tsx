@@ -1,18 +1,19 @@
 'use client';
 import styles from "./PhotoId.module.css"
-import {useStore} from "@/src/store";
+import {useStore} from "../../../../src/store";
 import Link from "next/link";
-
+import type {IPhotoUnit, ISearchListUnit} from "../../../interfaceList"
+import React from "react";
 
 function PicturePage({params}){
     /*  INITIALIZING THE GIVEN LIT OF PHOTOS  */
-    const photoList = useStore((state) => state.photoList)
+    const photoList: IPhotoUnit[] = useStore((state) => state.photoList)
     const setPhotoList = useStore((state) => state.setPhotoList)
 
     /*  TEMPORARY VARIABLES FOR INFORMATION ABOUT THE GIVEN IMAGE, AND THE LIST OF ACTIVE SELECTORS OF THAT IMAGE  */
-    let imageInfo = undefined
-    let selectorList = []
-    let selectors
+    let imageInfo: IPhotoUnit = undefined
+    let selectorList: string[]= []
+    let selectors: ISearchListUnit[] | React.JSX.Element[] | string
 
     /*  CHECK FOR GIVEN IMAGE BY ID AND RETRIEVING INFO ABOUT IT  */
     photoList.forEach((photo) => {
@@ -32,6 +33,7 @@ function PicturePage({params}){
     }
 
     /*  CHECK FOR EMPTY ARRAY  */
+    // @ts-ignore
     if(!selectorList.length < 1)
     {
         selectors = selectorList.map((sel, index) => <span key={index} >{sel}</span>)
@@ -43,9 +45,9 @@ function PicturePage({params}){
     /*  DELETING THE GIVEN PICTURE VIA ID AND UPDATING LOCAL STORAGE  */
     const deletePicture = () => {
         if (imageInfo) {
-            const index = photoList.findIndex((i) => i.id === params.PhotoId);
+            const index: number = photoList.findIndex((i) => i.id === params.PhotoId);
             if (index !== -1) {
-                const updatedPhotoList = [...photoList];
+                const updatedPhotoList: IPhotoUnit[] = [...photoList];
                 updatedPhotoList.splice(index, 1);
                 setPhotoList(updatedPhotoList);
                 localStorage.setItem('feed', JSON.stringify(updatedPhotoList));

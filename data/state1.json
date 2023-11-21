@@ -285,7 +285,7 @@
     { "name":  "Facial Expression", "isActive": false}
   ],
   "addPictureState": {
-    "pictureId": "",
+    "id": "",
     "name": "",
     "url": "",
     "selectors": [

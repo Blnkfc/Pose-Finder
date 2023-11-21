@@ -1,6 +1,6 @@
 'use client';
 import {useRef} from "react";
-import {useStore} from "@/src/store";
+import {useStore} from "../../src/store";
 
 
 const StoreInitializer = ({searchList, photoList, addPictureState}) => {
